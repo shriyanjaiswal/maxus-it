@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="MAXUS IT SERVICES — Technology That Moves Your Business Forward">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D3150" />
+      <stop offset="1" stop-color="#071F35" />
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="35%" r="55%">
+      <stop offset="0" stop-color="#2E9BC9" stop-opacity="0.55" />
+      <stop offset="1" stop-color="#071F35" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="globe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4FC3E8" />
+      <stop offset="1" stop-color="#0B3457" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+  <g fill="none" stroke="#2E86B8" stroke-width="2.5" opacity="0.8">
+    <ellipse cx="930" cy="315" rx="200" ry="84" transform="rotate(-22 930 315)" />
+    <ellipse cx="930" cy="315" rx="200" ry="84" transform="rotate(26 930 315)" stroke="#3FA9D6" stroke-dasharray="14 12" opacity="0.6" />
+  </g>
+  <circle cx="930" cy="315" r="108" fill="url(#globe)" />
+  <g fill="#BFE9F7" opacity="0.85">
+    <path d="M872 258c16-7 30 2 44-2s23 11 16 21-19 9-28 16-7 19-19 21-21-9-26-21 2-30 13-35z" />
+    <path d="M946 300c16 2 26 14 24 26s-14 18-26 14-16-16-12-26 8-14 14-14z" opacity="0.8" />
+  </g>
+  <g fill="none" stroke="#9FDDF4" stroke-width="1.2" opacity="0.4">
+    <ellipse cx="930" cy="315" rx="108" ry="36" />
+    <ellipse cx="930" cy="315" rx="36" ry="108" />
+    <path d="M822 315h216M930 207v216" />
+  </g>
+  <rect x="80" y="150" width="8" height="120" rx="4" fill="#B8D932" />
+  <text x="112" y="205" fill="#B8D932" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="4">MAXUS IT SERVICES PVT. LTD.</text>
+  <text x="108" y="285" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800">Technology That Moves</text>
+  <text x="108" y="355" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800">Your <tspan fill="#B8D932">Business Forward.</tspan></text>
+  <text x="110" y="425" fill="#A9C4D6" font-family="Arial, Helvetica, sans-serif" font-size="27">Websites · Custom Software · ERP · Billing · Inventory · Mobile · Digital</text>
+  <text x="110" y="500" fill="#8FB8D2" font-family="Arial, Helvetica, sans-serif" font-size="24">Smart Technology. Practical Solutions. Business Growth.</text>
+</svg>

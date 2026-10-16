@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "website-development",
+    "title": "Website Design & Development",
+    "icon": "monitor-smartphone",
+    "summary": "Modern, professional, responsive websites that strengthen brand identity and online presence.",
+    "detailsToConfirm": [
+      "Website types offered",
+      "CMS or ecommerce capabilities, if any",
+      "Maintenance and hosting options"
+    ]
+  },
+  {
+    "slug": "custom-software",
+    "title": "Customized Software Development",
+    "icon": "code-2",
+    "summary": "Business-oriented software solutions designed around specific operational requirements.",
+    "detailsToConfirm": [
+      "Typical software categories",
+      "Supported platforms and integrations",
+      "Maintenance/support terms"
+    ]
+  },
+  {
+    "slug": "billing-accounting",
+    "title": "Billing & Accounting Solutions",
+    "icon": "receipt-text",
+    "summary": "Digital solutions for invoicing, billing and transaction records.",
+    "detailsToConfirm": [
+      "Tax/GST features, if offered",
+      "Invoice formats and reporting",
+      "Supported integrations"
+    ]
+  },
+  {
+    "slug": "erp-business-management",
+    "title": "ERP & Business Management Solutions",
+    "icon": "workflow",
+    "summary": "Solutions that help organize business processes and improve operational coordination.",
+    "detailsToConfirm": [
+      "ERP modules actually provided",
+      "Implementation and customization scope",
+      "Reporting capabilities"
+    ]
+  },
+  {
+    "slug": "inventory-management",
+    "title": "Inventory & Stock Management",
+    "icon": "boxes",
+    "summary": "Tools to manage inventory, purchases, sales and stock records more efficiently.",
+    "detailsToConfirm": [
+      "Barcode support, if offered",
+      "Multi-location stock, if offered",
+      "Reporting and integrations"
+    ]
+  },
+  {
+    "slug": "mobile-app-development",
+    "title": "Mobile Application Development",
+    "icon": "smartphone",
+    "summary": "Mobile solutions designed to improve accessibility, customer engagement and business convenience.",
+    "detailsToConfirm": [
+      "Android/iOS capabilities",
+      "Native or cross-platform delivery",
+      "App maintenance options"
+    ]
+  },
+  {
+    "slug": "digital-marketing",
+    "title": "Digital Marketing & Online Promotion",
+    "icon": "chart-no-axes-combined",
+    "summary": "Support for digital presence, online promotion and website visibility.",
+    "detailsToConfirm": [
+      "SEO, paid ads and social media scope",
+      "Reporting cadence",
+      "Platforms actually supported"
+    ]
+  },
+  {
+    "slug": "industry-solutions",
+    "title": "Customized Industry Solutions",
+    "icon": "puzzle",
+    "summary": "Technology solutions tailored to a business model, workflow and industry requirements.",
+    "detailsToConfirm": [
+      "Industries served",
+      "Relevant delivered projects",
+      "Typical solution examples"
+    ]
+  }
+]

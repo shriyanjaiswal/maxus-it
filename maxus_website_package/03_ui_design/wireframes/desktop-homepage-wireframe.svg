@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1900" viewBox="0 0 1440 1900">
+<rect width="1440" height="1900" fill="#F5F8FA"/>
+<rect x="0" y="0" width="1440" height="86" fill="#FFFFFF"/>
+<rect x="70" y="22" width="190" height="42" rx="5" fill="#DCE4EA"/><text x="88" y="49" font-family="Arial" font-size="17" fill="#0D3150">MAXUS LOGO</text>
+<text x="720" y="51" font-family="Arial" font-size="16" fill="#27343E">Home   About   Services   Portfolio   Solutions   Contact</text>
+<rect x="1240" y="19" width="130" height="48" rx="9" fill="#B8D932"/><text x="1266" y="49" font-family="Arial" font-size="15" fill="#10202B">Let's Talk</text>
+<rect y="86" width="1440" height="570" fill="#0A1B2D"/>
+<text x="90" y="160" font-family="Arial" font-size="17" letter-spacing="3" fill="#B8D932">SMART TECHNOLOGY. REAL BUSINESS VALUE.</text>
+<text x="90" y="245" font-family="Arial" font-size="55" font-weight="bold" fill="#FFFFFF">Technology That</text>
+<text x="90" y="310" font-family="Arial" font-size="55" font-weight="bold" fill="#FFFFFF">Moves Your Business</text>
+<text x="90" y="375" font-family="Arial" font-size="55" font-weight="bold" fill="#FFFFFF">Forward.</text>
+<text x="90" y="427" font-family="Arial" font-size="20" fill="#D3DEE9">Websites, custom software, ERP, billing and</text>
+<text x="90" y="457" font-family="Arial" font-size="20" fill="#D3DEE9">inventory solutions for business growth.</text>
+<rect x="90" y="493" width="205" height="55" rx="9" fill="#B8D932"/><text x="113" y="527" font-family="Arial" font-size="16" fill="#10202B">Discuss Your Project</text>
+<rect x="310" y="493" width="185" height="55" rx="9" fill="none" stroke="#6B8296" stroke-width="2"/><text x="333" y="527" font-family="Arial" font-size="16" fill="#FFFFFF">Explore Our Work</text>
+<circle cx="1080" cy="355" r="158" fill="#123C58" stroke="#176B8A" stroke-width="4"/>
+<circle cx="1080" cy="355" r="205" fill="none" stroke="#176B8A" stroke-width="9" transform="rotate(-25 1080 355)"/>
+<ellipse cx="1080" cy="355" rx="220" ry="90" fill="none" stroke="#B8D932" stroke-width="3" transform="rotate(35 1080 355)"/>
+<circle cx="1080" cy="355" r="92" fill="#176B8A"/><path d="M1035 300 l40 -20 30 22 -8 34 28 22 -24 38 -33 -15 -10 -35 -29 -10z" fill="#F5F8FA"/>
+<rect x="850" y="230" width="150" height="74" rx="12" fill="#FFFFFF" opacity=".12" stroke="#8FB2C7"/><text x="870" y="260" font-family="Arial" font-size="13" fill="#FFFFFF">DIGITAL</text><text x="870" y="281" font-family="Arial" font-size="13" fill="#B8D932">SOLUTIONS</text>
+<rect x="1180" y="430" width="160" height="82" rx="12" fill="#FFFFFF" opacity=".12" stroke="#8FB2C7"/><text x="1200" y="462" font-family="Arial" font-size="13" fill="#FFFFFF">BUSINESS</text><text x="1200" y="484" font-family="Arial" font-size="13" fill="#B8D932">GROWTH</text>
+<text x="90" y="730" font-family="Arial" font-size="36" font-weight="bold" fill="#0D3150">Technology built around your business</text>
+<text x="90" y="770" font-family="Arial" font-size="18" fill="#5E6B75">Introduce the company and its verified experience.</text>
+<rect x="90" y="815" width="1260" height="100" rx="15" fill="#FFFFFF" stroke="#DCE4EA"/><text x="125" y="860" font-family="Arial" font-size="20" fill="#0D3150">Company introduction / verified history / business approach</text>
+<text x="90" y="1000" font-family="Arial" font-size="36" font-weight="bold" fill="#0D3150">Our Services</text>

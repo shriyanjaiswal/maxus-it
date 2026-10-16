@@ -1,0 +1,38 @@
+{
+  "color": {
+    "navy": "#0D3150",
+    "blue": "#176B8A",
+    "lime": "#B8D932",
+    "silver": "#929AA2",
+    "background": "#F5F8FA",
+    "surface": "#FFFFFF",
+    "graphite": "#27343E",
+    "mutedText": "#5E6B75",
+    "border": "#DCE4EA"
+  },
+  "typography": {
+    "heading": "Manrope or Plus Jakarta Sans",
+    "body": "1rem / 1.7",
+    "h1Desktop": "clamp(2.8rem, 5vw, 4.8rem)",
+    "h1Mobile": "clamp(2.25rem, 10vw, 3.25rem)"
+  },
+  "layout": {
+    "maxWidth": "1280px",
+    "desktopPagePadding": "32px",
+    "mobilePagePadding": "20px",
+    "desktopHeroHeight": "650-760px",
+    "cardRadius": "16px",
+    "buttonRadius": "10px",
+    "gridGap": "24px"
+  },
+  "breakpoints": {
+    "mobile": "<640px",
+    "tablet": "640px\u20131023px",
+    "desktop": ">=1024px"
+  },
+  "motion": {
+    "duration": "180\u2013450ms",
+    "rule": "Respect prefers-reduced-motion; avoid heavy parallax or motion that impairs readability."
+  },
+  "note": "These tokens are a starting point. Confirm the exact brand kit before production."
+}

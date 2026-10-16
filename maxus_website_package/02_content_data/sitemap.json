@@ -1,0 +1,151 @@
+{
+  "navigation": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "About Us",
+      "path": "/about"
+    },
+    {
+      "label": "Services",
+      "path": "/services"
+    },
+    {
+      "label": "Portfolio",
+      "path": "/portfolio"
+    },
+    {
+      "label": "Business Solutions",
+      "path": "/solutions"
+    },
+    {
+      "label": "Contact",
+      "path": "/contact"
+    }
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "title": "Home",
+      "sections": [
+        "Header",
+        "Hero",
+        "Company Introduction",
+        "Services Overview",
+        "Featured Portfolio",
+        "Business Solutions",
+        "How We Work",
+        "Final CTA",
+        "Footer"
+      ]
+    },
+    {
+      "path": "/about",
+      "title": "About Us",
+      "sections": [
+        "Page Hero",
+        "Company Story",
+        "Founding Members",
+        "Vision and Approach",
+        "Working Principles",
+        "CTA"
+      ]
+    },
+    {
+      "path": "/services",
+      "title": "Services",
+      "sections": [
+        "Page Hero",
+        "Service Grid",
+        "Engagement Process",
+        "CTA"
+      ]
+    },
+    {
+      "path": "/services/website-development",
+      "title": "Website Design & Development",
+      "template": "service-detail"
+    },
+    {
+      "path": "/services/custom-software",
+      "title": "Customized Software Development",
+      "template": "service-detail"
+    },
+    {
+      "path": "/services/billing-accounting",
+      "title": "Billing & Accounting Solutions",
+      "template": "service-detail"
+    },
+    {
+      "path": "/services/erp-business-management",
+      "title": "ERP & Business Management Solutions",
+      "template": "service-detail"
+    },
+    {
+      "path": "/services/inventory-management",
+      "title": "Inventory & Stock Management",
+      "template": "service-detail"
+    },
+    {
+      "path": "/services/mobile-app-development",
+      "title": "Mobile Application Development",
+      "template": "service-detail"
+    },
+    {
+      "path": "/services/digital-marketing",
+      "title": "Digital Marketing & Online Promotion",
+      "template": "service-detail"
+    },
+    {
+      "path": "/services/industry-solutions",
+      "title": "Customized Industry Solutions",
+      "template": "service-detail"
+    },
+    {
+      "path": "/solutions",
+      "title": "Business Solutions",
+      "sections": [
+        "Page Hero",
+        "Billing and Accounting",
+        "ERP",
+        "Inventory",
+        "CTA"
+      ]
+    },
+    {
+      "path": "/portfolio",
+      "title": "Portfolio",
+      "sections": [
+        "Page Hero",
+        "Project Filters",
+        "Project Grid",
+        "CTA"
+      ]
+    },
+    {
+      "path": "/portfolio/:slug",
+      "title": "Project Case Study",
+      "template": "case-study"
+    },
+    {
+      "path": "/contact",
+      "title": "Contact Us",
+      "sections": [
+        "Page Hero",
+        "Contact Details",
+        "Enquiry Form",
+        "WhatsApp CTA"
+      ]
+    },
+    {
+      "path": "/privacy-policy",
+      "title": "Privacy Policy",
+      "sections": [
+        "Policy Content"
+      ]
+    }
+  ],
+  "language": "English only"
+}

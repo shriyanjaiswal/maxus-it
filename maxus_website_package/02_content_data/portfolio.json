@@ -1,0 +1,26 @@
+{
+  "pageTitle": "Our Work",
+  "intro": "Explore selected projects delivered by MAXUS IT SERVICES PVT. LTD.",
+  "publicationRule": "Publish only approved projects and factual details. Do not invent project names, clients, outcomes, screenshots, or metrics.",
+  "projects": [
+    {
+      "slug": "project-example-01",
+      "title": "REPLACE_WITH_APPROVED_PROJECT_NAME",
+      "category": "REPLACE_WITH_CATEGORY",
+      "summary": "REPLACE_WITH_CLIENT_APPROVED_SUMMARY",
+      "thumbnail": "/assets/portfolio/project-example-01.webp",
+      "clientName": null,
+      "clientPermissionConfirmed": false,
+      "servicesDelivered": [],
+      "technologies": [],
+      "projectUrl": null,
+      "challenge": "",
+      "solution": "",
+      "implementationDetails": "",
+      "outcomes": [],
+      "screenshots": [],
+      "publicationApproved": false,
+      "notes": "Template record only. Replace with actual project information before launch."
+    }
+  ]
+}

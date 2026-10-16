@@ -1,0 +1,57 @@
+{
+  "companyName": "MAXUS IT SERVICES PVT. LTD.",
+  "tagline": "Smart Technology. Practical Solutions. Business Growth.",
+  "heroHeadline": "Technology That Moves Your Business Forward.",
+  "heroDescription": "From professional websites and custom software to ERP, billing and inventory solutions, MAXUS IT SERVICES helps businesses simplify operations and build for the future.",
+  "history": {
+    "statement": "The company began its journey in Mumbai in June 2011.",
+    "verificationRequired": true
+  },
+  "foundingMembers": [
+    {
+      "name": "Ram Jaiswal",
+      "verificationRequired": true
+    },
+    {
+      "name": "Krishna Murty Iyer",
+      "verificationRequired": true
+    }
+  ],
+  "contact": {
+    "businessContact": "Ram Jaiswal",
+    "title": "Business Head",
+    "phoneDisplay": "9559335909",
+    "phoneInternational": "+919559335909",
+    "email": "maxusit11@gail.com",
+    "whatsappNumberNeedsConfirmation": true
+  },
+  "associatedLocations": [
+    {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "verificationRequired": true
+    },
+    {
+      "city": "Varanasi",
+      "state": "Uttar Pradesh",
+      "verificationRequired": true
+    }
+  ],
+  "vision": "To help businesses unlock their potential through innovative technology and effective digital solutions.",
+  "approach": "We listen to business requirements, understand challenges, and work toward identifying suitable technology solutions.",
+  "language": "en",
+  "domain": {
+    "status": "existing",
+    "exactDomain": "NEEDS_CLIENT_DOMAIN",
+    "verificationRequired": true
+  },
+  "brandPaletteProvisional": {
+    "navy": "#0D3150",
+    "blue": "#176B8A",
+    "lime": "#B8D932",
+    "silver": "#929AA2",
+    "background": "#F5F8FA",
+    "graphite": "#27343E",
+    "note": "Provisional web palette only. Replace with exact values from the complete client brand kit."
+  }
+}

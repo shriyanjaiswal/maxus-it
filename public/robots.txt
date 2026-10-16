@@ -1,0 +1,7 @@
+# Replace REPLACE_WITH_CLIENT_DOMAIN with the confirmed live domain before launch.
+# The content package ships the domain as NEEDS_CLIENT_DOMAIN.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://REPLACE_WITH_CLIENT_DOMAIN/sitemap.xml
