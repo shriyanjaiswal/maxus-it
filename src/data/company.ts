@@ -17,11 +17,11 @@ export const company = {
   established: {
     label: 'Since June 2011',
     note: 'Our journey began in Mumbai',
-    unverified: true,
+    unverified: false,
   },
   founders: [
-    { name: 'Mr. Ram Jaiswal', unverified: true },
-    { name: 'Mr. Krishna Murty Iyer', unverified: true },
+    { name: 'Mr. Ram Jaiswal', unverified: false },
+    { name: 'Mr. Krishna Murty Iyer', unverified: false },
   ],
   contact: {
     person: 'Ram Jaiswal',
@@ -29,13 +29,13 @@ export const company = {
     phoneDisplay: '9559335909',
     phoneDial: '+919559335909',
     whatsapp: '919559335909',
-    whatsappUnverified: true,
-    email: 'maxusit11@gail.com',
-    emailUnverified: true,
+    whatsappUnverified: false,
+    email: 'maxusit11@gmail.com',
+    emailUnverified: false,
   },
   locations: [
-    { city: 'Mumbai', state: 'Maharashtra', unverified: true },
-    { city: 'Varanasi', state: 'Uttar Pradesh', unverified: true },
+    { city: 'Mumbai', state: 'Maharashtra', unverified: false },
+    { city: 'Varanasi', state: 'Uttar Pradesh', unverified: false },
   ],
   social: [
     { label: 'LinkedIn', key: 'linkedin' },

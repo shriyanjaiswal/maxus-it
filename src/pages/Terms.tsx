@@ -1,7 +1,7 @@
 import { company } from '../data/company'
 import { mailtoLink } from '../data/site'
 import { ContactCTA } from '../components/ContactCTA'
-import { DevNotice } from '../components/DevFlag'
+
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 
@@ -53,12 +53,7 @@ export function Terms() {
           <p className="text-sm text-muted">
             Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
-          <div className="mt-4">
-            <DevNotice>
-              Drafted for this build and not legal advice. Have the client&apos;s authorised
-              representative review and approve before publication.
-            </DevNotice>
-          </div>
+
           {sections.map((section) => (
             <div key={section.title} className="mt-10">
               <h2 className="text-xl font-bold text-navy">{section.title}</h2>

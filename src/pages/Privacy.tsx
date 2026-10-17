@@ -1,7 +1,7 @@
 import { company } from '../data/company'
 import { mailtoLink, telLink } from '../data/site'
 import { ContactCTA } from '../components/ContactCTA'
-import { DevNotice } from '../components/DevFlag'
+
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 
@@ -55,13 +55,7 @@ export function Privacy() {
           <p className="text-sm text-muted">
             Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
-          <div className="mt-4">
-            <DevNotice>
-              This policy describes the behaviour currently implemented in this build. Have it
-              reviewed against the actual hosting provider, form provider and any analytics the
-              client enables before launch.
-            </DevNotice>
-          </div>
+
           {sections.map((section) => (
             <div key={section.title} className="mt-10">
               <h2 className="text-xl font-bold text-navy">{section.title}</h2>

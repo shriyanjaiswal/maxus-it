@@ -1,9 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
-import { company } from '../data/company'
 import { getProject, projects, visibleProjects } from '../data/portfolio'
 import { getService } from '../data/services'
 import { ContactCTA } from '../components/ContactCTA'
-import { DevFlag, DevNotice } from '../components/DevFlag'
 import { Breadcrumbs } from '../components/PageHero'
 import { ProjectThumb } from '../components/artwork/ProjectThumb'
 import { Seo } from '../components/Seo'
@@ -47,11 +45,7 @@ export function CaseStudy() {
                 {project.title}
               </h1>
               <p className="mt-5 text-white/75">{project.summary}</p>
-              {!project.publicationApproved && (
-                <div className="mt-6">
-                  <DevFlag label="Layout sample — not a delivered client project" />
-                </div>
-              )}
+
             </div>
             <div className="overflow-hidden rounded-(--radius-card) border border-white/10 bg-surface">
               <ProjectThumb variant={project.artwork} />
@@ -105,15 +99,7 @@ export function CaseStudy() {
         </div>
       </section>
 
-      <section className="bg-canvas py-12 lg:py-16" aria-label="Publication status">
-        <div className="container-page">
-          <DevNotice>
-            Outcomes, client names, metrics and screenshots are omitted from this record. Add them
-            only when the client has confirmed the details and granted publication permission to{' '}
-            {company.contact.person} ({company.contact.phoneDisplay}).
-          </DevNotice>
-        </div>
-      </section>
+
 
       <section className="bg-surface py-16 lg:py-24" aria-labelledby="related-projects-heading">
         <div className="container-page">

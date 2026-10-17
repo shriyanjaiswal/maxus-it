@@ -2,7 +2,7 @@ import { Download, Handshake, Lightbulb, Target } from 'lucide-react'
 import { company, locationsLabel } from '../data/company'
 import { processSteps } from '../data/site'
 import { ContactCTA } from '../components/ContactCTA'
-import { DevFlag } from '../components/DevFlag'
+
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { SectionHeading } from '../components/SectionHeading'
@@ -108,18 +108,12 @@ export function About() {
                 {company.established.label}
               </dd>
               <dd className="mt-1 text-sm text-muted">{company.established.note}</dd>
-              {company.established.unverified && <DevFlag label="Verify before launch" />}
             </div>
             <div>
               <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
                 Associated Locations
               </dt>
               <dd className="mt-2 font-display text-lg font-bold text-navy">{locationsLabel}</dd>
-              {company.locations.some((l) => l.unverified) && (
-                <div className="mt-2">
-                  <DevFlag label="Confirm current locations" />
-                </div>
-              )}
             </div>
             <div className="sm:col-span-2">
               <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
@@ -129,7 +123,6 @@ export function About() {
                 {company.founders.map((founder) => (
                   <span key={founder.name} className="block">
                     {founder.name}
-                    {founder.unverified && <span className="ml-2 align-middle"><DevFlag label="Verify name and role" /></span>}
                   </span>
                 ))}
               </dd>

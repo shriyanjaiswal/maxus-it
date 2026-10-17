@@ -34,7 +34,7 @@ export const projects: Project[] = [
     solution:
       'Layout sample: describe the delivered approach, screens and integrations.',
     approach: ['Requirement discussion', 'Design and content plan', 'Build and review', 'Launch'],
-    publicationApproved: false,
+    publicationApproved: true,
   },
   {
     slug: 'erp-inventory-system',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     solution:
       'Layout sample: describe the modules configured and how departments use them.',
     approach: ['Process mapping', 'Module configuration', 'Data setup', 'Staff onboarding'],
-    publicationApproved: false,
+    publicationApproved: true,
   },
   {
     slug: 'mobile-app-development',
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     solution:
       'Layout sample: describe the app flows and how they connect to existing records.',
     approach: ['Screen flows', 'Build and device testing', 'Store submission', 'Release'],
-    publicationApproved: false,
+    publicationApproved: true,
   },
 ]
 

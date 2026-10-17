@@ -4,7 +4,7 @@ import { company } from '../data/company'
 import { getService, services } from '../data/services'
 import { ContactCTA } from '../components/ContactCTA'
 import { Icon } from '../components/Icon'
-import { DevNotice } from '../components/DevFlag'
+
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { ServiceGrid } from '../components/ServiceCard'
@@ -133,12 +133,7 @@ export function ServiceDetail() {
               </details>
             ))}
           </div>
-          <div className="mt-8">
-            <DevNotice>
-              Service capability wording is drafted from the approved content brief. Confirm the
-              feature list with the client before launch.
-            </DevNotice>
-          </div>
+
         </div>
       </section>
 

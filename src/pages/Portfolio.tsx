@@ -1,8 +1,6 @@
 import { useMemo, useState } from 'react'
-import { company } from '../data/company'
 import { visibleProjects } from '../data/portfolio'
 import { ContactCTA } from '../components/ContactCTA'
-import { DevNotice } from '../components/DevFlag'
 import { PageHero } from '../components/PageHero'
 import { ProjectCard } from '../components/ProjectCard'
 import { Seo } from '../components/Seo'
@@ -62,17 +60,6 @@ export function Portfolio() {
             </div>
           )}
 
-          <div className="mt-4">
-            <DevNotice>
-              The records below are layout samples taken from the approved design mockups. They are
-              not delivered client projects and are excluded from production builds until
-              <code className="mx-1 rounded bg-white/70 px-1.5 py-0.5 text-xs">
-                publicationApproved
-              </code>
-              is set in src/data/portfolio.ts. Replace them with approved case studies before
-              launch. Contact {company.contact.person} to confirm permissions.
-            </DevNotice>
-          </div>
 
           {shown.length > 0 ? (
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

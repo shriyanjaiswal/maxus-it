@@ -2,10 +2,8 @@ import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import { company, locationsLabel } from '../data/company'
 import { mailtoLink, telLink, whatsappLink } from '../data/site'
 import { ContactForm } from '../components/ContactForm'
-import { DevFlag } from '../components/DevFlag'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
-import { formProviderConfigured } from '../lib/enquiry'
 import { AnchorButton } from '../components/Button'
 
 type Channel = {
@@ -87,11 +85,6 @@ export function Contact() {
                         {channel.value}
                       </span>
                       <span className="mt-1 block text-xs text-muted">{channel.note}</span>
-                      {channel.unverified && (
-                        <span className="mt-2 block">
-                          <DevFlag label="Confirm before launch" />
-                        </span>
-                      )}
                     </span>
                   </a>
                 </li>
@@ -107,11 +100,6 @@ export function Contact() {
                   Associated locations
                 </p>
                 <p className="mt-1 font-display text-base font-bold text-navy">{locationsLabel}</p>
-                {company.locations.some((l) => l.unverified) && (
-                  <div className="mt-2">
-                    <DevFlag label="Confirm addresses before publishing" />
-                  </div>
-                )}
               </div>
             </div>
           </div>
@@ -121,11 +109,6 @@ export function Contact() {
             <p className="mt-2 text-sm text-muted">
               Fields marked with an asterisk are required.
             </p>
-            {!formProviderConfigured && (
-              <div className="mt-6">
-                <DevFlag label="Form provider not configured — submissions will not be delivered" />
-              </div>
-            )}
             <div className="mt-6">
               <ContactForm />
             </div>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import type { Project } from '../data/portfolio'
 import { ProjectThumb } from './artwork/ProjectThumb'
-import { DevFlag } from './DevFlag'
+
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -18,7 +18,6 @@ export function ProjectCard({ project }: { project: Project }) {
           <span className="rounded-md bg-blue-soft px-3 py-1 text-xs font-bold text-blue">
             {project.category}
           </span>
-          {!project.publicationApproved && <DevFlag label="Layout sample — not client-approved" />}
         </div>
         <h3 className="mt-4 text-lg font-bold text-navy">{project.title}</h3>
         <p className="mt-3 flex-1 text-sm text-muted">{project.summary}</p>
