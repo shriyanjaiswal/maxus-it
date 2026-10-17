@@ -32,9 +32,23 @@ export function Solutions() {
   return (
     <>
       <Seo
-        title="Business Solutions | Billing, ERP and Inventory | MAXUS IT SERVICES"
-        description="Billing and accounting, ERP and inventory management solutions that help businesses organise operations and manage records more efficiently."
+        title="Enterprise ERP Solutions & Business Accounting Software India | MAXUS IT SERVICES"
+        description="Explore ready-to-deploy enterprise software: Garment & Footwear ERP, School ERP, Business ERP-14 Accounting, and Touch POS billing tailored for Indian manufacturers and retailers."
         path="/solutions"
+        keywords="enterprise ERP solutions India, garment manufacturing ERP, footwear ERP software, touch POS billing India, school management system India, GST accounting software, retail inventory ERP"
+        ogImage="/assets/products/complete-it-solutions-banner.jpg"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Enterprise ERP & Business Solutions in India',
+          description: 'Specialized enterprise software suites engineered for educational institutions, garment manufacturing, retail trade, and wholesale distribution across India.',
+          url: 'https://www.maxusitservices.com/solutions',
+          provider: {
+            '@type': 'Organization',
+            name: company.name,
+            telephone: company.contact.phoneDial,
+          },
+        }}
       />
 
       <PageHero

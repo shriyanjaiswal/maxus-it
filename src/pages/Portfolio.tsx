@@ -18,9 +18,18 @@ export function Portfolio() {
   return (
     <>
       <Seo
-        title="Portfolio | MAXUS IT SERVICES"
-        description="Selected projects delivered by MAXUS IT SERVICES PVT. LTD. across websites, business systems and mobile applications."
+        title="Delivered Enterprise Software & Case Studies India | MAXUS IT SERVICES"
+        description="Review enterprise software implementations, retail POS deployments, Garment ERP platforms, and cloud web architectures delivered across India by Maxus IT Services."
         path="/portfolio"
+        keywords="ERP case studies India, garment software demo, retail POS implementations, school ERP case study, IT projects portfolio India, custom software portfolio"
+        ogImage="/assets/products/smart-it-solutions-banner.jpg"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Maxus IT Services Portfolio & Delivered Projects',
+          description: 'Production software systems, ERP suites, and digital platforms delivered for businesses in India.',
+          url: 'https://www.maxusitservices.com/portfolio',
+        }}
       />
 
       <PageHero

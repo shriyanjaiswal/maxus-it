@@ -29,9 +29,24 @@ export function About() {
   return (
     <>
       <Seo
-        title={`About Us | ${company.name}`}
-        description="MAXUS IT SERVICES PVT. LTD. delivers practical, scalable technology solutions with a customer-first approach. Learn about our vision, founders and working principles."
+        title="About Us | Established IT & ERP Software Company India | MAXUS IT SERVICES"
+        description="MAXUS IT SERVICES PVT. LTD. has delivered practical, scalable technology and enterprise ERP solutions since 2011 with a customer-first approach across India."
         path="/about"
+        keywords="about Maxus IT Services, IT company Mumbai Varanasi, software company since 2011, ERP providers India, Ram Jaiswal Maxus IT"
+        ogImage="/assets/products/smart-it-solutions-banner.jpg"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: 'About Maxus IT Services Pvt Ltd',
+          description: 'Corporate history, vision, executive leadership, and customer-first approach of Maxus IT Services.',
+          mainEntity: {
+            '@type': 'Organization',
+            name: company.name,
+            foundingDate: '2011-06',
+            slogan: company.slogan,
+            url: 'https://www.maxusitservices.com',
+          },
+        }}
       />
 
       <PageHero

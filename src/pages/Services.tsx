@@ -9,9 +9,25 @@ export function Services() {
   return (
     <>
       <Seo
-        title="Services | Website, Software, ERP and Billing Solutions | MAXUS IT SERVICES"
-        description="Eight service areas: website design and development, customised software, billing and accounting, ERP, inventory management, mobile apps, digital marketing and industry solutions."
+        title="Comprehensive IT & Software Development Services India | MAXUS IT SERVICES"
+        description="End-to-end IT services: Custom Software Development, ERP & CRM, GST Billing, Multi-Warehouse Inventory, Cloud Solutions, Mobile Apps, and Digital Marketing across India."
         path="/services"
+        keywords="IT services company India, custom software development, ERP development India, GST billing solutions, inventory management software, mobile app development India, cloud IT consulting"
+        ogImage="/assets/products/smart-it-solutions-banner.jpg"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Enterprise IT & Custom Software Development Services',
+          provider: {
+            '@type': 'Organization',
+            name: 'MAXUS IT SERVICES PVT. LTD.',
+            url: 'https://www.maxusitservices.com',
+          },
+          areaServed: {
+            '@type': 'Country',
+            name: 'India',
+          },
+        }}
       />
 
       <PageHero

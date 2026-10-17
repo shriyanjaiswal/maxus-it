@@ -48,9 +48,29 @@ export function Contact() {
   return (
     <>
       <Seo
-        title="Contact Us | MAXUS IT SERVICES"
-        description="Talk to MAXUS IT SERVICES PVT. LTD. about a website, custom software, ERP, billing or inventory requirement. Call, email, WhatsApp or send an enquiry."
+        title="Contact Us | Request ERP & Software Consultation Across India | MAXUS IT SERVICES"
+        description="Connect with MAXUS IT SERVICES PVT. LTD. for websites, custom software, ERP, billing or inventory software. Call +91-9559335909, WhatsApp, or request an instant proposal."
         path="/contact"
+        keywords="contact Maxus IT Services, ERP software quote India, software development enquiry, Ram Jaiswal contact, Maxus IT phone number"
+        ogImage="/assets/products/smart-it-solutions-banner.jpg"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact Maxus IT Services Pvt Ltd',
+          description: 'Official contact and consultation channels for software and ERP inquiries across India.',
+          mainEntity: {
+            '@type': 'Organization',
+            name: company.name,
+            telephone: company.contact.phoneDial,
+            email: company.contact.email,
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: company.contact.phoneDial,
+              contactType: 'sales & support',
+              areaServed: 'IN',
+            },
+          },
+        }}
       />
 
       <PageHero
