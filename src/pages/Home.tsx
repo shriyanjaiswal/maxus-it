@@ -110,6 +110,40 @@ export function Home() {
               },
             ],
           },
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'Which industries does Maxus IT Services cater to across India?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide specialized ERP and custom software solutions for Garment & Footwear manufacturing, wholesale & retail, Schools & Educational Institutes, Electronics & Appliance retail counters, Healthcare clinics, Hospitality, and multi-warehouse distribution businesses.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you implement ERP software remotely in other states outside Mumbai & Varanasi?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. We deploy secure cloud and hybrid on-premise systems for clients across all states in India. Our deployment includes remote server setup, database configuration, historical ledger migration, and video training sessions with 24/7 dedicated WhatsApp support.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does your billing and ERP software support Indian GST regulations?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'All our software platforms generate automated GST-compliant tax invoices, manage HSN/SAC codes, generate E-Way bills, and provide one-click exports for GSTR-1 and GSTR-3B filing.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can bills and payment receipts be sent directly to customers on WhatsApp?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Both our Garment & Footwear ERP and Business ERP-14 accounting suites come equipped with automated WhatsApp dispatch, allowing you to send professional digital invoices and payment receipts directly to client mobile phones.',
+              },
+            },
+          ],
         }}
       />
 
@@ -453,6 +487,59 @@ export function Home() {
       </section>
 
       <ProcessSteps tone="muted" />
+
+      {/* Nationwide ERP & IT Services FAQ Section */}
+      <section className="bg-surface py-16 lg:py-24 border-t border-line" aria-labelledby="home-faq-heading">
+        <div className="container-page max-w-4xl">
+          <SectionHeading
+            id="home-faq-heading"
+            eyebrow="Frequently Asked Questions"
+            title="Everything You Need to Know About Our IT & ERP Solutions"
+            description="Clear answers regarding software implementation, GST compliance, remote deployment, and post-launch technical support across India."
+          />
+
+          <div className="mt-12 space-y-4">
+            {[
+              {
+                q: 'Which industries does Maxus IT Services cater to across India?',
+                a: 'We provide specialized ERP and custom software solutions for Garment & Footwear manufacturing, wholesale & retail, Schools & Educational Institutes, Electronics & Appliance retail counters, Healthcare clinics, Hospitality, and multi-warehouse distribution businesses.',
+              },
+              {
+                q: 'Can you implement ERP software remotely in other states outside Mumbai & Varanasi?',
+                a: 'Yes. We deploy secure cloud and hybrid on-premise systems for clients across all states in India. Our deployment includes remote server setup, database configuration, historical ledger migration, and video training sessions with 24/7 dedicated WhatsApp support.',
+              },
+              {
+                q: 'Does your billing and ERP software support Indian GST regulations?',
+                a: 'Absolutely. All our software platforms generate automated GST-compliant tax invoices, manage HSN/SAC codes, generate E-Way bills, and provide one-click exports for GSTR-1 and GSTR-3B filing.',
+              },
+              {
+                q: 'Can bills and payment receipts be sent directly to customers on WhatsApp?',
+                a: 'Yes. Both our Garment & Footwear ERP and Business ERP-14 accounting suites come equipped with automated WhatsApp dispatch, allowing you to send professional digital invoices and payment receipts directly to client mobile phones.',
+              },
+              {
+                q: 'How does your team handle data migration from our existing spreadsheets?',
+                a: 'Our engineering team conducts structured data sanitization and imports your products, parties, open balances, and inventory ledgers from Excel or legacy accounting systems directly into your new software without operational disruption.',
+              },
+            ].map((faq) => (
+              <details
+                key={faq.q}
+                className="group rounded-(--radius-card) border border-line bg-canvas p-6 transition-all open:border-blue/50 open:shadow-xs"
+              >
+                <summary className="cursor-pointer list-none font-display text-base font-bold text-navy flex items-center justify-between">
+                  <span>{faq.q}</span>
+                  <span className="ml-4 shrink-0 text-blue font-bold text-lg transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm text-muted leading-relaxed border-t border-line/60 pt-3">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <ContactCTA />
     </>
   )

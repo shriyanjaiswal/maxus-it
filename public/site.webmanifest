@@ -1,0 +1,23 @@
+{
+  "name": "MAXUS IT SERVICES PVT. LTD.",
+  "short_name": "Maxus IT",
+  "description": "Smart IT & ERP Solutions Across India. Garment ERP, Business ERP-14, School Management & Custom Software.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071F35",
+  "theme_color": "#0D3150",
+  "icons": [
+    {
+      "src": "/assets/brand/glossy-earth-atom-emblem.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/brand/glossy-maxus-it-tech-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

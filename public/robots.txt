@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+# AI & Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 Sitemap: https://www.maxusitservices.com/sitemap.xml
