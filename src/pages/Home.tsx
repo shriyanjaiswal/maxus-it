@@ -121,7 +121,7 @@ export function Home() {
 
       <section className="bg-surface py-12 lg:py-16" aria-label="Company overview">
         <div className="container-page">
-          <ul className="grid divide-line rounded-(--radius-card) border border-line bg-surface shadow-(--shadow-card) sm:grid-cols-2 sm:divide-x lg:grid-cols-4">
+          <ul className="grid divide-y sm:divide-y-0 sm:divide-x divide-line rounded-(--radius-card) border border-line bg-surface shadow-(--shadow-card) sm:grid-cols-2 lg:grid-cols-4">
             {facts.map((fact) => (
               <li key={fact.label} className="flex gap-4 p-6">
                 <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-soft text-blue">
