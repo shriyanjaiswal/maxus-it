@@ -122,6 +122,218 @@ export function Solutions() {
         </div>
       </section>
 
+      <section className="bg-surface py-16 lg:py-24" aria-labelledby="industry-suites-heading">
+        <div className="container-page">
+          <SectionHeading
+            id="industry-suites-heading"
+            eyebrow="Specialized Software Suites"
+            title="Complete ERP Solutions Engineered for Your Sector"
+            description="Proven, ready-to-deploy platforms tailored for educational institutions and retail businesses, complete with mobile apps and real-time analytics."
+          />
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* School ERP Card */}
+            <div className="flex flex-col overflow-hidden rounded-(--radius-card) border border-line bg-canvas transition-all hover:-translate-y-1 hover:shadow-(--shadow-lift)">
+              <div className="aspect-16/10 overflow-hidden border-b border-line">
+                <img
+                  src="/assets/products/school-erp-software.jpg"
+                  alt="School ERP Software"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <span className="self-start rounded-md bg-blue-soft px-3 py-1 text-xs font-bold text-blue">
+                  Education ERP
+                </span>
+                <h3 className="mt-3 text-xl font-bold text-navy">School ERP Software</h3>
+                <p className="mt-2 text-sm text-muted">
+                  Streamlines academic, fee management, biometric attendance, examination, and parent WhatsApp/SMS communication in one platform.
+                </p>
+                <ul className="mt-4 space-y-1.5 text-xs text-ink">
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Student & Admission Records
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Online Fee Payment & Dues Tracking
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Automated Timetable & Vehicle Tracking
+                  </li>
+                </ul>
+                <div className="mt-6 pt-4 border-t border-line">
+                  <LinkButton to="/portfolio/school-erp-software" variant="outlineDark" className="w-full py-2.5" arrow>
+                    View School ERP
+                  </LinkButton>
+                </div>
+              </div>
+            </div>
+
+            {/* Institute Management Card */}
+            <div className="flex flex-col overflow-hidden rounded-(--radius-card) border border-line bg-canvas transition-all hover:-translate-y-1 hover:shadow-(--shadow-lift)">
+              <div className="aspect-16/10 overflow-hidden border-b border-line">
+                <img
+                  src="/assets/products/institute-management-software.jpg"
+                  alt="Institute Management Software"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <span className="self-start rounded-md bg-blue-soft px-3 py-1 text-xs font-bold text-blue">
+                  Coaching & Colleges
+                </span>
+                <h3 className="mt-3 text-xl font-bold text-navy">Institute Management Software</h3>
+                <p className="mt-2 text-sm text-muted">
+                  Smart solution for coaching centers, colleges, and academies to handle admissions, batches, test marks, and instant student certificates.
+                </p>
+                <ul className="mt-4 space-y-1.5 text-xs text-ink">
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Inquiry Capture & Lead Management
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Course & Batch Scheduling
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    ID Card Printing & Certificate Issuance
+                  </li>
+                </ul>
+                <div className="mt-6 pt-4 border-t border-line">
+                  <LinkButton to="/portfolio/institute-management-software" variant="outlineDark" className="w-full py-2.5" arrow>
+                    View Institute Software
+                  </LinkButton>
+                </div>
+              </div>
+            </div>
+
+            {/* Electronic Store ERP Card */}
+            <div className="flex flex-col overflow-hidden rounded-(--radius-card) border border-line bg-canvas transition-all hover:-translate-y-1 hover:shadow-(--shadow-lift)">
+              <div className="aspect-16/10 overflow-hidden border-b border-line">
+                <img
+                  src="/assets/products/electronic-store-erp-software.jpg"
+                  alt="Electronic Store ERP Software"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <span className="self-start rounded-md bg-blue-soft px-3 py-1 text-xs font-bold text-blue">
+                  Retail & Electronics
+                </span>
+                <h3 className="mt-3 text-xl font-bold text-navy">Electronic Store ERP Software</h3>
+                <p className="mt-2 text-sm text-muted">
+                  Powerful retail ERP for electronics, mobiles, and appliances with IMEI/serial tracking, warranty claims, multi-branch stock, and GST POS.
+                </p>
+                <ul className="mt-4 space-y-1.5 text-xs text-ink">
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Barcode & Serial Number Inventory
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Rapid POS & Multi-Branch Accounting
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Warranty Logs & Service Center Requests
+                  </li>
+                </ul>
+                <div className="mt-6 pt-4 border-t border-line">
+                  <LinkButton to="/portfolio/electronic-store-erp-software" variant="outlineDark" className="w-full py-2.5" arrow>
+                    View Store ERP
+                  </LinkButton>
+                </div>
+              </div>
+            </div>
+
+            {/* Garment & Footwear ERP Card */}
+            <div className="flex flex-col overflow-hidden rounded-(--radius-card) border border-line bg-canvas transition-all hover:-translate-y-1 hover:shadow-(--shadow-lift)">
+              <div className="aspect-16/10 overflow-hidden border-b border-line">
+                <img
+                  src="/assets/products/garment-footwear-erp-software.jpg"
+                  alt="Garment and Footwear ERP Software"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <span className="self-start rounded-md bg-blue-soft px-3 py-1 text-xs font-bold text-blue">
+                  Apparel & Manufacturing
+                </span>
+                <h3 className="mt-3 text-xl font-bold text-navy">Garment & Footwear ERP</h3>
+                <p className="mt-2 text-sm text-muted">
+                  End-to-end ERP for retailers, wholesalers, manufacturers, and distributors covering design-to-delivery, style/size/color BOM, and WhatsApp bills.
+                </p>
+                <ul className="mt-4 space-y-1.5 text-xs text-ink">
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Style, Size, Color & BOM Management
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Cutting, Stitching & Finishing Stages
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Mobile Field Sales & WhatsApp Invoicing
+                  </li>
+                </ul>
+                <div className="mt-6 pt-4 border-t border-line">
+                  <LinkButton to="/portfolio/garment-footwear-erp-software" variant="outlineDark" className="w-full py-2.5" arrow>
+                    View Garment ERP
+                  </LinkButton>
+                </div>
+              </div>
+            </div>
+
+            {/* Business ERP-14 Accounting Card */}
+            <div className="flex flex-col overflow-hidden rounded-(--radius-card) border border-line bg-canvas transition-all hover:-translate-y-1 hover:shadow-(--shadow-lift)">
+              <div className="aspect-16/10 overflow-hidden border-b border-line">
+                <img
+                  src="/assets/products/business-erp14-accounting-software.jpg"
+                  alt="Business ERP-14 Accounting Software"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <span className="self-start rounded-md bg-blue-soft px-3 py-1 text-xs font-bold text-blue">
+                  Multi-Industry Accounting
+                </span>
+                <h3 className="mt-3 text-xl font-bold text-navy">Business ERP-14 Accounting</h3>
+                <p className="mt-2 text-sm text-muted">
+                  Modern Touch POS billing, accurate financial ledgers, Excel bulk handling, and automated backup for retail, manufacturing, healthcare, and hospitality.
+                </p>
+                <ul className="mt-4 space-y-1.5 text-xs text-ink">
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Rapid Touch POS Counter Billing
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Online & Offline Hybrid Mode
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-blue" />
+                    Excel Import/Export & Auto Cloud Backup
+                  </li>
+                </ul>
+                <div className="mt-6 pt-4 border-t border-line">
+                  <LinkButton to="/portfolio/business-erp14-accounting-software" variant="outlineDark" className="w-full py-2.5" arrow>
+                    View Business ERP-14
+                  </LinkButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-navy py-16 lg:py-20" aria-labelledby="start-heading">
         <div className="container-page grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
           <div>

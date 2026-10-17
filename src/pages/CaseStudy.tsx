@@ -48,7 +48,15 @@ export function CaseStudy() {
 
             </div>
             <div className="overflow-hidden rounded-(--radius-card) border border-white/10 bg-surface">
-              <ProjectThumb variant={project.artwork} />
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <ProjectThumb variant={project.artwork} />
+              )}
             </div>
           </div>
         </div>
@@ -78,6 +86,26 @@ export function CaseStudy() {
           <div>
             <h2 className="text-2xl font-extrabold text-navy sm:text-3xl">The solution</h2>
             <p className="mt-5 text-muted">{project.solution}</p>
+
+            {project.keyFeatures && project.keyFeatures.length > 0 && (
+              <>
+                <h2 className="mt-12 text-2xl font-extrabold text-navy sm:text-3xl">
+                  Key software features
+                </h2>
+                <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
+                  {project.keyFeatures.map((feat) => (
+                    <li
+                      key={feat}
+                      className="flex items-start gap-2.5 rounded-xl border border-line bg-canvas p-3 text-xs font-medium text-ink"
+                    >
+                      <span className="mt-1 size-1.5 shrink-0 rounded-full bg-blue" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
             <h2 className="mt-12 text-lg font-bold text-navy">Services delivered</h2>
             <ul className="mt-4 flex flex-wrap gap-3">
               {project.services.map((serviceSlug) => {

@@ -6,6 +6,9 @@ export const company = {
   name: 'MAXUS IT SERVICES PVT. LTD.',
   shortName: 'Maxus IT',
   tagline: 'Smart Technology. Practical Solutions. Business Growth.',
+  slogan: 'THE BEST TECH, BEST FUTURE',
+  website: 'www.maxusitservices.com',
+  websiteUrl: 'https://www.maxusitservices.com',
   heroHeadline: 'Technology That Moves Your Business Forward.',
   heroEyebrow: 'Smart Technology. Practical Solutions. Business Growth.',
   heroDescription:

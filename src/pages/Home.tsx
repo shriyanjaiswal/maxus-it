@@ -47,12 +47,14 @@ const facts = [
 ]
 
 const solutionChips = [
+  { icon: 'workflow', label: 'School ERP Software' },
+  { icon: 'graduation-cap', label: 'Institute Management' },
+  { icon: 'boxes', label: 'Electronic Store ERP' },
   { icon: 'receipt-text', label: 'Billing & Invoicing' },
-  { icon: 'file-text', label: 'Accounting' },
-  { icon: 'boxes', label: 'Inventory Management' },
-  { icon: 'workflow', label: 'ERP Solutions' },
-  { icon: 'bar-chart-3', label: 'Business Reports' },
-  { icon: 'users', label: 'Multi-User Access' },
+  { icon: 'file-text', label: 'Financial Accounting' },
+  { icon: 'smartphone', label: 'Mobile App Solutions' },
+  { icon: 'bar-chart-3', label: 'Reports & Analytics' },
+  { icon: 'shield-check', label: 'Secure Cloud & POS' },
 ]
 
 export function Home() {
@@ -242,7 +244,7 @@ export function Home() {
           />
           {projects.length > 0 ? (
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {projects.slice(0, 3).map((project) => (
+              {projects.slice(0, 6).map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}
             </div>
