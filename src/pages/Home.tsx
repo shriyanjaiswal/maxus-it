@@ -257,6 +257,36 @@ export function Home() {
         </div>
       </section>
 
+      {/* Modern Technology Stack & Frameworks Strip */}
+      <section className="border-b border-line bg-canvas-subtle/80 py-5 lg:py-6" aria-label="Modern Technology Stack">
+        <div className="container-page flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted shrink-0">
+            <span className="size-2 rounded-full bg-lime-dark animate-pulse"></span>
+            <span>Production Tech Stack:</span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2.5 sm:gap-3">
+            {[
+              'React & Next.js',
+              'Node.js & Express',
+              'TypeScript',
+              'PostgreSQL & MySQL',
+              'Tailwind CSS',
+              'Docker & AWS Cloud',
+              'Python & AI Agents',
+              'Telegram & WhatsApp Bot APIs',
+              'Meta Conversions API',
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="inline-flex items-center rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold text-ink shadow-xs hover:border-blue hover:text-blue transition-colors cursor-default"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-surface py-12 lg:py-16" aria-label="Company overview">
         <div className="container-page">
           <ScrollReveal direction="up">

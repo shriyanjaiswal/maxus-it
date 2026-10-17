@@ -8,6 +8,8 @@ import { Solutions } from './pages/Solutions'
 import { Portfolio } from './pages/Portfolio'
 import { CaseStudy } from './pages/CaseStudy'
 import { Contact } from './pages/Contact'
+import { Process } from './pages/Process'
+import { Pricing } from './pages/Pricing'
 import { Privacy } from './pages/Privacy'
 import { Terms } from './pages/Terms'
 import { NotFound } from './pages/NotFound'
@@ -21,6 +23,8 @@ export function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/solutions" element={<Solutions />} />
+        <Route path="/process" element={<Process />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:slug" element={<CaseStudy />} />
         <Route path="/contact" element={<Contact />} />

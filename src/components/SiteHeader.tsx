@@ -84,27 +84,30 @@ export function SiteHeader() {
                   />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute left-1/2 top-full z-50 w-[320px] -translate-x-1/2 pt-3">
-                    <ul className="rounded-(--radius-card) border border-line bg-surface p-2 shadow-(--shadow-lift)">
-                      <li>
+                  <div className="absolute left-0 top-full z-50 w-[580px] pt-3">
+                    <div className="rounded-(--radius-card) border border-line bg-surface p-3 shadow-(--shadow-lift)">
+                      <div className="mb-2 pb-2 border-b border-line flex items-center justify-between px-2">
                         <Link
                           to="/services"
-                          className="block rounded-lg px-3 py-2 text-sm font-semibold text-blue hover:bg-canvas"
+                          className="text-xs font-bold text-blue hover:underline uppercase tracking-wider"
                         >
-                          All Services
+                          View All 12 Services →
                         </Link>
-                      </li>
-                      {services.map((service) => (
-                        <li key={service.slug}>
-                          <Link
-                            to={`/services/${service.slug}`}
-                            className="block rounded-lg px-3 py-2 text-sm text-ink hover:bg-canvas hover:text-blue"
-                          >
-                            {service.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                        <span className="text-[11px] text-muted">Enterprise & Digital Solutions</span>
+                      </div>
+                      <ul className="grid grid-cols-2 gap-1 max-h-[420px] overflow-y-auto">
+                        {services.map((service) => (
+                          <li key={service.slug}>
+                            <Link
+                              to={`/services/${service.slug}`}
+                              className="block rounded-lg px-2.5 py-1.5 text-xs font-medium text-ink hover:bg-canvas hover:text-blue transition-colors"
+                            >
+                              {service.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 )}
               </div>

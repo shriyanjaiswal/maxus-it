@@ -14,6 +14,8 @@ export const nav = [
   { label: 'About Us', to: '/about' },
   { label: 'Services', to: '/services', children: services.map((s) => ({ label: s.title, to: `/services/${s.slug}` })) },
   { label: 'Solutions', to: '/solutions' },
+  { label: 'Process', to: '/process' },
+  { label: 'Pricing', to: '/pricing' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'Contact', to: '/contact' },
 ]
@@ -25,6 +27,10 @@ export const footerServices = [
   { label: 'ERP Solutions', slug: 'erp-business-management' },
   { label: 'Inventory Management', slug: 'inventory-management' },
   { label: 'Mobile App Development', slug: 'mobile-app-development' },
+  { label: 'Telegram & WhatsApp Bots', slug: 'telegram-bot-development' },
+  { label: 'Meta Ads & Campaigns', slug: 'meta-ads-campaigns' },
+  { label: 'Business Automation & AI', slug: 'business-automation' },
+  { label: 'UI/UX Design', slug: 'ui-ux-design' },
   { label: 'Digital Marketing', slug: 'digital-marketing' },
   { label: 'Industry Solutions', slug: 'industry-solutions' },
 ].map((item) => ({ ...item, to: `/services/${item.slug}` }))
@@ -34,6 +40,8 @@ export const quickLinks = [
   { label: 'About Us', to: '/about' },
   { label: 'Services', to: '/services' },
   { label: 'Solutions', to: '/solutions' },
+  { label: 'Process', to: '/process' },
+  { label: 'Pricing', to: '/pricing' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'Contact', to: '/contact' },
 ]
