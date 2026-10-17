@@ -94,20 +94,20 @@ export function Home() {
           aria-hidden="true"
         />
 
-        <div className="container-page relative grid items-center gap-12 lg:grid-cols-[54%_46%] lg:gap-10">
-          <div>
+        <div className="container-page relative grid items-center gap-10 lg:grid-cols-[54%_46%] lg:gap-10">
+          <div className="min-w-0 max-w-full">
             {/* Enterprise status badge */}
-            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-lime/30 bg-lime/10 px-3 py-1.5 text-[11px] font-bold tracking-wide text-lime uppercase backdrop-blur-md sm:px-4 sm:text-xs">
+            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-lime/30 bg-lime/10 px-3 py-1.5 text-[10.5px] font-bold tracking-wide text-lime uppercase backdrop-blur-md sm:px-4 sm:text-xs">
               <span className="relative flex size-2 shrink-0">
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-lime opacity-75" />
                 <span className="relative inline-flex size-2 rounded-full bg-lime" />
               </span>
-              <span className="truncate">Smart Tech • Practical Solutions • Business Growth</span>
+              <span className="leading-tight">Smart Tech • Practical Solutions • Business Growth</span>
             </div>
 
             <h1
               id="hero-heading"
-              className="mt-5 text-balance-tight font-display text-[clamp(2.15rem,8vw,3.5rem)] font-extrabold tracking-tight text-white lg:text-[clamp(3rem,4.5vw,4.5rem)] lg:leading-[1.08]"
+              className="mt-5 text-balance-tight font-display text-[clamp(1.85rem,7.5vw,3.25rem)] font-extrabold tracking-tight break-words text-white lg:text-[clamp(3rem,4.5vw,4.5rem)] lg:leading-[1.08]"
             >
               Technology That Moves Your{' '}
               <span className="bg-gradient-to-r from-lime via-[#d8f45a] to-white bg-clip-text text-transparent">
@@ -120,10 +120,10 @@ export function Home() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
-              <LinkButton to="/contact" variant="lime" arrow className="shadow-[0_0_24px_rgba(184,217,50,0.35)] transition-all hover:shadow-[0_0_32px_rgba(184,217,50,0.5)]">
+              <LinkButton to="/contact" variant="lime" arrow className="w-full justify-center shadow-[0_0_24px_rgba(184,217,50,0.35)] transition-all hover:shadow-[0_0_32px_rgba(184,217,50,0.5)] sm:w-auto">
                 Discuss Your Project
               </LinkButton>
-              <LinkButton to="/services" variant="outlineLight">
+              <LinkButton to="/services" variant="outlineLight" className="w-full justify-center sm:w-auto">
                 Explore Our Services
               </LinkButton>
             </div>
@@ -147,7 +147,7 @@ export function Home() {
           </div>
 
           {/* Right column: Interactive focal centerpiece with floating glass stat badges */}
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex max-w-full items-center justify-center overflow-hidden py-4 sm:overflow-visible">
             {/* Ambient halo glow */}
             <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-blue/30 via-lime/15 to-transparent blur-2xl" />
 
@@ -163,7 +163,7 @@ export function Home() {
             </div>
 
             {/* Main Hero artwork */}
-            <div className="relative z-10 w-full max-w-[540px]">
+            <div className="relative z-10 w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[540px]">
               <HeroGlobe className="mx-auto w-full drop-shadow-[0_20px_50px_rgba(7,31,53,0.8)]" />
             </div>
 
