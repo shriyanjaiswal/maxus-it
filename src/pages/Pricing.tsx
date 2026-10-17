@@ -1,4 +1,4 @@
-import { CheckCircle2, ArrowRight, ShieldCheck, Zap, Headphones } from 'lucide-react'
+import { CheckCircle2, ArrowRight, ShieldCheck, Layers, Headphones } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Seo } from '../components/Seo'
 import { PageHero } from '../components/PageHero'
@@ -204,7 +204,7 @@ export function Pricing() {
           </div>
           <div className="flex gap-4 items-start">
             <div className="p-3 rounded-lg bg-lime-dark/10 text-lime-dark shrink-0">
-              <Zap className="size-6" />
+              <Layers className="size-6" />
             </div>
             <div>
               <h4 className="font-bold text-navy text-lg">Milestone Peace of Mind</h4>
