@@ -1,4 +1,4 @@
-import { Download, Handshake, Lightbulb, Target } from 'lucide-react'
+import { Handshake, Lightbulb, Target } from 'lucide-react'
 import { company, locationsLabel } from '../data/company'
 import { processSteps } from '../data/site'
 import { ContactCTA } from '../components/ContactCTA'
@@ -6,59 +6,6 @@ import { ContactCTA } from '../components/ContactCTA'
 import { PageHero } from '../components/PageHero'
 import { Seo } from '../components/Seo'
 import { SectionHeading } from '../components/SectionHeading'
-
-const brandDownloads = [
-  {
-    title: '4K Official Brand Logo',
-    description:
-      'Master full-color transparent lockup with 3D Earth Atom emblem and corporate typography.',
-    preview: '/assets/brand/maxus-it-services-logo-transparent.png',
-    fileName: 'MAXUS_IT_SERVICES_LOGO_4K_TRANSPARENT.png',
-    format: 'PNG (Transparent)',
-    dimensions: '4K Ultra HD',
-    type: 'Full Lockup',
-  },
-  {
-    title: '3D Glossy Earth Atom Emblem',
-    description:
-      'Official standalone symbol combining the global orbit, atom geometry and forward tech figure.',
-    preview: '/assets/brand/glossy-earth-atom-emblem.png',
-    fileName: 'Glossy_Earth_Atom_Emblem.png',
-    format: 'PNG (Transparent)',
-    dimensions: 'High-Res Symbol',
-    type: 'Symbol Mark',
-  },
-  {
-    title: 'Glossy Tech Icon & App Badge',
-    description:
-      'Rounded squircle application badge designed for digital services, app stores and mobile icons.',
-    preview: '/assets/brand/glossy-maxus-it-tech-icon.png',
-    fileName: 'Glossy_Maxus_IT_Tech_Icon.png',
-    format: 'PNG (High-Res)',
-    dimensions: 'Square App Icon',
-    type: 'App Icon',
-  },
-  {
-    title: '3D Core Services Pillar Emblem',
-    description:
-      'Brand emblem with the 6 core pillars: Cloud, Web & App, IT Consulting, Cyber Security, Infrastructure & Digital Transformation.',
-    preview: '/assets/brand/maxus-core-services-pillar.jpg',
-    fileName: 'Maxus_IT_Core_Services_Pillar.jpg',
-    format: 'JPG (High-Res)',
-    dimensions: 'High-Res Square',
-    type: 'Brand Graphic',
-  },
-  {
-    title: 'Official 3D Circular Seal Emblem',
-    description:
-      'High-resolution round company insignia with the 3D globe atom core and official slogan banner.',
-    preview: '/assets/brand/maxus-round-seal-logo.jpg',
-    fileName: 'Maxus_IT_Round_Seal_Emblem.jpg',
-    format: 'JPG (High-Res)',
-    dimensions: 'High-Res Round',
-    type: 'Corporate Seal',
-  },
-]
 
 const principles = [
   {
@@ -210,58 +157,6 @@ export function About() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section className="bg-surface py-16 lg:py-24" aria-labelledby="brand-kit-heading">
-        <div className="container-page">
-          <SectionHeading
-            id="brand-kit-heading"
-            eyebrow="Official Brand Assets"
-            title="Brand identity & downloadable media kit"
-            description="Official visual assets for MAXUS IT SERVICES PVT. LTD. Authorized for partner communications, press materials, and client portals."
-          />
-
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {brandDownloads.map((asset) => (
-              <div
-                key={asset.title}
-                className="group flex flex-col overflow-hidden rounded-(--radius-card) border border-line bg-surface transition-all duration-200 hover:-translate-y-1 hover:shadow-(--shadow-lift)"
-              >
-                <div className="flex h-56 items-center justify-center border-b border-line bg-gradient-to-b from-[#0a1f33] to-[#071626] p-6">
-                  <img
-                    src={asset.preview}
-                    alt={asset.title}
-                    className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="rounded-md bg-blue-soft px-2.5 py-0.5 text-xs font-bold text-blue">
-                      {asset.type}
-                    </span>
-                    <span className="text-xs font-medium text-muted">
-                      {asset.dimensions}
-                    </span>
-                  </div>
-                  <h3 className="mt-3 text-lg font-bold text-navy">{asset.title}</h3>
-                  <p className="mt-2 flex-1 text-sm text-muted">{asset.description}</p>
-                  <div className="mt-6 flex items-center justify-between gap-3 border-t border-line/60 pt-4">
-                    <span className="text-xs font-medium text-muted">{asset.format}</span>
-                    <a
-                      href={asset.preview}
-                      download={asset.fileName}
-                      className="inline-flex items-center gap-1.5 rounded-(--radius-btn) bg-navy px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-blue focus-visible:outline-none"
-                    >
-                      <Download className="size-3.5" aria-hidden="true" />
-                      Download
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
