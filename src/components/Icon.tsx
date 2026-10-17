@@ -10,6 +10,7 @@ import {
   FileText,
   Gauge,
   Globe2,
+  GraduationCap,
   Handshake,
   Headphones,
   Layers,
@@ -28,7 +29,6 @@ import {
   Search,
   ShieldCheck,
   Smartphone,
-  Sparkles,
   Target,
   Users,
   Workflow,
@@ -47,6 +47,7 @@ const icons: Record<string, LucideIcon> = {
   'file-text': FileText,
   gauge: Gauge,
   globe: Globe2,
+  'graduation-cap': GraduationCap,
   handshake: Handshake,
   headphones: Headphones,
   layers: Layers,
@@ -65,7 +66,6 @@ const icons: Record<string, LucideIcon> = {
   search: Search,
   'shield-check': ShieldCheck,
   smartphone: Smartphone,
-  sparkles: Sparkles,
   target: Target,
   users: Users,
   workflow: Workflow,
@@ -78,6 +78,6 @@ type IconProps = {
 }
 
 export function Icon({ name, className = 'size-5', strokeWidth = 1.8 }: IconProps) {
-  const Glyph = icons[name] ?? Sparkles
+  const Glyph = icons[name] ?? CheckCircle2
   return <Glyph className={className} strokeWidth={strokeWidth} aria-hidden="true" />
 }
