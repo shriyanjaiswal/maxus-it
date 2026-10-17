@@ -122,7 +122,7 @@ export function About() {
           <dl className="grid gap-6 rounded-(--radius-card) border border-line bg-canvas p-8 sm:grid-cols-2">
             <div>
               <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
-                Established
+                Incorporation &amp; Heritage
               </dt>
               <dd className="mt-2 font-display text-lg font-bold text-navy">
                 {company.established.label}
@@ -131,19 +131,21 @@ export function About() {
             </div>
             <div>
               <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
-                Associated Locations
+                Operating Offices &amp; Regional Presence
               </dt>
               <dd className="mt-2 font-display text-lg font-bold text-navy">{locationsLabel}</dd>
+              <dd className="mt-1 text-sm text-muted">Dual regional delivery centers across India</dd>
             </div>
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-2 pt-4 border-t border-line/60">
               <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
-                Founded By
+                Executive Leadership &amp; Board of Directors
               </dt>
-              <dd className="mt-2 space-y-1 font-display text-lg font-bold text-navy">
+              <dd className="mt-3 grid gap-3 sm:grid-cols-2 font-display text-base font-bold text-navy">
                 {company.founders.map((founder) => (
-                  <span key={founder.name} className="block">
-                    {founder.name}
-                  </span>
+                  <div key={founder.name} className="flex items-center gap-2.5 rounded-lg border border-line/70 bg-surface px-4 py-2.5">
+                    <span className="size-2 rounded-full bg-blue" />
+                    <span>{founder.name}</span>
+                  </div>
                 ))}
               </dd>
             </div>
