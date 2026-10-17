@@ -21,9 +21,31 @@ export function CaseStudy() {
   return (
     <>
       <Seo
-        title={`${project.title} | ${project.category} | MAXUS IT SERVICES`}
-        description={project.summary}
+        title={`${project.title} | Software Solutions India | MAXUS IT SERVICES`}
+        description={`${project.summary} Engineered by Maxus IT Services for businesses across India.`}
         path={`/portfolio/${project.slug}`}
+        keywords={`${project.title}, ${project.category}, ERP software India, business software solutions India, Maxus IT Services`}
+        ogImage={project.image || '/assets/products/smart-it-solutions-banner.jpg'}
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: project.title,
+          applicationCategory: 'BusinessApplication',
+          operatingSystem: 'Windows, Web, Android, iOS',
+          description: project.summary,
+          provider: {
+            '@type': 'Organization',
+            name: 'MAXUS IT SERVICES PVT. LTD.',
+            telephone: '+91-9559335909',
+          },
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'INR',
+            availability: 'https://schema.org/InStock',
+            description: 'Custom implementation and live demonstration upon enquiry across India',
+          },
+        }}
       />
 
       <section className="bg-navy py-12 lg:py-16" aria-labelledby="case-title">

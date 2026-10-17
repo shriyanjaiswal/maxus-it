@@ -1,52 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- PLACEHOLDER DOMAIN: regenerate with the confirmed domain before launch (see public/robots.txt). Approved portfolio URLs are added once projects are cleared for publication. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Core Pages -->
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/</loc>
+    <loc>https://www.maxusitservices.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/about</loc>
+    <loc>https://www.maxusitservices.com/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services</loc>
+    <loc>https://www.maxusitservices.com/solutions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/solutions</loc>
+    <loc>https://www.maxusitservices.com/portfolio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/portfolio</loc>
+    <loc>https://www.maxusitservices.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/contact</loc>
+    <loc>https://www.maxusitservices.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service Specific Pages -->
+  <url>
+    <loc>https://www.maxusitservices.com/services/custom-software</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/privacy-policy</loc>
+    <loc>https://www.maxusitservices.com/services/erp-business-management</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/terms</loc>
+    <loc>https://www.maxusitservices.com/services/billing-accounting</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services/website-development</loc>
+    <loc>https://www.maxusitservices.com/services/inventory-management</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services/custom-software</loc>
+    <loc>https://www.maxusitservices.com/services/website-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services/billing-accounting</loc>
+    <loc>https://www.maxusitservices.com/services/mobile-app-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services/erp-business-management</loc>
+    <loc>https://www.maxusitservices.com/services/digital-marketing</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services/inventory-management</loc>
+    <loc>https://www.maxusitservices.com/services/industry-solutions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Software Products & Case Studies -->
+  <url>
+    <loc>https://www.maxusitservices.com/portfolio/garment-footwear-erp-software</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services/mobile-app-development</loc>
+    <loc>https://www.maxusitservices.com/portfolio/business-erp14-accounting-software</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services/digital-marketing</loc>
+    <loc>https://www.maxusitservices.com/portfolio/school-erp-software</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://REPLACE_WITH_CLIENT_DOMAIN/services/industry-solutions</loc>
+    <loc>https://www.maxusitservices.com/portfolio/institute-management-software</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.maxusitservices.com/portfolio/electronic-store-erp-software</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.maxusitservices.com/portfolio/corporate-website</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.maxusitservices.com/portfolio/erp-inventory-system</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.maxusitservices.com/portfolio/mobile-app-development</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal & Trust Pages -->
+  <url>
+    <loc>https://www.maxusitservices.com/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.maxusitservices.com/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

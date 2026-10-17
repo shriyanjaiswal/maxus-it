@@ -21,16 +21,45 @@ export function ServiceDetail() {
   return (
     <>
       <Seo
-        title={`${service.title} | ${company.name}`}
-        description={service.summary}
+        title={`${service.title} in India | ${company.name}`}
+        description={`${service.summary} Delivered across India with dedicated onboarding, customization, and 24/7 technical support.`}
         path={`/services/${service.slug}`}
+        keywords={`${service.title} India, ${service.cardTitle}, IT software solutions India, enterprise business software, Maxus IT Services`}
         schema={{
           '@context': 'https://schema.org',
-          '@type': 'Service',
-          name: service.title,
-          description: service.summary,
-          serviceType: service.title,
-          provider: { '@type': 'Organization', name: company.name },
+          '@graph': [
+            {
+              '@type': 'Service',
+              name: `${service.title} in India`,
+              description: service.summary,
+              serviceType: service.title,
+              provider: {
+                '@type': 'Organization',
+                name: company.name,
+                telephone: company.contact.phoneDial,
+                email: company.contact.email,
+              },
+              areaServed: {
+                '@type': 'Country',
+                name: 'India',
+              },
+            },
+            ...(service.faqs && service.faqs.length > 0
+              ? [
+                  {
+                    '@type': 'FAQPage',
+                    mainEntity: service.faqs.map((faq) => ({
+                      '@type': 'Question',
+                      name: faq.question,
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: faq.answer,
+                      },
+                    })),
+                  },
+                ]
+              : []),
+          ],
         }}
       />
 

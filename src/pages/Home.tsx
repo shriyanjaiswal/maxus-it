@@ -63,16 +63,53 @@ export function Home() {
   return (
     <>
       <Seo
-        title="MAXUS IT SERVICES | Technology That Moves Your Business Forward"
-        description={company.heroDescription}
+        title="MAXUS IT SERVICES | IT Solutions, ERP & Accounting Software India"
+        description="Maxus IT Services Pvt Ltd delivers premier Garment ERP, Business ERP-14, School Management, Touch POS billing, and Custom Software Development across all states in India."
         path="/"
+        keywords="ERP software India, garment manufacturing ERP, footwear retail software, school ERP software India, touch POS billing software, GST accounting software, custom software development company India"
+        ogImage="/assets/products/smart-it-solutions-banner.jpg"
         schema={{
           '@context': 'https://schema.org',
-          '@type': 'Organization',
+          '@type': 'ITService',
           name: company.name,
+          alternateName: 'Maxus IT Services Pvt Ltd',
           description: company.tagline,
           email: company.contact.email,
           telephone: company.contact.phoneDial,
+          areaServed: {
+            '@type': 'Country',
+            name: 'India',
+          },
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'IT Services & Software Suites',
+            itemListElement: [
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'SoftwareApplication',
+                  name: 'Garment & Footwear ERP Software',
+                  applicationCategory: 'BusinessApplication',
+                },
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'SoftwareApplication',
+                  name: 'Business ERP-14 Accounting Software',
+                  applicationCategory: 'BusinessApplication',
+                },
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'SoftwareApplication',
+                  name: 'School ERP Software',
+                  applicationCategory: 'EducationalApplication',
+                },
+              },
+            ],
+          },
         }}
       />
 
@@ -325,6 +362,93 @@ export function Home() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Pan-India Service Coverage & Industrial Hubs Section */}
+      <section className="bg-canvas py-16 lg:py-24 border-t border-line" aria-labelledby="nationwide-coverage-heading">
+        <div className="container-page">
+          <SectionHeading
+            id="nationwide-coverage-heading"
+            eyebrow="Nationwide Footprint"
+            title="Delivering IT & Software Solutions Across All States in India"
+            description="Empowering manufacturers, retail chains, wholesalers, and educational institutions from Kashmir to Kanyakumari with seamless cloud deployment, on-premise setups, and 24/7 dedicated support."
+          />
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-(--radius-card) border border-line bg-surface p-6 shadow-xs">
+              <div className="flex items-center gap-3">
+                <span className="flex size-10 items-center justify-center rounded-xl bg-blue-soft text-blue font-bold text-sm">
+                  01
+                </span>
+                <h3 className="font-bold text-navy">North India</h3>
+              </div>
+              <p className="mt-3 text-xs text-muted leading-relaxed">
+                Delhi NCR, Uttar Pradesh (Kanpur, Lucknow, Noida, Varanasi), Punjab, Haryana, Rajasthan (Jaipur, Jodhpur), Uttarakhand.
+              </p>
+              <div className="mt-4 pt-3 border-t border-line text-xs font-semibold text-blue">
+                ✓ Garment ERP & School Portals
+              </div>
+            </div>
+
+            <div className="rounded-(--radius-card) border border-line bg-surface p-6 shadow-xs">
+              <div className="flex items-center gap-3">
+                <span className="flex size-10 items-center justify-center rounded-xl bg-lime-soft text-lime-dark font-bold text-sm">
+                  02
+                </span>
+                <h3 className="font-bold text-navy">West India</h3>
+              </div>
+              <p className="mt-3 text-xs text-muted leading-relaxed">
+                Maharashtra (Mumbai, Pune, Nagpur), Gujarat (Surat, Ahmedabad, Rajkot), Madhya Pradesh (Indore, Bhopal), Goa.
+              </p>
+              <div className="mt-4 pt-3 border-t border-line text-xs font-semibold text-lime-dark">
+                ✓ Textile & Touch POS Retail
+              </div>
+            </div>
+
+            <div className="rounded-(--radius-card) border border-line bg-surface p-6 shadow-xs">
+              <div className="flex items-center gap-3">
+                <span className="flex size-10 items-center justify-center rounded-xl bg-blue-soft text-blue font-bold text-sm">
+                  03
+                </span>
+                <h3 className="font-bold text-navy">South India</h3>
+              </div>
+              <p className="mt-3 text-xs text-muted leading-relaxed">
+                Karnataka (Bengaluru), Tamil Nadu (Chennai, Tirupur, Coimbatore), Telangana (Hyderabad), Andhra Pradesh, Kerala.
+              </p>
+              <div className="mt-4 pt-3 border-t border-line text-xs font-semibold text-blue">
+                ✓ Apparel BOM & Multi-Store ERP
+              </div>
+            </div>
+
+            <div className="rounded-(--radius-card) border border-line bg-surface p-6 shadow-xs">
+              <div className="flex items-center gap-3">
+                <span className="flex size-10 items-center justify-center rounded-xl bg-lime-soft text-lime-dark font-bold text-sm">
+                  04
+                </span>
+                <h3 className="font-bold text-navy">East & Central</h3>
+              </div>
+              <p className="mt-3 text-xs text-muted leading-relaxed">
+                West Bengal (Kolkata), Bihar (Patna), Odisha (Bhubaneswar), Jharkhand, Chhattisgarh, and North-Eastern States.
+              </p>
+              <div className="mt-4 pt-3 border-t border-line text-xs font-semibold text-lime-dark">
+                ✓ Wholesale & Distribution ERP
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-2xl bg-navy p-8 text-white sm:flex sm:items-center sm:justify-between shadow-lg">
+            <div>
+              <p className="text-xs font-bold text-lime uppercase tracking-widest">Pan-India Remote & On-Site Assistance</p>
+              <h3 className="mt-1 text-xl font-extrabold sm:text-2xl">Looking to implement ERP or Custom Software in your city?</h3>
+              <p className="mt-2 text-sm text-white/75 max-w-2xl">
+                We provide instant live online demos, remote server installations, localized staff training, and 24/7 WhatsApp support anywhere in India.
+              </p>
+            </div>
+            <LinkButton to="/contact" variant="lime" arrow className="mt-6 sm:mt-0 shrink-0">
+              Get Pan-India Quote
+            </LinkButton>
+          </div>
         </div>
       </section>
 

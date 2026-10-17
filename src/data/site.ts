@@ -5,10 +5,9 @@ import { services } from './services'
  * Canonical URLs stay disabled until the client confirms the live domain
  * (the package ships `NEEDS_CLIENT_DOMAIN`). Set VITE_SITE_URL at build time.
  */
-export const siteUrl = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(
-  /\/$/,
-  '',
-)
+export const siteUrl =
+  (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, '') ||
+  'https://www.maxusitservices.com'
 
 export const nav = [
   { label: 'Home', to: '/' },
