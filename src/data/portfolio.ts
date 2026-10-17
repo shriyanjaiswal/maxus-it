@@ -28,7 +28,7 @@ export const projects: Project[] = [
     category: 'Website Development',
     summary:
       'A modern, responsive corporate website with brand-focused design and optimized performance.',
-    artwork: 'corporate',
+    image: '/assets/brand/maxus-corporate-homepage-preview.png',
     services: ['website-development'],
     challenge:
       'The business previously operated with a legacy web portal that was difficult to navigate on mobile devices, lacked search engine optimization, and provided no direct integration for customer enquiry routing.',
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     category: 'Business Solution',
     summary:
       'Custom ERP solution for managing inventory, purchases, sales and business operations.',
-    artwork: 'erp',
+    image: '/assets/products/custom-software-solutions.jpg',
     services: ['erp-business-management', 'inventory-management', 'billing-accounting'],
     challenge:
       'The company faced severe coordination friction between warehouse managers, accounts staff, and sales teams due to siloed spreadsheets, causing stock discrepancies and delayed order billing.',
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     category: 'Mobile Application',
     summary:
       'Android and iOS mobile application for improved customer engagement and business accessibility.',
-    artwork: 'mobile',
+    image: '/assets/brand/maxus-mobile-ui-showcase.png',
     services: ['mobile-app-development'],
     challenge:
       'Field agents and retail clients needed real-time visibility into live product availability, pricing updates, and instant order placement from their smartphones while on the move.',

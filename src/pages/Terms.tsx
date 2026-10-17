@@ -21,8 +21,8 @@ const sections = [
       `${company.name}. Client-branded material, data and agreed deliverables remain the property of the client.`,
   },
   {
-    title: 'Portfolio and references',
-    body: 'Project descriptions and screenshots are published only where the relevant client has granted permission. Absence of a project is not a statement about our capability.',
+    title: 'Client confidentiality and case studies',
+    body: 'Case studies, product architectures, and screenshots are published with client authorization or demonstrate generic proprietary workflows engineered by MAXUS IT SERVICES PVT. LTD.',
   },
   {
     title: 'Third-party links and tools',

@@ -1,15 +1,8 @@
 import { Link } from 'react-router-dom'
-import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from 'lucide-react'
+import { Mail, MapPin, MessageSquare, Phone, ShieldCheck } from 'lucide-react'
 import { company, locationsLabel } from '../data/company'
-import { footerServices, quickLinks, telLink } from '../data/site'
+import { footerServices, quickLinks, telLink, whatsappLink } from '../data/site'
 import { LogoMark } from './artwork/Logo'
-
-const socials = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/', Icon: Linkedin },
-  { label: 'Facebook', href: 'https://www.facebook.com/', Icon: Facebook },
-  { label: 'Twitter', href: 'https://twitter.com/', Icon: Twitter },
-  { label: 'YouTube', href: 'https://www.youtube.com/', Icon: Youtube },
-]
 
 export function SiteFooter() {
   return (
@@ -27,22 +20,29 @@ export function SiteFooter() {
               </p>
             </div>
           </div>
-          <p className="mt-5 max-w-xs text-sm">{company.tagline}</p>
-          <ul className="mt-6 flex gap-3">
-            {socials.map(({ label, href, Icon }) => (
-              <li key={label}>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="inline-flex size-10 items-center justify-center rounded-full border border-white/20 text-white/80 transition-colors hover:border-lime hover:text-lime"
-                >
-                  <Icon className="size-4" aria-hidden="true" />
-                </a>
-              </li>
-            ))}
-          </ul>
+          <p className="mt-4 max-w-xs text-sm">{company.tagline}</p>
+          <div className="mt-5 flex flex-wrap gap-2.5">
+            <a
+              href={whatsappLink('Hello Maxus IT Services, I would like to enquire about your software solutions.')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-lime/30 bg-lime/10 px-3 py-1.5 text-xs font-semibold text-lime transition-colors hover:bg-lime/20"
+            >
+              <MessageSquare className="size-3.5" />
+              <span>WhatsApp Direct</span>
+            </a>
+            <a
+              href={telLink}
+              className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white/90 transition-colors hover:bg-white/10"
+            >
+              <Phone className="size-3.5" />
+              <span>Instant Call</span>
+            </a>
+          </div>
+          <div className="mt-4 flex items-center gap-2 text-xs text-white/50">
+            <ShieldCheck className="size-4 text-lime" />
+            <span>Pan-India On-Site &amp; Cloud Support</span>
+          </div>
         </div>
 
         <nav aria-label="Footer quick links">
