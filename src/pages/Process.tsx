@@ -77,6 +77,19 @@ export function Process() {
         description="Learn how MAXUS IT SERVICES takes your business software from initial discovery and UI design to engineering, QA testing, launch, and long-term support."
         path="/process"
         keywords="software development process, agile engineering lifecycle, ERP implementation steps, custom software roadmap, IT consulting workflow"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: '7-Step Enterprise Software Development Process',
+          description:
+            'A structured, transparent engineering lifecycle from discovery and UI design to engineering, quality testing, and cloud deployment by MAXUS IT SERVICES.',
+          step: processRoadmap.map((item, idx) => ({
+            '@type': 'HowToStep',
+            position: idx + 1,
+            name: item.name,
+            text: item.description,
+          })),
+        }}
       />
 
       <PageHero

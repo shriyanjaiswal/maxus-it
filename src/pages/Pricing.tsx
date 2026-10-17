@@ -98,6 +98,29 @@ export function Pricing() {
         description="Explore clear, transparent pricing models for software development, ERP systems, website design, and monthly digital maintenance from MAXUS IT SERVICES."
         path="/pricing"
         keywords="software development pricing India, ERP software cost, website design packages, custom software estimate, IT AMC pricing"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'FAQPage',
+              mainEntity: faqs.map((faq) => ({
+                '@type': 'Question',
+                name: faq.q,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: faq.a,
+                },
+              })),
+            },
+            {
+              '@type': 'PriceSpecification',
+              name: 'Enterprise Software & IT Engagement Plans',
+              priceCurrency: 'INR',
+              description:
+                'Custom milestone-based pricing for enterprise ERP, business automation, mobile apps, and monthly website maintenance.',
+            },
+          ],
+        }}
       />
 
       <PageHero
