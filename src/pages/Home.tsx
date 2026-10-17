@@ -168,7 +168,7 @@ export function Home() {
         />
 
         <div className="container-page relative grid items-center gap-10 lg:grid-cols-[54%_46%] lg:gap-10">
-          <div className="min-w-0 max-w-full">
+          <div className="min-w-0 max-w-full animate-fade-in">
             {/* Enterprise status badge */}
             <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-lime/30 bg-lime/10 px-3 py-1.5 text-[10.5px] font-bold tracking-wide text-lime uppercase backdrop-blur-md sm:px-4 sm:text-xs">
               <span className="relative flex size-2 shrink-0">

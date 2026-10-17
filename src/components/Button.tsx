@@ -3,14 +3,14 @@ import type { ReactNode } from 'react'
 import { Icon } from './Icon'
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-(--radius-btn) px-6 py-3.5 font-display text-sm font-bold transition-colors duration-200'
+  'inline-flex items-center justify-center gap-2 rounded-(--radius-btn) px-6 py-3.5 font-display text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] cursor-pointer'
 
 const variants = {
-  lime: 'bg-lime text-navy hover:bg-lime-dark',
+  lime: 'bg-lime text-navy hover:bg-lime-dark hover:shadow-md hover:shadow-lime/20',
   outlineLight: 'border border-white/35 text-white hover:border-white hover:bg-white/10',
-  outlineDark: 'border border-line text-navy hover:border-navy hover:bg-canvas',
-  navy: 'bg-navy text-white hover:bg-navy-soft',
-  white: 'bg-white text-navy hover:bg-canvas',
+  outlineDark: 'border border-line text-navy hover:border-navy hover:bg-canvas hover:shadow-sm',
+  navy: 'bg-navy text-white hover:bg-navy-soft hover:shadow-md hover:shadow-navy/20',
+  white: 'bg-white text-navy hover:bg-canvas hover:shadow-md',
 } as const
 
 type CommonProps = {
