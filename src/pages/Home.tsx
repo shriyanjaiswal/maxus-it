@@ -146,8 +146,8 @@ export function Home() {
             </ul>
           </div>
 
-          {/* Right column: Interactive focal centerpiece with floating glass stat badges */}
-          <div className="relative flex max-w-full items-center justify-center overflow-hidden py-4 sm:overflow-visible">
+          {/* Right column: Interactive focal centerpiece (hidden on mobile, visible on desktop/tablet) */}
+          <div className="relative hidden max-w-full items-center justify-center py-4 lg:flex">
             {/* Ambient halo glow */}
             <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-blue/30 via-lime/15 to-transparent blur-2xl" />
 
@@ -163,7 +163,7 @@ export function Home() {
             </div>
 
             {/* Main Hero artwork */}
-            <div className="relative z-10 w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[540px]">
+            <div className="relative z-10 w-full max-w-[540px]">
               <HeroGlobe className="mx-auto w-full drop-shadow-[0_20px_50px_rgba(7,31,53,0.8)]" />
             </div>
 
