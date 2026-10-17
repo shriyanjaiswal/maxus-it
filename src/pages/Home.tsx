@@ -97,17 +97,17 @@ export function Home() {
         <div className="container-page relative grid items-center gap-12 lg:grid-cols-[54%_46%] lg:gap-10">
           <div>
             {/* Enterprise status badge */}
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-lime/30 bg-lime/10 px-4 py-1.5 text-xs font-bold tracking-wide text-lime uppercase backdrop-blur-md">
-              <span className="relative flex size-2">
+            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-lime/30 bg-lime/10 px-3 py-1.5 text-[11px] font-bold tracking-wide text-lime uppercase backdrop-blur-md sm:px-4 sm:text-xs">
+              <span className="relative flex size-2 shrink-0">
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-lime opacity-75" />
                 <span className="relative inline-flex size-2 rounded-full bg-lime" />
               </span>
-              <span>Smart Tech • Practical Solutions • Business Growth</span>
+              <span className="truncate">Smart Tech • Practical Solutions • Business Growth</span>
             </div>
 
             <h1
               id="hero-heading"
-              className="mt-6 text-balance-tight font-display text-[clamp(2.35rem,8vw,3.5rem)] font-extrabold tracking-tight text-white lg:text-[clamp(3rem,4.5vw,4.5rem)] lg:leading-[1.08]"
+              className="mt-5 text-balance-tight font-display text-[clamp(2.15rem,8vw,3.5rem)] font-extrabold tracking-tight text-white lg:text-[clamp(3rem,4.5vw,4.5rem)] lg:leading-[1.08]"
             >
               Technology That Moves Your{' '}
               <span className="bg-gradient-to-r from-lime via-[#d8f45a] to-white bg-clip-text text-transparent">
@@ -115,11 +115,11 @@ export function Home() {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
               {company.heroDescription}
             </p>
 
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
               <LinkButton to="/contact" variant="lime" arrow className="shadow-[0_0_24px_rgba(184,217,50,0.35)] transition-all hover:shadow-[0_0_32px_rgba(184,217,50,0.5)]">
                 Discuss Your Project
               </LinkButton>
@@ -129,7 +129,7 @@ export function Home() {
             </div>
 
             {/* Highlights with frosted glass treatment */}
-            <ul className="mt-11 grid gap-3 sm:grid-cols-3">
+            <ul className="mt-8 grid grid-cols-1 gap-2.5 sm:mt-10 sm:grid-cols-3 sm:gap-3">
               {heroHighlights.map((item) => (
                 <li
                   key={item.title}
