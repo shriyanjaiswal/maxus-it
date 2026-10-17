@@ -59,6 +59,29 @@ export function ServiceDetail() {
                   },
                 ]
               : []),
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://www.maxusitservices.com/',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Services',
+                  item: 'https://www.maxusitservices.com/services',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: service.title,
+                  item: `https://www.maxusitservices.com/services/${service.slug}`,
+                },
+              ],
+            },
           ],
         }}
       />

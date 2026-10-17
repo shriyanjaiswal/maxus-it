@@ -28,23 +28,50 @@ export function CaseStudy() {
         ogImage={project.image || '/assets/products/smart-it-solutions-banner.jpg'}
         schema={{
           '@context': 'https://schema.org',
-          '@type': 'SoftwareApplication',
-          name: project.title,
-          applicationCategory: 'BusinessApplication',
-          operatingSystem: 'Windows, Web, Android, iOS',
-          description: project.summary,
-          provider: {
-            '@type': 'Organization',
-            name: 'MAXUS IT SERVICES PVT. LTD.',
-            telephone: '+91-9559335909',
-          },
-          offers: {
-            '@type': 'Offer',
-            price: '0',
-            priceCurrency: 'INR',
-            availability: 'https://schema.org/InStock',
-            description: 'Custom implementation and live demonstration upon enquiry across India',
-          },
+          '@graph': [
+            {
+              '@type': 'SoftwareApplication',
+              name: project.title,
+              applicationCategory: 'BusinessApplication',
+              operatingSystem: 'Windows, Web, Android, iOS',
+              description: project.summary,
+              provider: {
+                '@type': 'Organization',
+                name: 'MAXUS IT SERVICES PVT. LTD.',
+                telephone: '+91-9559335909',
+              },
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'INR',
+                availability: 'https://schema.org/InStock',
+                description: 'Custom implementation and live demonstration upon enquiry across India',
+              },
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://www.maxusitservices.com/',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Portfolio',
+                  item: 'https://www.maxusitservices.com/portfolio',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: project.title,
+                  item: `https://www.maxusitservices.com/portfolio/${project.slug}`,
+                },
+              ],
+            },
+          ],
         }}
       />
 
