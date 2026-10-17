@@ -38,6 +38,26 @@ const brandDownloads = [
     dimensions: 'Square App Icon',
     type: 'App Icon',
   },
+  {
+    title: '3D Core Services Pillar Emblem',
+    description:
+      'Brand emblem with the 6 core pillars: Cloud, Web & App, IT Consulting, Cyber Security, Infrastructure & Digital Transformation.',
+    preview: '/assets/brand/maxus-core-services-pillar.jpg',
+    fileName: 'Maxus_IT_Core_Services_Pillar.jpg',
+    format: 'JPG (High-Res)',
+    dimensions: 'High-Res Square',
+    type: 'Brand Graphic',
+  },
+  {
+    title: 'Official 3D Circular Seal Emblem',
+    description:
+      'High-resolution round company insignia with the 3D globe atom core and official slogan banner.',
+    preview: '/assets/brand/maxus-round-seal-logo.jpg',
+    fileName: 'Maxus_IT_Round_Seal_Emblem.jpg',
+    format: 'JPG (High-Res)',
+    dimensions: 'High-Res Round',
+    type: 'Corporate Seal',
+  },
 ]
 
 const principles = [
