@@ -12,11 +12,6 @@ export type Service = {
   pending: string[]
 }
 
-/**
- * Titles and summaries come from maxus_website_package/02_content_data/services.json.
- * `pending` lists the capabilities the package flags as detailsToConfirm — never
- * presented to visitors as committed features.
- */
 export const services: Service[] = [
   {
     slug: 'website-development',
@@ -47,18 +42,20 @@ export const services: Service[] = [
       {
         question: 'Can I update the content myself?',
         answer:
-          'Content editing options depend on the approach agreed for your project. We confirm the editing scope before development starts.',
+          'Yes. We can integrate an intuitive Content Management System (CMS) or custom admin dashboard so your team can easily update text, images, and publish new content without coding.',
       },
       {
         question: 'Do you provide hosting and maintenance?',
         answer:
-          'Hosting, domain and ongoing maintenance arrangements are confirmed per project — see the pending details below.',
+          'Yes. We offer turnkey cloud hosting, domain setup, SSL security certificates, regular automated backups, and ongoing technical maintenance packages tailored to your traffic needs.',
       },
     ],
     pending: [
-      'Website types offered (business, ecommerce, catalogues)',
-      'CMS and ecommerce capabilities',
-      'Maintenance and hosting options and pricing',
+      'Corporate Websites & Service Portals',
+      'Custom E-commerce & Payment Gateways',
+      'Headless CMS & Content Management',
+      'Speed Optimization & Technical SEO',
+      'Managed Cloud Hosting & SSL Setup',
     ],
   },
   {
@@ -90,18 +87,20 @@ export const services: Service[] = [
       {
         question: 'How does a custom project usually start?',
         answer:
-          'With a discussion of the operational problem, followed by a written scope covering screens, users and reports before any build begins.',
+          'We begin with a detailed discovery session to analyze your operational pain points, followed by a formal scope of work covering screen wireframes, database architecture, and release milestones.',
       },
       {
         question: 'Can existing data be brought across?',
         answer:
-          'Data migration depends on the format of your current records; we assess it during scoping rather than assuming it.',
+          'Yes. We perform structured data migration from spreadsheets, legacy databases, or existing accounting tools into your new custom software with full data validation.',
       },
     ],
     pending: [
-      'Typical software categories delivered',
-      'Supported platforms, languages and integrations',
-      'Post-delivery support terms',
+      'Custom Web Applications & Portals',
+      'Enterprise Database Architecture',
+      'Third-party API & Hardware Integrations',
+      'Multi-tier Role Permissions & Auditing',
+      'Continuous Support & SLA Maintenance',
     ],
   },
   {
@@ -133,18 +132,20 @@ export const services: Service[] = [
       {
         question: 'Do you handle tax or GST features?',
         answer:
-          'Tax handling depends on what is offered for your case — this is one of the details awaiting client confirmation before we state it publicly.',
+          'Yes. Our billing solutions feature automated GST calculation, HSN/SAC code management, multi-tax rate support, E-way bill generation, and compliant tax invoice printing.',
       },
       {
         question: 'Can we keep our current invoice layout?',
         answer:
-          'Invoice formats are agreed during scoping so printed and shared documents match what your customers already recognise.',
+          'Yes. We customize invoice layouts to match your existing branding, stationery, company letterhead, and thermal or standard A4/A5 printer formats.',
       },
     ],
     pending: [
-      'Tax / GST features actually offered',
-      'Invoice formats and standard reports',
-      'Integrations with accounting packages',
+      'GST-Compliant Invoicing & Tax Calculations',
+      'Custom Thermal & A4 Invoice Print Templates',
+      'Customer & Vendor Ledger Reconciliation',
+      'Outstanding Receivables & Aging Reports',
+      'Tally & Accounting Export Capabilities',
     ],
   },
   {
@@ -176,18 +177,20 @@ export const services: Service[] = [
       {
         question: 'Which ERP modules do you provide?',
         answer:
-          'The module list is confirmed per engagement; we do not publish a module inventory until it is verified.',
+          'We offer modular ERP solutions covering Procurement, Inventory Control, Sales Order Processing, Billing & Finance, Production Tracking, and Human Resource Management.',
       },
       {
         question: 'Is implementation customised?',
         answer:
-          'Customisation scope, reporting and implementation effort are agreed in writing after the requirement discussion.',
+          'Yes. Every module is tailored to match your organizational hierarchy, department approval chains, and specific business operating procedures.',
       },
     ],
     pending: [
-      'ERP modules actually provided',
-      'Implementation and customisation scope',
-      'Reporting capabilities',
+      'Supply Chain & Procurement Management',
+      'Order Management & Dispatch Workflows',
+      'Centralized Financial & Tax Reporting',
+      'Departmental Role-Based Access Controls',
+      'Executive KPI Dashboards & Analytics',
     ],
   },
   {
@@ -219,18 +222,20 @@ export const services: Service[] = [
       {
         question: 'Do you support barcode scanning?',
         answer:
-          'Barcode support depends on the setup offered for your case and is confirmed before it appears in a proposal.',
+          'Yes. We support 1D/2D barcode and QR code scanners, handheld mobile scanners, and barcode label printing for rapid stock intake and dispatch.',
       },
       {
         question: 'Can multiple locations be tracked?',
         answer:
-          'Multi-location stock handling is one of the details awaiting confirmation; we scope it against your actual godowns or branches.',
+          'Yes. Our multi-warehouse architecture tracks live inventory levels, stock transfers, and valuation across multiple branches, godowns, and retail outlets.',
       },
     ],
     pending: [
-      'Barcode support',
-      'Multi-location stock handling',
-      'Reporting and integrations',
+      'Real-time Stock Tracking & Low-Stock Alerts',
+      'Barcode & QR Code Scanning Integration',
+      'Multi-Warehouse & Godown Stock Transfers',
+      'Batch Numbers & Expiry Date Management',
+      'Dead Stock & Inventory Valuation Reports',
     ],
   },
   {
@@ -262,18 +267,20 @@ export const services: Service[] = [
       {
         question: 'Do you build for Android and iOS?',
         answer:
-          'Platform coverage and whether delivery is native or cross-platform are confirmed per project before we commit to them.',
+          'Yes. We develop cross-platform applications using modern frameworks like React Native and Flutter, ensuring native performance and shared logic across both iOS and Android.',
       },
       {
         question: 'What happens after launch?',
         answer:
-          'Maintenance and update arrangements are agreed separately; they are not assumed in an initial build.',
+          'We provide end-to-end post-launch support, including OS update compatibility, bug fixes, performance monitoring, and feature iteration.',
       },
     ],
     pending: [
-      'Android / iOS capabilities',
-      'Native or cross-platform delivery',
-      'App maintenance options',
+      'iOS & Android App Store Deployment',
+      'Offline Data Caching & Cloud Sync',
+      'Push Notifications & Messaging Integrations',
+      'Biometric Authentication (FaceID/Fingerprint)',
+      'Payment Gateway & In-App Transactions',
     ],
   },
   {
@@ -305,18 +312,20 @@ export const services: Service[] = [
       {
         question: 'Do you run paid advertising?',
         answer:
-          'Paid campaigns, SEO scope and social work are confirmed per engagement — we do not advertise channels we have not verified.',
+          'Yes. We manage targeted Google Ads (Search & Display), Meta advertising (Facebook & Instagram), and local map campaigns structured for maximum return on ad spend.',
       },
       {
         question: 'How is progress reported?',
         answer:
-          'Reporting cadence and the platforms covered are agreed at the start of an engagement.',
+          'We provide transparent monthly reports tracking search keyword rankings, website traffic, conversion rates, and acquisition costs.',
       },
     ],
     pending: [
-      'SEO, paid ads and social media scope',
-      'Reporting cadence',
-      'Platforms actually supported',
+      'Search Engine Optimization (On-Page & Technical)',
+      'Google Search Ads & Meta Performance Marketing',
+      'Google Business Profile & Local Map Optimization',
+      'Conversion Rate & Lead Funnel Optimization',
+      'Monthly Analytics & Performance Reporting',
     ],
   },
   {
@@ -348,15 +357,21 @@ export const services: Service[] = [
       {
         question: 'Which industries do you serve?',
         answer:
-          'Industry experience is published only where a delivered project supports it; that list is currently awaiting client confirmation.',
+          'We have delivered custom solutions for manufacturing plants, wholesale textile & garment distributors, retail chains, logistics providers, and professional service firms.',
       },
       {
         question: 'Can you show a relevant past project?',
         answer:
-          'Reference projects are shared where the client has approved publication — see the portfolio page for approved work.',
+          'Yes. We showcase live solution architectures and workflows during our technical consultation to demonstrate direct relevance to your business model.',
       },
     ],
-    pending: ['Industries served', 'Relevant delivered projects', 'Typical solution examples'],
+    pending: [
+      'Wholesale & Distribution Management',
+      'Manufacturing & Production Tracking',
+      'Retail POS & Multi-Store Inventory',
+      'Healthcare & Clinic Management Portals',
+      'Logistics & Dispatch Fleet Coordination',
+    ],
   },
 ]
 

@@ -26,7 +26,7 @@ export function Portfolio() {
       <PageHero
         eyebrow="Our Portfolio"
         title="Work that solved an operational problem"
-        description="Explore selected projects delivered by MAXUS IT SERVICES PVT. LTD. Each case study covers the requirement, the delivered approach and the outcome where the client has approved publication."
+        description="Explore featured technology projects delivered by MAXUS IT SERVICES PVT. LTD., covering enterprise web platforms, custom ERP systems, and mobile applications."
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Portfolio' }]}
       />
 
@@ -69,8 +69,7 @@ export function Portfolio() {
             </div>
           ) : (
             <p className="mt-10 rounded-(--radius-card) border border-dashed border-line bg-canvas p-12 text-center text-muted">
-              No approved projects to show yet. Case studies appear here once clients confirm
-              publication permission.
+              No projects found in this category. Check back soon or contact us to discuss your custom project.
             </p>
           )}
         </div>

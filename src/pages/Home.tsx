@@ -184,7 +184,7 @@ export function Home() {
             </div>
           ) : (
             <p className="mt-12 rounded-(--radius-card) border border-dashed border-line bg-surface p-10 text-center text-sm text-muted">
-              Approved client projects will appear here once publication permission is confirmed.
+              Featured projects are currently being updated. Contact our team for custom case studies and live demos.
             </p>
           )}
         </div>

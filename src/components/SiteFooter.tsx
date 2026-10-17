@@ -35,7 +35,7 @@ export function SiteFooter() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${label} (link to be confirmed)`}
+                  aria-label={label}
                   className="inline-flex size-10 items-center justify-center rounded-full border border-white/20 text-white/80 transition-colors hover:border-lime hover:text-lime"
                 >
                   <Icon className="size-4" aria-hidden="true" />

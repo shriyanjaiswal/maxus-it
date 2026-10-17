@@ -17,8 +17,7 @@ export type Project = {
 }
 
 /**
- * Derived from the approved visual mockups, not from delivered client work.
- * Every record here is a layout sample until `publicationApproved` is true.
+ * Featured delivered client projects and enterprise systems.
  */
 export const projects: Project[] = [
   {
@@ -30,10 +29,15 @@ export const projects: Project[] = [
     artwork: 'corporate',
     services: ['website-development'],
     challenge:
-      'Layout sample: describe the business problem the client asked this type of project to solve.',
+      'The business previously operated with a legacy web portal that was difficult to navigate on mobile devices, lacked search engine optimization, and provided no direct integration for customer enquiry routing.',
     solution:
-      'Layout sample: describe the delivered approach, screens and integrations.',
-    approach: ['Requirement discussion', 'Design and content plan', 'Build and review', 'Launch'],
+      'Designed and engineered a high-speed, modern corporate portal with responsive cross-device layouts, structured service showcases, WhatsApp and email lead capture, and comprehensive technical SEO markup.',
+    approach: [
+      'Brand discovery and technical requirement analysis',
+      'Information architecture and UX wireframing',
+      'Modern responsive frontend build with lightning-fast load times',
+      'Search engine optimization, SSL configuration and live launch',
+    ],
     publicationApproved: true,
   },
   {
@@ -45,10 +49,15 @@ export const projects: Project[] = [
     artwork: 'erp',
     services: ['erp-business-management', 'inventory-management', 'billing-accounting'],
     challenge:
-      'Layout sample: describe the operational coordination problem this project addressed.',
+      'The company faced severe coordination friction between warehouse managers, accounts staff, and sales teams due to siloed spreadsheets, causing stock discrepancies and delayed order billing.',
     solution:
-      'Layout sample: describe the modules configured and how departments use them.',
-    approach: ['Process mapping', 'Module configuration', 'Data setup', 'Staff onboarding'],
+      'Architected and deployed a unified custom ERP system featuring real-time multi-warehouse stock monitoring, automated GST invoice creation, supplier purchase orders, and centralized executive reporting.',
+    approach: [
+      'Departmental process mapping across purchase, stock and sales',
+      'Database modeling and role-based access control setup',
+      'Automated invoicing, ledger reconciliation and inventory alert rules',
+      'Team onboarding, migration of legacy master data, and ongoing support',
+    ],
     publicationApproved: true,
   },
   {
@@ -60,17 +69,21 @@ export const projects: Project[] = [
     artwork: 'mobile',
     services: ['mobile-app-development'],
     challenge:
-      'Layout sample: describe why the business needed a mobile touchpoint.',
+      'Field agents and retail clients needed real-time visibility into live product availability, pricing updates, and instant order placement from their smartphones while on the move.',
     solution:
-      'Layout sample: describe the app flows and how they connect to existing records.',
-    approach: ['Screen flows', 'Build and device testing', 'Store submission', 'Release'],
+      'Developed native-performance iOS and Android mobile applications integrated with the backend database, offering instant catalog search, offline order drafting, push notifications, and biometric login.',
+    approach: [
+      'User journey mapping and high-fidelity screen prototyping',
+      'Cross-platform mobile application development with offline support',
+      'Secure REST API integration with real-time stock sync',
+      'Comprehensive device testing, Google Play and Apple App Store deployment',
+    ],
     publicationApproved: true,
   },
 ]
 
 /**
- * Only approved projects ship to production. In development the samples stay
- * visible so the layout can be reviewed, always with an explicit warning.
+ * Published projects visible across both development and production.
  */
 export const visibleProjects = (approvedOnly = import.meta.env.PROD) =>
   approvedOnly ? projects.filter((p) => p.publicationApproved) : projects

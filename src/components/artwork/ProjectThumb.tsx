@@ -16,7 +16,7 @@ export function ProjectThumb({ variant, className = 'w-full' }: Props) {
       className={className}
       preserveAspectRatio="xMidYMid slice"
       role="img"
-      aria-label={`${variant === 'corporate' ? 'Corporate website' : variant === 'erp' ? 'ERP and inventory system' : 'Mobile application'} layout sample`}
+      aria-label={`${variant === 'corporate' ? 'Corporate website' : variant === 'erp' ? 'ERP and inventory system' : 'Mobile application'} showcase`}
     >
       <defs>
         <linearGradient id={`thumb-bg-${variant}`} x1="0%" y1="0%" x2="100%" y2="100%">

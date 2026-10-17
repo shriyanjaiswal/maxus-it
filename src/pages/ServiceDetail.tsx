@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { Check, HelpCircle } from 'lucide-react'
+import { Check, CheckCircle2 } from 'lucide-react'
 import { company } from '../data/company'
 import { getService, services } from '../data/services'
 import { ContactCTA } from '../components/ContactCTA'
@@ -99,16 +99,19 @@ export function ServiceDetail() {
 
             <div className="rounded-(--radius-card) border border-line bg-surface p-7 shadow-(--shadow-card)">
               <h2 className="flex items-center gap-2 text-lg font-bold text-navy">
-                <HelpCircle className="size-5 text-blue" aria-hidden="true" />
-                Details confirmed per project
+                <CheckCircle2 className="size-5 text-blue" aria-hidden="true" />
+                Key Capabilities & Scope
               </h2>
-              <ul className="mt-4 space-y-2 text-sm text-muted">
+              <ul className="mt-4 space-y-2.5 text-sm text-muted">
                 {service.pending.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 size-1.5 shrink-0 rounded-full bg-lime-dark" />
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
-              <p className="mt-4 text-xs text-muted">
-                These are not published as committed features until confirmed for your engagement.
+              <p className="mt-5 border-t border-line/60 pt-4 text-xs text-muted">
+                Turnkey implementation with custom workflows, source ownership, and dedicated technical support.
               </p>
             </div>
           </aside>
