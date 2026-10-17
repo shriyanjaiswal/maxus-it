@@ -13,6 +13,7 @@ import { ServiceGrid } from '../components/ServiceCard'
 import { ProjectCard } from '../components/ProjectCard'
 import { ProcessSteps } from '../components/ProcessSteps'
 import { ContactCTA } from '../components/ContactCTA'
+import { ScrollReveal } from '../components/ScrollReveal'
 
 
 const facts = [
@@ -258,67 +259,77 @@ export function Home() {
 
       <section className="bg-surface py-12 lg:py-16" aria-label="Company overview">
         <div className="container-page">
-          <ul className="grid divide-y sm:divide-y-0 sm:divide-x divide-line rounded-(--radius-card) border border-line bg-surface shadow-(--shadow-card) sm:grid-cols-2 lg:grid-cols-4">
-            {facts.map((fact) => (
-              <li key={fact.label} className="flex gap-4 p-6">
-                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-soft text-blue">
-                  <fact.Icon className="size-5" aria-hidden="true" />
-                </span>
-                <div className="min-w-0">
-                  <p className="text-xs font-semibold tracking-wide text-muted uppercase">
-                    {fact.label}
-                  </p>
-                  <p className="mt-1 font-display text-base font-bold text-navy">{fact.value}</p>
-                  <p className="mt-1 text-xs text-muted">{fact.note}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <ScrollReveal direction="up">
+            <ul className="grid divide-y sm:divide-y-0 sm:divide-x divide-line rounded-(--radius-card) border border-line bg-surface shadow-(--shadow-card) sm:grid-cols-2 lg:grid-cols-4">
+              {facts.map((fact) => (
+                <li key={fact.label} className="flex gap-4 p-6">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-soft text-blue">
+                    <fact.Icon className="size-5" aria-hidden="true" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+                      {fact.label}
+                    </p>
+                    <p className="mt-1 font-display text-base font-bold text-navy">{fact.value}</p>
+                    <p className="mt-1 text-xs text-muted">{fact.note}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="bg-surface pb-16 lg:pb-24" aria-labelledby="services-heading">
         <div className="container-page">
-          <SectionHeading
-            id="services-heading"
-            eyebrow="Our Services"
-            title={
-              <>
-                Comprehensive IT Services for <span className="text-blue">Your Business</span>
-              </>
-            }
-            description="We provide end-to-end technology solutions to simplify your operations and accelerate growth."
-            action={
-              <LinkButton to="/services" variant="outlineDark">
-                View All Services
-              </LinkButton>
-            }
-          />
-          <div className="mt-12">
-            <ServiceGrid services={services} />
-          </div>
+          <ScrollReveal direction="up">
+            <SectionHeading
+              id="services-heading"
+              eyebrow="Our Services"
+              title={
+                <>
+                  Comprehensive IT Services for <span className="text-blue">Your Business</span>
+                </>
+              }
+              description="We provide end-to-end technology solutions to simplify your operations and accelerate growth."
+              action={
+                <LinkButton to="/services" variant="outlineDark">
+                  View All Services
+                </LinkButton>
+              }
+            />
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={150}>
+            <div className="mt-12">
+              <ServiceGrid services={services} />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="bg-canvas py-16 lg:py-24" aria-labelledby="portfolio-heading">
         <div className="container-page">
-          <SectionHeading
-            id="portfolio-heading"
-            eyebrow="Our Portfolio"
-            title="Some of Our Recent Work"
-            description="Delivering practical solutions for growing businesses."
-            action={
-              <LinkButton to="/portfolio" variant="outlineDark">
-                View All Projects
-              </LinkButton>
-            }
-          />
+          <ScrollReveal direction="up">
+            <SectionHeading
+              id="portfolio-heading"
+              eyebrow="Our Portfolio"
+              title="Some of Our Recent Work"
+              description="Delivering practical solutions for growing businesses."
+              action={
+                <LinkButton to="/portfolio" variant="outlineDark">
+                  View All Projects
+                </LinkButton>
+              }
+            />
+          </ScrollReveal>
           {projects.length > 0 ? (
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {projects.slice(0, 6).map((project) => (
-                <ProjectCard key={project.slug} project={project} />
-              ))}
-            </div>
+            <ScrollReveal direction="up" delay={200}>
+              <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {projects.slice(0, 6).map((project) => (
+                  <ProjectCard key={project.slug} project={project} />
+                ))}
+              </div>
+            </ScrollReveal>
           ) : (
             <p className="mt-12 rounded-(--radius-card) border border-dashed border-line bg-surface p-10 text-center text-sm text-muted">
               Featured projects are currently being updated. Contact our team for custom case studies and live demos.
@@ -333,40 +344,44 @@ export function Home() {
           aria-hidden="true"
         />
         <div className="container-page relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <p className="eyebrow flex items-center gap-3 text-lime">
-              <span className="h-px w-8 bg-lime" aria-hidden="true" />
-              Business Solutions
-            </p>
-            <h2
-              id="solutions-heading"
-              className="mt-4 text-3xl font-extrabold text-white sm:text-4xl lg:text-[2.6rem]"
-            >
-              Smart Solutions for{' '}
-              <span className="text-lime">Efficient Business Operations</span>
-            </h2>
-            <p className="mt-5 text-white/75">
-              Our billing, accounting, ERP and inventory solutions help you manage your business
-              more efficiently with easy-to-use and practical technology.
-            </p>
-            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-              {solutionChips.map((chip) => (
-                <li
-                  key={chip.label}
-                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3"
-                >
-                  <span className="inline-flex size-9 items-center justify-center rounded-lg bg-blue/40 text-lime">
-                    <Icon name={chip.icon} className="size-4" strokeWidth={2} />
-                  </span>
-                  <span className="text-sm font-semibold text-white/90">{chip.label}</span>
-                </li>
-              ))}
-            </ul>
-            <LinkButton to="/solutions" variant="lime" arrow className="mt-9">
-              Explore Business Solutions
-            </LinkButton>
-          </div>
-          <DashboardPanel />
+          <ScrollReveal direction="right">
+            <div>
+              <p className="eyebrow flex items-center gap-3 text-lime">
+                <span className="h-px w-8 bg-lime" aria-hidden="true" />
+                Business Solutions
+              </p>
+              <h2
+                id="solutions-heading"
+                className="mt-4 text-3xl font-extrabold text-white sm:text-4xl lg:text-[2.6rem]"
+              >
+                Smart Solutions for{' '}
+                <span className="text-lime">Efficient Business Operations</span>
+              </h2>
+              <p className="mt-5 text-white/75">
+                Our billing, accounting, ERP and inventory solutions help you manage your business
+                more efficiently with easy-to-use and practical technology.
+              </p>
+              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+                {solutionChips.map((chip) => (
+                  <li
+                    key={chip.label}
+                    className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3"
+                  >
+                    <span className="inline-flex size-9 items-center justify-center rounded-lg bg-blue/40 text-lime">
+                      <Icon name={chip.icon} className="size-4" strokeWidth={2} />
+                    </span>
+                    <span className="text-sm font-semibold text-white/90">{chip.label}</span>
+                  </li>
+                ))}
+              </ul>
+              <LinkButton to="/solutions" variant="lime" arrow className="mt-9">
+                Explore Business Solutions
+              </LinkButton>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal direction="left" delay={200}>
+            <DashboardPanel />
+          </ScrollReveal>
         </div>
       </section>
 
