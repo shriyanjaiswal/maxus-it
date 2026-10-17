@@ -119,8 +119,8 @@ export function Home() {
         </div>
       </section>
 
-      <section className="relative z-10 bg-surface pb-16 lg:pb-20" aria-label="Company overview">
-        <div className="container-page relative -mt-8 lg:-mt-10">
+      <section className="bg-surface py-12 lg:py-16" aria-label="Company overview">
+        <div className="container-page">
           <ul className="grid divide-line rounded-(--radius-card) border border-line bg-surface shadow-(--shadow-card) sm:grid-cols-2 sm:divide-x lg:grid-cols-4">
             {facts.map((fact) => (
               <li key={fact.label} className="flex gap-4 p-6">
@@ -133,7 +133,6 @@ export function Home() {
                   </p>
                   <p className="mt-1 font-display text-base font-bold text-navy">{fact.value}</p>
                   <p className="mt-1 text-xs text-muted">{fact.note}</p>
-                  {fact.unverified && <DevFlag label="Verify before launch" />}
                 </div>
               </li>
             ))}
