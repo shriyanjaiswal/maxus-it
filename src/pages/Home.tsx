@@ -74,47 +74,111 @@ export function Home() {
         }}
       />
 
-      <section className="relative overflow-hidden bg-navy-deep" aria-labelledby="hero-heading">
+      <section className="relative overflow-hidden bg-navy-deep py-16 lg:py-24" aria-labelledby="hero-heading">
+        {/* Layered atmospheric lighting & grid mesh */}
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_100%_at_75%_20%,rgba(23,107,138,0.5),transparent_65%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_20%,rgba(23,107,138,0.55),transparent_70%)] animate-pulse-glow"
           aria-hidden="true"
         />
-        <div className="container-page relative grid items-center gap-12 py-14 lg:grid-cols-[52%_48%] lg:gap-8 lg:py-20">
+        <div
+          className="pointer-events-none absolute -left-40 -top-40 size-96 rounded-full bg-blue/20 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute right-10 bottom-0 size-80 rounded-full bg-lime/10 blur-3xl"
+          aria-hidden="true"
+        />
+        {/* Subtle geometric dot grid pattern */}
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px] opacity-60"
+          aria-hidden="true"
+        />
+
+        <div className="container-page relative grid items-center gap-12 lg:grid-cols-[54%_46%] lg:gap-10">
           <div>
-            <p className="eyebrow text-lime">{company.heroEyebrow}</p>
+            {/* Enterprise status badge */}
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-lime/30 bg-lime/10 px-4 py-1.5 text-xs font-bold tracking-wide text-lime uppercase backdrop-blur-md">
+              <span className="relative flex size-2">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-lime opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-lime" />
+              </span>
+              <span>Smart Tech • Practical Solutions • Business Growth</span>
+            </div>
+
             <h1
               id="hero-heading"
-              className="mt-5 text-balance-tight font-display text-[clamp(2.25rem,10vw,3.25rem)] font-extrabold text-white lg:text-[clamp(2.8rem,5vw,4.4rem)]"
+              className="mt-6 text-balance-tight font-display text-[clamp(2.35rem,8vw,3.5rem)] font-extrabold tracking-tight text-white lg:text-[clamp(3rem,4.5vw,4.5rem)] lg:leading-[1.08]"
             >
               Technology That Moves Your{' '}
-              <span className="text-lime">Business Forward.</span>
+              <span className="bg-gradient-to-r from-lime via-[#d8f45a] to-white bg-clip-text text-transparent">
+                Business Forward.
+              </span>
             </h1>
-            <p className="mt-6 max-w-xl text-base text-white/80 lg:text-lg">
+
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
               {company.heroDescription}
             </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <LinkButton to="/contact" variant="lime" arrow>
+
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <LinkButton to="/contact" variant="lime" arrow className="shadow-[0_0_24px_rgba(184,217,50,0.35)] transition-all hover:shadow-[0_0_32px_rgba(184,217,50,0.5)]">
                 Discuss Your Project
               </LinkButton>
               <LinkButton to="/services" variant="outlineLight">
                 Explore Our Services
               </LinkButton>
             </div>
-            <ul className="mt-10 grid gap-5 sm:grid-cols-3">
+
+            {/* Highlights with frosted glass treatment */}
+            <ul className="mt-11 grid gap-3 sm:grid-cols-3">
               {heroHighlights.map((item) => (
-                <li key={item.title} className="flex items-start gap-3">
-                  <span className="mt-0.5 inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-lime">
-                    <Icon name={item.icon} className="size-4" strokeWidth={2} />
+                <li
+                  key={item.title}
+                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.05] p-3 backdrop-blur-md transition-colors hover:border-lime/30 hover:bg-white/[0.08]"
+                >
+                  <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-lime/15 text-lime shadow-inner">
+                    <Icon name={item.icon} className="size-4.5" strokeWidth={2.2} />
                   </span>
-                  <span className="text-xs font-semibold text-white/85 lg:text-sm">
+                  <span className="text-xs font-semibold leading-snug text-white/90">
                     {item.title}
                   </span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="relative">
-            <HeroGlobe className="mx-auto w-full max-w-[560px]" />
+
+          {/* Right column: Interactive focal centerpiece with floating glass stat badges */}
+          <div className="relative flex items-center justify-center">
+            {/* Ambient halo glow */}
+            <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-blue/30 via-lime/15 to-transparent blur-2xl" />
+
+            {/* Floating Top Metric Glass Card */}
+            <div className="animate-float-slow absolute -top-4 -left-4 z-20 hidden rounded-2xl border border-white/15 bg-navy-soft/80 p-4 shadow-2xl backdrop-blur-xl sm:flex sm:items-center sm:gap-3.5">
+              <div className="flex size-11 items-center justify-center rounded-xl bg-lime text-navy font-bold shadow-md">
+                <span className="text-lg">15+</span>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white uppercase tracking-wider">Years Experience</p>
+                <p className="text-[11px] text-white/70">Trusted Tech Partner Since 2011</p>
+              </div>
+            </div>
+
+            {/* Main Hero artwork */}
+            <div className="relative z-10 w-full max-w-[540px]">
+              <HeroGlobe className="mx-auto w-full drop-shadow-[0_20px_50px_rgba(7,31,53,0.8)]" />
+            </div>
+
+            {/* Floating Bottom Metric Glass Card */}
+            <div className="animate-float-reverse absolute -bottom-4 -right-2 z-20 hidden rounded-2xl border border-white/15 bg-navy-soft/85 p-4 shadow-2xl backdrop-blur-xl sm:flex sm:items-center sm:gap-3.5">
+              <div className="flex size-10 items-center justify-center rounded-xl bg-blue text-white shadow-md">
+                <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white uppercase tracking-wider">99.9% Reliable SLA</p>
+                <p className="text-[11px] text-lime">Enterprise ERP & Web Systems</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
