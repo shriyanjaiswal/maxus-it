@@ -97,6 +97,10 @@ export function Pricing() {
         title="Transparent Pricing & Flexible Engagement Models | MAXUS IT SERVICES"
         description="Explore clear, transparent pricing models for software development, ERP systems, website design, and monthly digital maintenance from MAXUS IT SERVICES."
         path="/pricing"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Pricing', path: '/pricing' },
+        ]}
         keywords="software development pricing India, ERP software cost, website design packages, custom software estimate, IT AMC pricing"
         schema={{
           '@context': 'https://schema.org',
@@ -135,23 +139,23 @@ export function Pricing() {
       />
 
       {/* Pricing Cards Grid */}
-      <section className="bg-canvas py-16 lg:py-24" aria-labelledby="pricing-tiers-heading">
+      <section className="bg-canvas py-10 sm:py-16 lg:py-24" aria-labelledby="pricing-tiers-heading">
         <div className="container-page">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="pricing-tiers-heading" className="text-3xl font-extrabold text-navy sm:text-4xl">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-16">
+            <h2 id="pricing-tiers-heading" className="text-[20px] font-extrabold text-navy sm:text-3xl lg:text-4xl font-heading">
               Choose the right engagement model
             </h2>
-            <p className="mt-4 text-muted text-base sm:text-lg">
+            <p className="mt-2.5 sm:mt-4 text-muted text-[14px] sm:text-base leading-relaxed">
               Every business has unique operational needs. Select the model that fits your timeline,
               scope, and long-term goals.
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-3 items-stretch">
+          <div className="grid gap-5 sm:gap-8 lg:grid-cols-3 items-stretch">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.id}
-                className={`relative rounded-(--radius-card) border p-8 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-2xl border p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   tier.highlighted
                     ? 'border-blue bg-surface shadow-xl ring-2 ring-blue/20 -translate-y-1'
                     : 'border-line bg-surface hover:shadow-lg'
@@ -160,7 +164,7 @@ export function Pricing() {
                 {tier.badge && (
                   <div className="absolute -top-3.5 right-6">
                     <span
-                      className={`inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${
+                      className={`inline-block text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full ${
                         tier.highlighted
                           ? 'bg-blue text-white shadow-sm'
                           : 'bg-canvas-subtle text-muted border border-line'
@@ -172,30 +176,30 @@ export function Pricing() {
                 )}
 
                 <div>
-                  <h3 className="text-2xl font-bold text-navy">{tier.name}</h3>
-                  <p className="mt-2 text-xs text-muted font-medium min-h-[32px]">{tier.tagline}</p>
+                  <h3 className="font-heading text-[18px] sm:text-2xl font-bold text-navy">{tier.name}</h3>
+                  <p className="mt-1 text-[12px] sm:text-xs text-muted font-medium min-h-[24px] sm:min-h-[32px]">{tier.tagline}</p>
 
-                  <div className="mt-6 pb-6 border-b border-line">
-                    <span className="text-3xl font-black text-navy">{tier.price}</span>
-                    <span className="block text-xs text-muted mt-1 font-medium">{tier.period}</span>
+                  <div className="mt-3.5 sm:mt-6 pb-3.5 sm:pb-6 border-b border-line">
+                    <span className="font-heading text-[22px] sm:text-3xl font-black text-navy">{tier.price}</span>
+                    <span className="block text-[11px] sm:text-xs text-muted mt-1 font-medium">{tier.period}</span>
                   </div>
 
-                  <p className="mt-6 text-sm text-ink leading-relaxed">{tier.description}</p>
+                  <p className="mt-3.5 sm:mt-6 text-[13px] sm:text-sm text-ink leading-relaxed">{tier.description}</p>
 
-                  <ul className="mt-6 space-y-3">
+                  <ul className="mt-3.5 sm:mt-6 space-y-2 sm:space-y-3">
                     {tier.features.map((feat) => (
-                      <li key={feat} className="flex items-start gap-2.5 text-xs text-ink">
-                        <CheckCircle2 className="size-4 shrink-0 text-lime-dark mt-0.5" />
+                      <li key={feat} className="flex items-start gap-2 text-[12px] sm:text-xs text-ink">
+                        <CheckCircle2 className="size-3.5 sm:size-4 shrink-0 text-lime-dark mt-0.5" />
                         <span>{feat}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-line">
+                <div className="mt-5 sm:mt-8 pt-4 sm:pt-6 border-t border-line">
                   <Link
                     to={tier.ctaLink}
-                    className={`w-full py-3 px-5 rounded-md text-sm font-semibold inline-flex items-center justify-center gap-2 transition-all ${
+                    className={`w-full min-h-[44px] py-2.5 sm:py-3 px-5 rounded-xl text-[13px] sm:text-sm font-semibold inline-flex items-center justify-center gap-2 transition-all active:scale-95 ${
                       tier.highlighted
                         ? 'bg-blue text-white hover:bg-navy shadow-md'
                         : 'border border-line bg-canvas text-ink hover:border-blue hover:text-blue'
@@ -212,37 +216,37 @@ export function Pricing() {
       </section>
 
       {/* Value Pillars */}
-      <section className="bg-surface py-16 lg:py-20 border-y border-line" aria-label="Commitment highlights">
-        <div className="container-page grid gap-8 md:grid-cols-3">
-          <div className="flex gap-4 items-start">
-            <div className="p-3 rounded-lg bg-blue/10 text-blue shrink-0">
-              <ShieldCheck className="size-6" />
+      <section className="bg-surface py-10 sm:py-16 lg:py-20 border-y border-line" aria-label="Commitment highlights">
+        <div className="container-page grid gap-4 sm:gap-8 md:grid-cols-3">
+          <div className="flex gap-3.5 sm:gap-4 items-start rounded-2xl border border-line/60 bg-canvas p-4 sm:border-0 sm:bg-transparent sm:p-0">
+            <div className="p-2.5 sm:p-3 rounded-xl bg-blue/10 text-blue shrink-0">
+              <ShieldCheck className="size-5 sm:size-6" />
             </div>
             <div>
-              <h4 className="font-bold text-navy text-lg">No Hidden Surprises</h4>
-              <p className="mt-1 text-xs text-muted leading-relaxed">
+              <h4 className="font-heading font-bold text-navy text-[15px] sm:text-lg">No Hidden Surprises</h4>
+              <p className="mt-1 text-[12px] sm:text-xs text-muted leading-relaxed">
                 Clear deliverables, upfront terms, and documented feature checklists before contract signing.
               </p>
             </div>
           </div>
-          <div className="flex gap-4 items-start">
-            <div className="p-3 rounded-lg bg-lime-dark/10 text-lime-dark shrink-0">
-              <Layers className="size-6" />
+          <div className="flex gap-3.5 sm:gap-4 items-start rounded-2xl border border-line/60 bg-canvas p-4 sm:border-0 sm:bg-transparent sm:p-0">
+            <div className="p-2.5 sm:p-3 rounded-xl bg-lime-dark/10 text-lime-dark shrink-0">
+              <Layers className="size-5 sm:size-6" />
             </div>
             <div>
-              <h4 className="font-bold text-navy text-lg">Milestone Peace of Mind</h4>
-              <p className="mt-1 text-xs text-muted leading-relaxed">
+              <h4 className="font-heading font-bold text-navy text-[15px] sm:text-lg">Milestone Peace of Mind</h4>
+              <p className="mt-1 text-[12px] sm:text-xs text-muted leading-relaxed">
                 Approve each phase of work before unlocking the next payment milestone.
               </p>
             </div>
           </div>
-          <div className="flex gap-4 items-start">
-            <div className="p-3 rounded-lg bg-blue/10 text-blue shrink-0">
-              <Headphones className="size-6" />
+          <div className="flex gap-3.5 sm:gap-4 items-start rounded-2xl border border-line/60 bg-canvas p-4 sm:border-0 sm:bg-transparent sm:p-0">
+            <div className="p-2.5 sm:p-3 rounded-xl bg-blue/10 text-blue shrink-0">
+              <Headphones className="size-5 sm:size-6" />
             </div>
             <div>
-              <h4 className="font-bold text-navy text-lg">Lifetime Support Availability</h4>
-              <p className="mt-1 text-xs text-muted leading-relaxed">
+              <h4 className="font-heading font-bold text-navy text-[15px] sm:text-lg">Lifetime Support Availability</h4>
+              <p className="mt-1 text-[12px] sm:text-xs text-muted leading-relaxed">
                 Direct phone and WhatsApp assistance from engineers who understand your system.
               </p>
             </div>
@@ -251,34 +255,34 @@ export function Pricing() {
       </section>
 
       {/* Pricing FAQs */}
-      <section className="bg-canvas py-16 lg:py-24" aria-labelledby="pricing-faq-heading">
+      <section className="bg-canvas py-10 sm:py-16 lg:py-24" aria-labelledby="pricing-faq-heading">
         <div className="container-page max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 id="pricing-faq-heading" className="text-3xl font-extrabold text-navy sm:text-4xl">
+          <div className="text-center mb-6 sm:mb-12">
+            <h2 id="pricing-faq-heading" className="text-[20px] font-extrabold text-navy sm:text-3xl lg:text-4xl font-heading">
               Frequently Asked Questions
             </h2>
-            <p className="mt-3 text-muted">
+            <p className="mt-2 text-[12px] sm:text-sm text-muted">
               Have questions regarding our contracts, rates, or estimates? Here are quick answers.
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-(--radius-card) border border-line bg-surface p-6">
-                <h3 className="text-base font-bold text-navy">{faq.q}</h3>
-                <p className="mt-2 text-sm text-muted leading-relaxed">{faq.a}</p>
+              <div key={faq.q} className="rounded-2xl border border-line bg-surface p-4 sm:p-6 shadow-xs">
+                <h3 className="font-heading text-[15px] sm:text-base font-bold text-navy">{faq.q}</h3>
+                <p className="mt-1.5 text-[13px] sm:text-sm text-muted leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-sm text-muted">
+          <div className="mt-8 sm:mt-12 text-center">
+            <p className="text-[13px] sm:text-sm text-muted">
               Need a custom quotation tailored to your exact software specification?
             </p>
-            <div className="mt-4 flex flex-wrap justify-center gap-4">
+            <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-blue text-white font-semibold text-sm hover:bg-navy transition-all shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue text-white font-semibold text-[14px] sm:text-sm hover:bg-navy transition-all shadow-sm min-h-[44px]"
               >
                 Send Your Requirements
                 <ArrowRight className="size-4" />
@@ -287,7 +291,7 @@ export function Pricing() {
                 href={whatsappLink('Hello MAXUS IT SERVICES, I would like to get a price estimate for my project.')}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-line bg-surface text-ink font-semibold text-sm hover:border-blue hover:text-blue transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-line bg-surface text-ink font-semibold text-[14px] sm:text-sm hover:border-blue hover:text-blue transition-all min-h-[44px]"
               >
                 WhatsApp Quick Estimate
               </a>

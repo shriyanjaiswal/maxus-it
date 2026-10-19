@@ -3,18 +3,13 @@ export type Project = {
   title: string
   category: string
   summary: string
-  /** Key into the local SVG artwork set or custom image path. */
   artwork?: 'corporate' | 'erp' | 'mobile'
-  image?: string
+  image: string
   services: string[]
   challenge: string
   solution: string
   approach: string[]
   keyFeatures?: string[]
-  /**
-   * Set true only after the client confirms the project is real and approved
-   * for publication. Unapproved records never render in a production build.
-   */
   publicationApproved: boolean
 }
 
@@ -45,7 +40,7 @@ export const projects: Project[] = [
   {
     slug: 'erp-inventory-system',
     title: 'ERP & Inventory System',
-    category: 'Business Solution',
+    category: 'Enterprise ERP & Billing',
     summary:
       'Custom ERP solution for managing inventory, purchases, sales and business operations.',
     image: '/assets/products/custom-software-solutions.jpg',
@@ -65,7 +60,7 @@ export const projects: Project[] = [
   {
     slug: 'mobile-app-development',
     title: 'Mobile App Development',
-    category: 'Mobile Application',
+    category: 'Mobile Applications',
     summary:
       'Android and iOS mobile application for improved customer engagement and business accessibility.',
     image: '/assets/brand/maxus-mobile-ui-showcase.png',
@@ -85,7 +80,7 @@ export const projects: Project[] = [
   {
     slug: 'school-erp-software',
     title: 'School ERP Software',
-    category: 'Education Solution',
+    category: 'Education Software',
     summary:
       'Complete school management solution to streamline academic, administrative, and parent communication processes in one platform.',
     image: '/assets/products/school-erp-software.jpg',
@@ -117,7 +112,7 @@ export const projects: Project[] = [
   {
     slug: 'institute-management-software',
     title: 'Institute Management Software',
-    category: 'Education Solution',
+    category: 'Education Software',
     summary:
       'Smart and simple software solution for coaching institutes, colleges, and training academies to manage admissions, courses, exams, and certifications.',
     image: '/assets/products/institute-management-software.jpg',
@@ -149,7 +144,7 @@ export const projects: Project[] = [
   {
     slug: 'electronic-store-erp-software',
     title: 'Electronic Store ERP Software',
-    category: 'Retail & ERP Solution',
+    category: 'Enterprise ERP & Billing',
     summary:
       'Powerful ERP software for electronics, home appliances, mobile, and IT retail stores to handle multi-branch inventory, serial tracking, warranty, and GST billing.',
     image: '/assets/products/electronic-store-erp-software.jpg',
@@ -181,7 +176,7 @@ export const projects: Project[] = [
   {
     slug: 'garment-footwear-erp-software',
     title: 'Garment & Footwear ERP Software',
-    category: 'Industry ERP Solution',
+    category: 'Enterprise ERP & Billing',
     summary:
       'Most advanced Garment & Footwear ERP software solution for retailers, wholesalers, manufacturers, and distributors to manage entire operations from design to delivery.',
     image: '/assets/products/garment-footwear-erp-software.jpg',
@@ -215,7 +210,7 @@ export const projects: Project[] = [
   {
     slug: 'business-erp14-accounting-software',
     title: 'Business ERP-14 Software Accounting',
-    category: 'Accounting & ERP Solution',
+    category: 'Enterprise ERP & Billing',
     summary:
       'All-in-one Business ERP-14 software for smart accounting, touch POS billing, inventory tracking, and seamless operations across Retail, Manufacturing, Healthcare, Hospitality, and Agriculture.',
     image: '/assets/products/business-erp14-accounting-software.jpg',

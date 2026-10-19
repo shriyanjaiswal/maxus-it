@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { Link } from 'react-router-dom'
 import { AlertCircle, Loader2, Send, CheckCircle2 } from 'lucide-react'
 import { services } from '../data/services'
 import { formProviderConfigured, submitEnquiry, type EnquiryPayload } from '../lib/enquiry'
@@ -66,11 +67,11 @@ export function ContactForm() {
   }
 
   const inputClass = (key: keyof EnquiryPayload) =>
-    `w-full rounded-(--radius-btn) border bg-surface px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-silver focus:border-blue ${
+    `w-full rounded-xl border bg-surface px-3.5 py-3 text-[14px] sm:text-sm text-ink outline-none transition-colors placeholder:text-silver focus:border-blue min-h-[44px] ${
       errors[key] ? 'border-red-400' : 'border-line'
     }`
 
-  const labelClass = 'mb-1.5 block font-display text-sm font-bold text-navy'
+  const labelClass = 'mb-1.5 block font-heading text-[13px] sm:text-sm font-bold text-navy'
 
   const error = (key: keyof EnquiryPayload) =>
     errors[key] ? (
@@ -84,17 +85,17 @@ export function ContactForm() {
     return (
       <div
         role="status"
-        className="rounded-(--radius-card) border border-lime-dark/40 bg-lime/15 p-8"
+        className="rounded-2xl border border-lime-dark/40 bg-lime/15 p-6 sm:p-8"
       >
         <CheckCircle2 className="size-8 text-lime-dark" aria-hidden="true" />
-        <h3 className="mt-4 text-xl font-bold text-navy">Enquiry sent</h3>
-        <p className="mt-2 text-sm text-ink">
+        <h3 className="mt-4 text-[18px] sm:text-xl font-bold text-navy font-heading">Enquiry sent</h3>
+        <p className="mt-2 text-[14px] sm:text-sm text-ink">
           Thank you. Your message has been accepted for delivery. We reply during business hours.
         </p>
         <button
           type="button"
           onClick={() => setState('idle')}
-          className="mt-5 text-sm font-bold text-blue underline-offset-4 hover:underline"
+          className="mt-5 text-[14px] font-bold text-blue underline-offset-4 hover:underline"
         >
           Send another enquiry
         </button>
@@ -196,7 +197,12 @@ export function ContactForm() {
         </div>
       )}
 
-      <ActionButton type="submit" variant="navy" disabled={state === 'sending'} className="w-full sm:w-auto">
+      <ActionButton
+        type="submit"
+        variant="navy"
+        disabled={state === 'sending'}
+        className="w-full sm:w-auto h-12 text-[14px] font-bold rounded-xl active:scale-[0.98] justify-center"
+      >
         {state === 'sending' ? (
           <>
             <Loader2 className="size-4 animate-spin" aria-hidden="true" />
@@ -209,11 +215,11 @@ export function ContactForm() {
           </>
         )}
       </ActionButton>
-      <p className="text-xs text-muted">
+      <p className="text-[12px] text-muted">
         By sending this enquiry you agree to us using these details to respond to you. See our{' '}
-        <a href="/privacy-policy" className="text-blue underline underline-offset-2">
+        <Link to="/privacy-policy" className="text-blue underline underline-offset-2">
           privacy policy
-        </a>
+        </Link>
         .
       </p>
     </form>

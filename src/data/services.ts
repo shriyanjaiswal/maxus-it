@@ -10,6 +10,7 @@ export type Service = {
   deliverables: string[]
   faqs: { question: string; answer: string }[]
   pending: string[]
+  ogImage?: string
 }
 
 export const services: Service[] = [
@@ -57,6 +58,7 @@ export const services: Service[] = [
       'Speed Optimization & Technical SEO',
       'Managed Cloud Hosting & SSL Setup',
     ],
+    ogImage: '/assets/banners/website-development-banner-online.jpg',
   },
   {
     slug: 'custom-software',
@@ -293,6 +295,7 @@ export const services: Service[] = [
       'Biometric Authentication (FaceID/Fingerprint)',
       'Payment Gateway & In-App Transactions',
     ],
+    ogImage: '/assets/banners/mobile-app-banner-custom.jpg',
   },
   {
     slug: 'digital-marketing',
@@ -588,6 +591,62 @@ export const services: Service[] = [
       'Enterprise Dashboard UI & Data Visualization',
       'Design Systems & Brand Style Guides',
       'UX Usability Audits & Redesign Strategy',
+    ],
+  },
+  {
+    slug: 'seo-gmb-services',
+    title: 'SEO & Google Business Profile (GMB) Optimization',
+    cardTitle: 'SEO & Google Business Profile (GMB)',
+    icon: 'search',
+    summary:
+      'Rank #1 on Google Search and Google Maps with technical SEO, localized keyword targeting, and complete Google Business Profile optimization.',
+    intro:
+      'Get found by high-intent customers right when they are searching for your products and services. We combine on-page SEO, schema markup, Core Web Vitals optimization, and Google Maps local 3-pack dominance to drive real phone calls and foot traffic.',
+    capabilities: [
+      'Complete Google Business Profile (GMB) setup, category selection & verification',
+      'Google Maps 3-Pack local ranking optimization & geo-tagged photo updates',
+      'Technical SEO audit: Page speed, Core Web Vitals, mobile responsiveness & crawl error fixes',
+      'High-intent commercial keyword research with competitor rank gap analysis',
+      'Local citations, NAP consistency across 50+ business directories & review strategy',
+      'Schema.org structured data (LocalBusiness, FAQPage, OfferCatalog, HowTo)',
+    ],
+    fitFor: [
+      'Businesses not showing up on Google Maps for local queries in their city',
+      'Companies whose competitors outrank them on top commercial Google keywords',
+      'Retailers, manufacturers, and institutes wanting direct WhatsApp & phone inquiries from search',
+      'Brands recovering from search ranking drops or poor technical website health',
+    ],
+    deliverables: [
+      'Comprehensive baseline SEO & Google Maps ranking audit report',
+      'Fully optimized and verified Google Business Profile with localized services & products',
+      'On-page title tags, meta descriptions, semantic H1-H3 headers, and internal linking structure',
+      'JSON-LD rich snippet schema implementation for instant Google search enhancements',
+      'Monthly search keyword ranking and Google Maps call/direction insights dashboard',
+    ],
+    faqs: [
+      {
+        question: 'How long does it take to see results from SEO and GMB optimization?',
+        answer:
+          'Google Maps / GMB optimization frequently generates visible rank improvements and direct customer calls within 3 to 6 weeks. Broad organic Google Search ranking gains typically take 6 to 12 weeks depending on industry competition and keyword difficulty.',
+      },
+      {
+        question: 'How do you get our business into Google Maps Local 3-Pack?',
+        answer:
+          'We optimize your primary and secondary GMB business categories, ensure 100% NAP (Name, Address, Phone) consistency across directories, add localized product catalogs with geo-targeted descriptions, embed Google Maps schema on your website, and implement a proven customer review acquisition workflow.',
+      },
+      {
+        question: 'Do you provide monthly ranking and traffic reports?',
+        answer:
+          'Yes. Every month you receive a clear, jargon-free report tracking keyword ranking positions on Google, organic website visitors, total phone calls generated, and Google Maps direction requests.',
+      },
+    ],
+    pending: [
+      'Google Business Profile (GMB) 3-Pack Ranking',
+      'Local SEO & City-Wise Citation Building',
+      'Technical SEO & Core Web Vitals Optimization',
+      'Rich Snippet & Schema.org Implementation',
+      'Customer Review Generation & Reputation Strategy',
+      'Monthly Keyword Performance & Analytics Reports',
     ],
   },
 ]

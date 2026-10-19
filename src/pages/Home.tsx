@@ -2,14 +2,14 @@ import { CalendarDays, MapPin, Target, Users } from 'lucide-react'
 import { company, locationsLabel } from '../data/company'
 import { services } from '../data/services'
 import { visibleProjects } from '../data/portfolio'
-import { heroHighlights, trustPoints } from '../data/site'
+import { trustPoints } from '../data/site'
 import { LinkButton } from '../components/Button'
-import { HeroGlobe } from '../components/artwork/HeroGlobe'
+import { PureHeroImageCarousel } from '../components/PureHeroImageCarousel'
 import { DashboardPanel } from '../components/artwork/DashboardPanel'
 import { Icon } from '../components/Icon'
 import { SectionHeading } from '../components/SectionHeading'
 import { Seo } from '../components/Seo'
-import { ServiceGrid } from '../components/ServiceCard'
+import { ServiceSlider } from '../components/ServiceSlider'
 import { ProjectCard } from '../components/ProjectCard'
 import { ProcessSteps } from '../components/ProcessSteps'
 import { ContactCTA } from '../components/ContactCTA'
@@ -71,207 +71,116 @@ export function Home() {
         ogImage="/assets/products/smart-it-solutions-banner.jpg"
         schema={{
           '@context': 'https://schema.org',
-          '@type': 'ITService',
-          name: company.name,
-          alternateName: 'Maxus IT Services Pvt Ltd',
-          description: company.tagline,
-          email: company.contact.email,
-          telephone: company.contact.phoneDial,
-          areaServed: {
-            '@type': 'Country',
-            name: 'India',
-          },
-          hasOfferCatalog: {
-            '@type': 'OfferCatalog',
-            name: 'IT Services & Software Suites',
-            itemListElement: [
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'SoftwareApplication',
-                  name: 'Garment & Footwear ERP Software',
-                  applicationCategory: 'BusinessApplication',
-                },
-              },
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'SoftwareApplication',
-                  name: 'Business ERP-14 Accounting Software',
-                  applicationCategory: 'BusinessApplication',
-                },
-              },
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'SoftwareApplication',
-                  name: 'School ERP Software',
-                  applicationCategory: 'EducationalApplication',
-                },
-              },
-            ],
-          },
-          mainEntity: [
+          '@graph': [
             {
-              '@type': 'Question',
-              name: 'Which industries does Maxus IT Services cater to across India?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'We provide specialized ERP and custom software solutions for Garment & Footwear manufacturing, wholesale & retail, Schools & Educational Institutes, Electronics & Appliance retail counters, Healthcare clinics, Hospitality, and multi-warehouse distribution businesses.',
+              '@type': ['ITService', 'LocalBusiness'],
+              '@id': 'https://www.maxusitservices.com/#itservice',
+              name: company.name,
+              alternateName: 'Maxus IT Services Pvt Ltd',
+              description: company.tagline,
+              email: company.contact.email,
+              telephone: company.contact.phoneDial,
+              url: 'https://www.maxusitservices.com/',
+              areaServed: {
+                '@type': 'Country',
+                name: 'India',
+              },
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'IT Services & Software Suites',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'SoftwareApplication',
+                      name: 'Garment & Footwear ERP Software',
+                      applicationCategory: 'BusinessApplication',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'SoftwareApplication',
+                      name: 'Business ERP-14 Accounting Software',
+                      applicationCategory: 'BusinessApplication',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'SoftwareApplication',
+                      name: 'School ERP Software',
+                      applicationCategory: 'EducationalApplication',
+                    },
+                  },
+                ],
               },
             },
             {
-              '@type': 'Question',
-              name: 'Can you implement ERP software remotely in other states outside Mumbai & Varanasi?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Yes. We deploy secure cloud and hybrid on-premise systems for clients across all states in India. Our deployment includes remote server setup, database configuration, historical ledger migration, and video training sessions with 24/7 dedicated WhatsApp support.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Does your billing and ERP software support Indian GST regulations?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'All our software platforms generate automated GST-compliant tax invoices, manage HSN/SAC codes, generate E-Way bills, and provide one-click exports for GSTR-1 and GSTR-3B filing.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Can bills and payment receipts be sent directly to customers on WhatsApp?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Yes. Both our Garment & Footwear ERP and Business ERP-14 accounting suites come equipped with automated WhatsApp dispatch, allowing you to send professional digital invoices and payment receipts directly to client mobile phones.',
-              },
+              '@type': 'FAQPage',
+              '@id': 'https://www.maxusitservices.com/#faq',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Which industries does Maxus IT Services cater to across India?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'We provide specialized ERP and custom software solutions for Garment & Footwear manufacturing, wholesale & retail, Schools & Educational Institutes, Electronics & Appliance retail counters, Healthcare clinics, Hospitality, and multi-warehouse distribution businesses.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Can you implement ERP software remotely in other states outside Mumbai & Varanasi?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. We deploy secure cloud and hybrid on-premise systems for clients across all states in India. Our deployment includes remote server setup, database configuration, historical ledger migration, and video training sessions with 24/7 dedicated WhatsApp support.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Does your billing and ERP software support Indian GST regulations?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'All our software platforms generate automated GST-compliant tax invoices, manage HSN/SAC codes, generate E-Way bills, and provide one-click exports for GSTR-1 and GSTR-3B filing.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Can bills and payment receipts be sent directly to customers on WhatsApp?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. Both our Garment & Footwear ERP and Business ERP-14 accounting suites come equipped with automated WhatsApp dispatch, allowing you to send professional digital invoices and payment receipts directly to client mobile phones.',
+                  },
+                },
+              ],
             },
           ],
         }}
       />
 
-      <section className="relative overflow-hidden bg-navy-deep py-16 lg:py-24" aria-labelledby="hero-heading">
-        {/* Layered atmospheric lighting & grid mesh */}
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_20%,rgba(23,107,138,0.55),transparent_70%)] animate-pulse-glow"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute -left-40 -top-40 size-96 rounded-full bg-blue/20 blur-3xl"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute right-10 bottom-0 size-80 rounded-full bg-lime/10 blur-3xl"
-          aria-hidden="true"
-        />
-        {/* Subtle geometric dot grid pattern */}
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px] opacity-60"
-          aria-hidden="true"
-        />
+      {/* 5 Full Banner Images Auto-Scroll Carousel without text content */}
+      <PureHeroImageCarousel />
 
-        <div className="container-page relative grid items-center gap-10 lg:grid-cols-[54%_46%] lg:gap-10">
-          <div className="min-w-0 max-w-full animate-fade-in">
-            {/* Enterprise status badge */}
-            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-lime/30 bg-lime/10 px-3 py-1.5 text-[10.5px] font-bold tracking-wide text-lime uppercase backdrop-blur-md sm:px-4 sm:text-xs">
-              <span className="relative flex size-2 shrink-0">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-lime opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-lime" />
-              </span>
-              <span className="leading-tight">Smart Tech • Practical Solutions • Business Growth</span>
-            </div>
-
-            <h1
-              id="hero-heading"
-              className="mt-5 text-balance-tight font-display text-[clamp(1.85rem,7.5vw,3.25rem)] font-extrabold tracking-tight break-words text-white lg:text-[clamp(3rem,4.5vw,4.5rem)] lg:leading-[1.08]"
-            >
-              Technology That Moves Your{' '}
-              <span className="bg-gradient-to-r from-lime via-[#d8f45a] to-white bg-clip-text text-transparent">
-                Business Forward.
-              </span>
-            </h1>
-
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              {company.heroDescription}
-            </p>
-
-            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
-              <LinkButton to="/contact" variant="lime" arrow className="w-full justify-center shadow-[0_0_24px_rgba(184,217,50,0.35)] transition-all hover:shadow-[0_0_32px_rgba(184,217,50,0.5)] sm:w-auto">
-                Discuss Your Project
-              </LinkButton>
-              <LinkButton to="/services" variant="outlineLight" className="w-full justify-center sm:w-auto">
-                Explore Our Services
-              </LinkButton>
-            </div>
-
-            {/* Highlights with frosted glass treatment */}
-            <ul className="mt-8 grid grid-cols-1 gap-2.5 sm:mt-10 sm:grid-cols-3 sm:gap-3">
-              {heroHighlights.map((item) => (
-                <li
-                  key={item.title}
-                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.05] p-3 backdrop-blur-md transition-colors hover:border-lime/30 hover:bg-white/[0.08]"
-                >
-                  <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-lime/15 text-lime shadow-inner">
-                    <Icon name={item.icon} className="size-4.5" strokeWidth={2.2} />
-                  </span>
-                  <span className="text-xs font-semibold leading-snug text-white/90">
-                    {item.title}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Right column: Interactive focal centerpiece (hidden on mobile, visible on desktop/tablet) */}
-          <div className="relative hidden max-w-full items-center justify-center py-4 lg:flex">
-            {/* Ambient halo glow */}
-            <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-blue/30 via-lime/15 to-transparent blur-2xl" />
-
-            {/* Floating Top Metric Glass Card */}
-            <div className="animate-float-slow absolute -top-4 -left-4 z-20 hidden rounded-2xl border border-white/15 bg-navy-soft/80 p-4 shadow-2xl backdrop-blur-xl sm:flex sm:items-center sm:gap-3.5">
-              <div className="flex size-11 items-center justify-center rounded-xl bg-lime text-navy font-bold shadow-md">
-                <span className="text-lg">15+</span>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-white uppercase tracking-wider">Years Experience</p>
-                <p className="text-[11px] text-white/70">Trusted Tech Partner Since 2011</p>
-              </div>
-            </div>
-
-            {/* Main Hero artwork */}
-            <div className="relative z-10 w-full max-w-[540px]">
-              <HeroGlobe className="mx-auto w-full drop-shadow-[0_20px_50px_rgba(7,31,53,0.8)]" />
-            </div>
-
-            {/* Floating Bottom Metric Glass Card */}
-            <div className="animate-float-reverse absolute -bottom-4 -right-2 z-20 hidden rounded-2xl border border-white/15 bg-navy-soft/85 p-4 shadow-2xl backdrop-blur-xl sm:flex sm:items-center sm:gap-3.5">
-              <div className="flex size-10 items-center justify-center rounded-xl bg-blue text-white shadow-md">
-                <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-white uppercase tracking-wider">99.9% Reliable SLA</p>
-                <p className="text-[11px] text-lime">Enterprise ERP & Web Systems</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-surface py-12 lg:py-16" aria-label="Company overview">
+      <section className="bg-surface py-8 sm:py-12 lg:py-16" aria-label="Company overview">
         <div className="container-page">
           <ScrollReveal direction="up">
-            <ul className="grid divide-y sm:divide-y-0 sm:divide-x divide-line rounded-(--radius-card) border border-line bg-surface shadow-(--shadow-card) sm:grid-cols-2 lg:grid-cols-4">
+            <ul className="grid grid-cols-2 gap-2.5 sm:gap-0 sm:divide-x divide-line rounded-2xl sm:rounded-(--radius-card) border border-line bg-canvas sm:bg-surface p-2 sm:p-0 shadow-(--shadow-card) lg:grid-cols-4">
               {facts.map((fact) => (
-                <li key={fact.label} className="flex gap-4 p-6">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-soft text-blue">
-                    <fact.Icon className="size-5" aria-hidden="true" />
-                  </span>
-                  <div className="min-w-0">
-                    <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+                <li
+                  key={fact.label}
+                  className="rounded-xl sm:rounded-none bg-surface p-3.5 sm:p-6 flex flex-col justify-between border border-line/60 sm:border-0 shadow-xs sm:shadow-none transition-transform active:scale-[0.98]"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="inline-flex size-9 sm:size-11 shrink-0 items-center justify-center rounded-xl bg-blue-soft text-blue">
+                      <fact.Icon className="size-4.5 sm:size-5" aria-hidden="true" />
+                    </span>
+                    <span className="text-[10px] font-bold tracking-wider text-muted uppercase">
                       {fact.label}
-                    </p>
-                    <p className="mt-1 font-display text-base font-bold text-navy">{fact.value}</p>
-                    <p className="mt-1 text-xs text-muted">{fact.note}</p>
+                    </span>
+                  </div>
+                  <div className="mt-3">
+                    <p className="font-display text-sm sm:text-base font-bold text-navy line-clamp-1">{fact.value}</p>
+                    <p className="mt-0.5 text-[11px] sm:text-xs text-muted leading-tight line-clamp-2">{fact.note}</p>
                   </div>
                 </li>
               ))}
@@ -280,7 +189,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="bg-surface pb-16 lg:pb-24" aria-labelledby="services-heading">
+      <section className="bg-surface pb-10 sm:pb-16 lg:pb-24" aria-labelledby="services-heading">
         <div className="container-page">
           <ScrollReveal direction="up">
             <SectionHeading
@@ -293,21 +202,21 @@ export function Home() {
               }
               description="We provide end-to-end technology solutions to simplify your operations and accelerate growth."
               action={
-                <LinkButton to="/services" variant="outlineDark">
+                <LinkButton to="/services" variant="outlineDark" className="w-full sm:w-auto justify-center">
                   View All Services
                 </LinkButton>
               }
             />
           </ScrollReveal>
           <ScrollReveal direction="up" delay={150}>
-            <div className="mt-12">
-              <ServiceGrid services={services} />
+            <div className="mt-5 sm:mt-8">
+              <ServiceSlider services={services} />
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="bg-canvas py-16 lg:py-24" aria-labelledby="portfolio-heading">
+      <section className="bg-canvas py-10 sm:py-16 lg:py-24" aria-labelledby="portfolio-heading">
         <div className="container-page">
           <ScrollReveal direction="up">
             <SectionHeading
@@ -316,7 +225,7 @@ export function Home() {
               title="Some of Our Recent Work"
               description="Delivering practical solutions for growing businesses."
               action={
-                <LinkButton to="/portfolio" variant="outlineDark">
+                <LinkButton to="/portfolio" variant="outlineDark" className="w-full sm:w-auto justify-center">
                   View All Projects
                 </LinkButton>
               }
@@ -324,57 +233,57 @@ export function Home() {
           </ScrollReveal>
           {projects.length > 0 ? (
             <ScrollReveal direction="up" delay={200}>
-              <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-6 sm:mt-12 grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {projects.slice(0, 6).map((project) => (
                   <ProjectCard key={project.slug} project={project} />
                 ))}
               </div>
             </ScrollReveal>
           ) : (
-            <p className="mt-12 rounded-(--radius-card) border border-dashed border-line bg-surface p-10 text-center text-sm text-muted">
+            <p className="mt-6 sm:mt-12 rounded-2xl border border-dashed border-line bg-surface p-6 sm:p-10 text-center text-sm text-muted">
               Featured projects are currently being updated. Contact our team for custom case studies and live demos.
             </p>
           )}
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-navy py-16 lg:py-24" aria-labelledby="solutions-heading">
+      <section className="relative overflow-hidden bg-navy py-10 sm:py-16 lg:py-24" aria-labelledby="solutions-heading">
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_100%_at_20%_0%,rgba(23,107,138,0.55),transparent_60%)]"
           aria-hidden="true"
         />
-        <div className="container-page relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="container-page relative grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           <ScrollReveal direction="right">
             <div>
-              <p className="eyebrow flex items-center gap-3 text-lime">
-                <span className="h-px w-8 bg-lime" aria-hidden="true" />
+              <p className="eyebrow flex items-center gap-2.5 sm:gap-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-lime">
+                <span className="h-px w-6 sm:w-8 bg-lime" aria-hidden="true" />
                 Business Solutions
               </p>
               <h2
                 id="solutions-heading"
-                className="mt-4 text-3xl font-extrabold text-white sm:text-4xl lg:text-[2.6rem]"
+                className="mt-2.5 sm:mt-4 text-[20px] font-extrabold text-white sm:text-3xl lg:text-[2.6rem] font-heading leading-tight"
               >
                 Smart Solutions for{' '}
                 <span className="text-lime">Efficient Business Operations</span>
               </h2>
-              <p className="mt-5 text-white/75">
+              <p className="mt-3 sm:mt-5 text-[14px] sm:text-base text-white/75 leading-relaxed">
                 Our billing, accounting, ERP and inventory solutions help you manage your business
                 more efficiently with easy-to-use and practical technology.
               </p>
-              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              <ul className="mt-5 sm:mt-8 grid gap-2.5 sm:gap-3 sm:grid-cols-2">
                 {solutionChips.map((chip) => (
                   <li
                     key={chip.label}
-                    className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3"
+                    className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3.5 py-2.5 sm:px-4 sm:py-3"
                   >
-                    <span className="inline-flex size-9 items-center justify-center rounded-lg bg-blue/40 text-lime">
+                    <span className="inline-flex size-8 sm:size-9 shrink-0 items-center justify-center rounded-lg bg-blue/40 text-lime">
                       <Icon name={chip.icon} className="size-4" strokeWidth={2} />
                     </span>
-                    <span className="text-sm font-semibold text-white/90">{chip.label}</span>
+                    <span className="text-[13px] sm:text-sm font-semibold text-white/90">{chip.label}</span>
                   </li>
                 ))}
               </ul>
-              <LinkButton to="/solutions" variant="lime" arrow className="mt-9">
+              <LinkButton to="/solutions" variant="lime" arrow className="mt-6 sm:mt-9 w-full sm:w-auto justify-center">
                 Explore Business Solutions
               </LinkButton>
             </div>
@@ -385,29 +294,34 @@ export function Home() {
         </div>
       </section>
 
-      <section className="bg-surface py-16 lg:py-24" aria-labelledby="why-heading">
-        <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
+      <section className="bg-surface py-10 sm:py-16 lg:py-24" aria-labelledby="why-heading">
+        <div className="container-page grid gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           <div>
-            <p className="eyebrow flex items-center gap-3 text-blue">
-              <span className="h-px w-8 bg-lime-dark" aria-hidden="true" />
+            <p className="eyebrow flex items-center gap-2.5 sm:gap-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-blue">
+              <span className="h-px w-6 sm:w-8 bg-lime-dark" aria-hidden="true" />
               Why Choose Maxus
             </p>
-            <h2 id="why-heading" className="mt-4 text-3xl font-extrabold text-navy sm:text-4xl">
+            <h2 id="why-heading" className="mt-2.5 sm:mt-4 text-[20px] font-extrabold text-navy sm:text-3xl lg:text-4xl font-heading">
               Your Trusted Technology Partner
             </h2>
-            <p className="mt-5 text-muted">
+            <p className="mt-2.5 sm:mt-5 text-[14px] sm:text-base text-muted leading-relaxed">
               We focus on delivering practical, scalable and business aligned solutions with a
               customer-first approach.
             </p>
           </div>
-          <ul className="grid gap-8 sm:grid-cols-2">
+          <ul className="grid gap-3 sm:gap-6 sm:grid-cols-2">
             {trustPoints.map((point) => (
-              <li key={point.title}>
-                <span className="inline-flex size-12 items-center justify-center rounded-xl bg-blue-soft text-blue">
-                  <Icon name={point.icon} className="size-6" strokeWidth={1.7} />
+              <li
+                key={point.title}
+                className="rounded-2xl border border-line bg-canvas p-4 sm:p-6 shadow-xs flex items-start gap-3 sm:gap-3.5 transition-transform active:scale-[0.98]"
+              >
+                <span className="inline-flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-xl bg-blue-soft text-blue">
+                  <Icon name={point.icon} className="size-5 sm:size-6" strokeWidth={1.7} />
                 </span>
-                <h3 className="mt-4 text-base font-bold text-navy">{point.title}</h3>
-                <p className="mt-2 text-sm text-muted">{point.body}</p>
+                <div className="min-w-0">
+                  <h3 className="font-heading text-[15px] sm:text-base font-bold text-navy">{point.title}</h3>
+                  <p className="mt-1 text-[12px] sm:text-sm text-muted leading-relaxed">{point.body}</p>
+                </div>
               </li>
             ))}
           </ul>
@@ -415,7 +329,7 @@ export function Home() {
       </section>
 
       {/* Pan-India Service Coverage & Industrial Hubs Section */}
-      <section className="bg-canvas py-16 lg:py-24 border-t border-line" aria-labelledby="nationwide-coverage-heading">
+      <section className="bg-canvas py-10 sm:py-16 lg:py-24 border-t border-line" aria-labelledby="nationwide-coverage-heading">
         <div className="container-page">
           <SectionHeading
             id="nationwide-coverage-heading"
@@ -424,77 +338,77 @@ export function Home() {
             description="Empowering manufacturers, retail chains, wholesalers, and educational institutions from Kashmir to Kanyakumari with seamless cloud deployment, on-premise setups, and 24/7 dedicated support."
           />
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-(--radius-card) border border-line bg-surface p-6 shadow-xs">
+          <div className="mt-6 sm:mt-12 grid gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-2xl border border-line bg-surface p-4 sm:p-6 shadow-xs transition-transform active:scale-[0.98]">
               <div className="flex items-center gap-3">
-                <span className="flex size-10 items-center justify-center rounded-xl bg-blue-soft text-blue font-bold text-sm">
+                <span className="flex size-8 sm:size-10 items-center justify-center rounded-xl bg-blue-soft text-blue font-bold text-xs sm:text-sm">
                   01
                 </span>
-                <h3 className="font-bold text-navy">North India</h3>
+                <h3 className="font-heading font-bold text-navy text-[15px] sm:text-base">North India</h3>
               </div>
-              <p className="mt-3 text-xs text-muted leading-relaxed">
+              <p className="mt-2 text-[12px] text-muted leading-relaxed">
                 Delhi NCR, Uttar Pradesh (Kanpur, Lucknow, Noida, Varanasi), Punjab, Haryana, Rajasthan (Jaipur, Jodhpur), Uttarakhand.
               </p>
-              <div className="mt-4 pt-3 border-t border-line text-xs font-semibold text-blue">
+              <div className="mt-3 pt-2 border-t border-line text-[11px] sm:text-xs font-semibold text-blue">
                 ✓ Garment ERP & School Portals
               </div>
             </div>
 
-            <div className="rounded-(--radius-card) border border-line bg-surface p-6 shadow-xs">
+            <div className="rounded-2xl border border-line bg-surface p-4 sm:p-6 shadow-xs transition-transform active:scale-[0.98]">
               <div className="flex items-center gap-3">
-                <span className="flex size-10 items-center justify-center rounded-xl bg-lime-soft text-lime-dark font-bold text-sm">
+                <span className="flex size-8 sm:size-10 items-center justify-center rounded-xl bg-lime-soft text-lime-dark font-bold text-xs sm:text-sm">
                   02
                 </span>
-                <h3 className="font-bold text-navy">West India</h3>
+                <h3 className="font-heading font-bold text-navy text-[15px] sm:text-base">West India</h3>
               </div>
-              <p className="mt-3 text-xs text-muted leading-relaxed">
+              <p className="mt-2 text-[12px] text-muted leading-relaxed">
                 Maharashtra (Mumbai, Pune, Nagpur), Gujarat (Surat, Ahmedabad, Rajkot), Madhya Pradesh (Indore, Bhopal), Goa.
               </p>
-              <div className="mt-4 pt-3 border-t border-line text-xs font-semibold text-lime-dark">
+              <div className="mt-3 pt-2 border-t border-line text-[11px] sm:text-xs font-semibold text-lime-dark">
                 ✓ Textile & Touch POS Retail
               </div>
             </div>
 
-            <div className="rounded-(--radius-card) border border-line bg-surface p-6 shadow-xs">
+            <div className="rounded-2xl border border-line bg-surface p-4 sm:p-6 shadow-xs transition-transform active:scale-[0.98]">
               <div className="flex items-center gap-3">
-                <span className="flex size-10 items-center justify-center rounded-xl bg-blue-soft text-blue font-bold text-sm">
+                <span className="flex size-8 sm:size-10 items-center justify-center rounded-xl bg-blue-soft text-blue font-bold text-xs sm:text-sm">
                   03
                 </span>
-                <h3 className="font-bold text-navy">South India</h3>
+                <h3 className="font-heading font-bold text-navy text-[15px] sm:text-base">South India</h3>
               </div>
-              <p className="mt-3 text-xs text-muted leading-relaxed">
+              <p className="mt-2 text-[12px] text-muted leading-relaxed">
                 Karnataka (Bengaluru), Tamil Nadu (Chennai, Tirupur, Coimbatore), Telangana (Hyderabad), Andhra Pradesh, Kerala.
               </p>
-              <div className="mt-4 pt-3 border-t border-line text-xs font-semibold text-blue">
+              <div className="mt-3 pt-2 border-t border-line text-[11px] sm:text-xs font-semibold text-blue">
                 ✓ Apparel BOM & Multi-Store ERP
               </div>
             </div>
 
-            <div className="rounded-(--radius-card) border border-line bg-surface p-6 shadow-xs">
+            <div className="rounded-2xl border border-line bg-surface p-4 sm:p-6 shadow-xs transition-transform active:scale-[0.98]">
               <div className="flex items-center gap-3">
-                <span className="flex size-10 items-center justify-center rounded-xl bg-lime-soft text-lime-dark font-bold text-sm">
+                <span className="flex size-8 sm:size-10 items-center justify-center rounded-xl bg-lime-soft text-lime-dark font-bold text-xs sm:text-sm">
                   04
                 </span>
-                <h3 className="font-bold text-navy">East & Central</h3>
+                <h3 className="font-heading font-bold text-navy text-[15px] sm:text-base">East & Central</h3>
               </div>
-              <p className="mt-3 text-xs text-muted leading-relaxed">
+              <p className="mt-2 text-[12px] text-muted leading-relaxed">
                 West Bengal (Kolkata), Bihar (Patna), Odisha (Bhubaneswar), Jharkhand, Chhattisgarh, and North-Eastern States.
               </p>
-              <div className="mt-4 pt-3 border-t border-line text-xs font-semibold text-lime-dark">
+              <div className="mt-3 pt-2 border-t border-line text-[11px] sm:text-xs font-semibold text-lime-dark">
                 ✓ Wholesale & Distribution ERP
               </div>
             </div>
           </div>
 
-          <div className="mt-10 rounded-2xl bg-navy p-8 text-white sm:flex sm:items-center sm:justify-between shadow-lg">
+          <div className="mt-6 sm:mt-10 rounded-2xl bg-navy p-4.5 sm:p-8 text-white sm:flex sm:items-center sm:justify-between shadow-lg">
             <div>
-              <p className="text-xs font-bold text-lime uppercase tracking-widest">Pan-India Remote & On-Site Assistance</p>
-              <h3 className="mt-1 text-xl font-extrabold sm:text-2xl">Looking to implement ERP or Custom Software in your city?</h3>
-              <p className="mt-2 text-sm text-white/75 max-w-2xl">
+              <p className="text-[11px] sm:text-xs font-bold text-lime uppercase tracking-widest">Pan-India Remote & On-Site Assistance</p>
+              <h3 className="mt-1 text-[18px] sm:text-2xl font-extrabold font-heading">Looking to implement ERP or Custom Software in your city?</h3>
+              <p className="mt-2 text-[13px] sm:text-sm text-white/75 max-w-2xl leading-relaxed">
                 We provide instant live online demos, remote server installations, localized staff training, and 24/7 WhatsApp support anywhere in India.
               </p>
             </div>
-            <LinkButton to="/contact" variant="lime" arrow className="mt-6 sm:mt-0 shrink-0">
+            <LinkButton to="/contact" variant="lime" arrow className="mt-4 sm:mt-0 w-full sm:w-auto justify-center shrink-0">
               Get Pan-India Quote
             </LinkButton>
           </div>
@@ -504,7 +418,7 @@ export function Home() {
       <ProcessSteps tone="muted" />
 
       {/* Nationwide ERP & IT Services FAQ Section */}
-      <section className="bg-surface py-16 lg:py-24 border-t border-line" aria-labelledby="home-faq-heading">
+      <section className="bg-surface py-10 sm:py-16 lg:py-24 border-t border-line" aria-labelledby="home-faq-heading">
         <div className="container-page max-w-4xl">
           <SectionHeading
             id="home-faq-heading"
@@ -513,7 +427,7 @@ export function Home() {
             description="Clear answers regarding software implementation, GST compliance, remote deployment, and post-launch technical support across India."
           />
 
-          <div className="mt-12 space-y-4">
+          <div className="mt-6 sm:mt-12 space-y-3 sm:space-y-4">
             {[
               {
                 q: 'Which industries does Maxus IT Services cater to across India?',
@@ -538,15 +452,15 @@ export function Home() {
             ].map((faq) => (
               <details
                 key={faq.q}
-                className="group rounded-(--radius-card) border border-line bg-canvas p-6 transition-all open:border-blue/50 open:shadow-xs"
+                className="group rounded-2xl border border-line bg-canvas p-4 sm:p-6 transition-all duration-200 open:border-blue/50 open:bg-surface open:shadow-sm"
               >
-                <summary className="cursor-pointer list-none font-display text-base font-bold text-navy flex items-center justify-between">
+                <summary className="cursor-pointer list-none font-heading text-[15px] sm:text-base font-bold text-navy flex items-center justify-between transition-colors group-hover:text-blue">
                   <span>{faq.q}</span>
-                  <span className="ml-4 shrink-0 text-blue font-bold text-lg transition-transform group-open:rotate-45">
+                  <span className="ml-4 flex size-6 sm:size-7 shrink-0 items-center justify-center rounded-full bg-blue/10 text-blue font-bold text-sm sm:text-base transition-transform duration-300 group-open:rotate-45 group-open:bg-navy group-open:text-lime">
                     +
                   </span>
                 </summary>
-                <p className="mt-4 text-sm text-muted leading-relaxed border-t border-line/60 pt-3">
+                <p className="mt-3 text-[13px] sm:text-sm text-muted leading-relaxed border-t border-line/60 pt-3">
                   {faq.a}
                 </p>
               </details>

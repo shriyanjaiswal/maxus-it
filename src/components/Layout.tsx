@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { SiteHeader } from './SiteHeader'
 import { SiteFooter } from './SiteFooter'
 import { WhatsAppFloat } from './WhatsAppFloat'
+import { MobileAppBottomNav } from './MobileAppBottomNav'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -23,11 +24,12 @@ export function AppLayout() {
         Skip to content
       </a>
       <SiteHeader />
-      <main id="main">
+      <main id="main" className="pb-16 lg:pb-0">
         <Outlet />
       </main>
       <SiteFooter />
       <WhatsAppFloat />
+      <MobileAppBottomNav />
     </>
   )
 }

@@ -43,6 +43,10 @@ export function Privacy() {
         title="Privacy Policy | MAXUS IT SERVICES"
         description="How MAXUS IT SERVICES PVT. LTD. handles information submitted through this website, including enquiry form data, hosting logs and analytics."
         path="/privacy-policy"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Privacy Policy', path: '/privacy-policy' },
+        ]}
       />
       <PageHero
         eyebrow="Legal"
@@ -50,27 +54,30 @@ export function Privacy() {
         description={`How we handle information you share with ${company.name}.`}
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Privacy Policy' }]}
       />
-      <section className="bg-surface py-16 lg:py-20">
+      <section className="bg-surface py-10 sm:py-16 lg:py-20">
         <div className="container-page max-w-3xl">
-          <p className="text-sm text-muted">
+          <p className="text-[13px] text-muted">
             Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
 
-          {sections.map((section) => (
-            <div key={section.title} className="mt-10">
-              <h2 className="text-xl font-bold text-navy">{section.title}</h2>
-              <p className="mt-3 text-muted">{section.body}</p>
-            </div>
-          ))}
-          <div className="mt-10 rounded-(--radius-card) border border-line bg-canvas p-6">
-            <h2 className="text-lg font-bold text-navy">Contact</h2>
-            <p className="mt-2 text-sm text-muted">
+          <div className="mt-6 sm:mt-8 space-y-6 sm:space-y-8">
+            {sections.map((section) => (
+              <div key={section.title} className="rounded-2xl border border-line/70 bg-canvas/40 p-4 sm:border-0 sm:bg-transparent sm:p-0">
+                <h2 className="text-[17px] sm:text-xl font-bold text-navy font-heading">{section.title}</h2>
+                <p className="mt-2 text-[14px] sm:text-base text-muted leading-relaxed">{section.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 sm:mt-10 rounded-2xl border border-line bg-canvas p-4.5 sm:p-6">
+            <h2 className="text-[16px] sm:text-lg font-bold text-navy font-heading">Contact</h2>
+            <p className="mt-2 text-[13px] sm:text-sm text-muted leading-relaxed">
               Questions about this policy: {company.contact.person}, {company.contact.title} —{' '}
-              <a href={telLink} className="text-blue underline underline-offset-2">
+              <a href={telLink} className="text-blue font-semibold underline underline-offset-2">
                 {company.contact.phoneDisplay}
               </a>{' '}
               /{' '}
-              <a href={mailtoLink('Privacy question')} className="text-blue underline break-all underline-offset-2">
+              <a href={mailtoLink('Privacy question')} className="text-blue font-semibold underline break-all underline-offset-2">
                 {company.contact.email}
               </a>
             </p>

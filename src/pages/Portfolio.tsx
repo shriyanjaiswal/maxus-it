@@ -21,14 +21,32 @@ export function Portfolio() {
         title="Delivered Enterprise Software & Case Studies India | MAXUS IT SERVICES"
         description="Review enterprise software implementations, retail POS deployments, Garment ERP platforms, and cloud web architectures delivered across India by Maxus IT Services."
         path="/portfolio"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Portfolio', path: '/portfolio' },
+        ]}
         keywords="ERP case studies India, garment software demo, retail POS implementations, school ERP case study, IT projects portfolio India, custom software portfolio"
         ogImage="/assets/products/smart-it-solutions-banner.jpg"
         schema={{
           '@context': 'https://schema.org',
-          '@type': 'CollectionPage',
-          name: 'Maxus IT Services Portfolio & Delivered Projects',
-          description: 'Production software systems, ERP suites, and digital platforms delivered for businesses in India.',
-          url: 'https://www.maxusitservices.com/portfolio',
+          '@graph': [
+            {
+              '@type': 'CollectionPage',
+              name: 'Maxus IT Services Portfolio & Delivered Projects',
+              description: 'Production software systems, ERP suites, and digital platforms delivered for businesses in India.',
+              url: 'https://www.maxusitservices.com/portfolio',
+            },
+            {
+              '@type': 'ItemList',
+              name: 'Delivered Enterprise Software Solutions',
+              itemListElement: projects.map((p, idx) => ({
+                '@type': 'ListItem',
+                position: idx + 1,
+                name: p.title,
+                url: `https://www.maxusitservices.com/portfolio/${p.slug}`,
+              })),
+            },
+          ],
         }}
       />
 
@@ -39,7 +57,7 @@ export function Portfolio() {
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Portfolio' }]}
       />
 
-      <section className="bg-surface py-16 lg:py-24" aria-labelledby="projects-heading">
+      <section className="bg-surface py-10 sm:py-16 lg:py-24" aria-labelledby="projects-heading">
         <div className="container-page">
           <h2 id="projects-heading" className="sr-only">
             Projects
@@ -49,7 +67,8 @@ export function Portfolio() {
             <div
               role="group"
               aria-label="Filter projects by category"
-              className="flex flex-wrap gap-3"
+              className="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {categories.map((category) => (
                 <button
@@ -57,9 +76,9 @@ export function Portfolio() {
                   type="button"
                   aria-pressed={active === category}
                   onClick={() => setActive(category)}
-                  className={`rounded-full border px-5 py-2 text-sm font-semibold transition-colors ${
+                  className={`rounded-full border px-4 py-1.5 sm:px-5 sm:py-2 text-xs sm:text-sm font-semibold whitespace-nowrap transition-all active:scale-95 ${
                     active === category
-                      ? 'border-navy bg-navy text-white'
+                      ? 'border-navy bg-navy text-white shadow-xs'
                       : 'border-line bg-surface text-navy hover:border-blue hover:text-blue'
                   }`}
                 >
@@ -69,15 +88,14 @@ export function Portfolio() {
             </div>
           )}
 
-
           {shown.length > 0 ? (
-            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 sm:mt-10 grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
               {shown.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}
             </div>
           ) : (
-            <p className="mt-10 rounded-(--radius-card) border border-dashed border-line bg-canvas p-12 text-center text-muted">
+            <p className="mt-8 sm:mt-10 rounded-2xl border border-dashed border-line bg-canvas p-8 sm:p-12 text-center text-xs sm:text-sm text-muted">
               No projects found in this category. Check back soon or contact us to discuss your custom project.
             </p>
           )}

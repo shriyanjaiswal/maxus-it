@@ -37,9 +37,9 @@ export function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with MAXUS IT Services on WhatsApp"
-      className="fixed right-4 bottom-4 z-40 inline-flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-(--shadow-lift) transition-transform hover:scale-110 sm:right-6 sm:bottom-6 focus-visible:outline-none"
+      className="fixed right-4 bottom-[72px] sm:bottom-6 sm:right-6 z-40 inline-flex size-13 sm:size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-(--shadow-lift) transition-all active:scale-95 hover:scale-105 focus-visible:outline-none"
     >
-      <MessageCircle className="size-7" aria-hidden="true" strokeWidth={2} />
+      <MessageCircle className="size-6 sm:size-7" aria-hidden="true" strokeWidth={2} />
     </a>
   )
 }

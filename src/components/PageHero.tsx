@@ -12,22 +12,22 @@ type Props = {
 
 export function PageHero({ eyebrow, title, description, actions, crumbs }: Props) {
   return (
-    <section className="relative overflow-hidden bg-navy py-14 lg:py-20" aria-labelledby="page-title">
+    <section className="relative overflow-hidden bg-navy py-8 sm:py-12 lg:py-20" aria-labelledby="page-title">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_120%_at_15%_0%,rgba(23,107,138,0.6),transparent_60%)]"
         aria-hidden="true"
       />
       <div className="container-page relative">
         {crumbs && <Breadcrumbs crumbs={crumbs} />}
-        <p className="eyebrow mt-6 flex items-center gap-3 text-lime">
-          <span className="h-px w-8 bg-lime" aria-hidden="true" />
+        <p className="eyebrow mt-2.5 sm:mt-6 flex items-center gap-2.5 sm:gap-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-lime">
+          <span className="h-px w-6 sm:w-8 bg-lime" aria-hidden="true" />
           {eyebrow}
         </p>
-        <h1 id="page-title" className="mt-4 max-w-3xl text-4xl font-extrabold text-white sm:text-5xl">
+        <h1 id="page-title" className="mt-2.5 sm:mt-4 max-w-3xl text-[22px] font-extrabold text-white sm:text-4xl lg:text-5xl font-heading leading-tight tracking-tight">
           {title}
         </h1>
-        {description && <p className="mt-5 max-w-2xl text-white/75">{description}</p>}
-        {actions && <div className="mt-8 flex flex-wrap gap-4">{actions}</div>}
+        {description && <p className="mt-2.5 sm:mt-5 max-w-2xl text-[14px] sm:text-base text-white/75 leading-relaxed">{description}</p>}
+        {actions && <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">{actions}</div>}
       </div>
     </section>
   )

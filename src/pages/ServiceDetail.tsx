@@ -25,6 +25,7 @@ export function ServiceDetail() {
         description={`${service.summary} Delivered across India with dedicated onboarding, customization, and 24/7 technical support.`}
         path={`/services/${service.slug}`}
         keywords={`${service.title} India, ${service.cardTitle}, IT software solutions India, enterprise business software, Maxus IT Services`}
+        ogImage={service.ogImage || '/assets/products/smart-it-solutions-banner.jpg'}
         schema={{
           '@context': 'https://schema.org',
           '@graph': [
@@ -105,56 +106,56 @@ export function ServiceDetail() {
         }
       />
 
-      <section className="bg-surface py-16 lg:py-24" aria-labelledby="capabilities-heading">
-        <div className="container-page grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+      <section className="bg-surface py-10 sm:py-16 lg:py-24" aria-labelledby="capabilities-heading">
+        <div className="container-page grid gap-8 sm:gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
           <div>
-            <div className="flex items-center gap-4">
-              <span className="inline-flex size-12 items-center justify-center rounded-xl bg-blue-soft text-blue">
-                <Icon name={service.icon} className="size-6" strokeWidth={1.7} />
+            <div className="flex items-center gap-3 sm:gap-4">
+              <span className="inline-flex size-11 sm:size-12 items-center justify-center rounded-xl bg-blue-soft text-blue">
+                <Icon name={service.icon} className="size-5 sm:size-6" strokeWidth={1.7} />
               </span>
-              <h2 id="capabilities-heading" className="text-2xl font-extrabold text-navy sm:text-3xl">
+              <h2 id="capabilities-heading" className="text-[18px] sm:text-2xl font-extrabold text-navy sm:text-3xl font-heading">
                 What this covers
               </h2>
             </div>
-            <ul className="mt-8 space-y-4">
+            <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
               {service.capabilities.map((item) => (
-                <li key={item} className="flex gap-3 rounded-(--radius-card) border border-line bg-canvas p-5">
-                  <Check className="mt-0.5 size-5 shrink-0 text-lime-dark" aria-hidden="true" strokeWidth={2.4} />
-                  <span className="text-sm text-ink">{item}</span>
+                <li key={item} className="flex gap-3 rounded-2xl border border-line bg-canvas p-4 sm:p-5">
+                  <Check className="mt-0.5 size-4.5 sm:size-5 shrink-0 text-lime-dark" aria-hidden="true" strokeWidth={2.4} />
+                  <span className="text-[13px] sm:text-sm text-ink">{item}</span>
                 </li>
               ))}
             </ul>
 
-            <h2 className="mt-14 text-2xl font-extrabold text-navy">Typical deliverables</h2>
-            <ul className="mt-6 space-y-3">
+            <h2 className="mt-8 sm:mt-12 text-[18px] sm:text-2xl font-extrabold text-navy font-heading">Typical deliverables</h2>
+            <ul className="mt-3.5 sm:mt-5 space-y-2 sm:space-y-3">
               {service.deliverables.map((item) => (
-                <li key={item} className="flex gap-3 text-sm text-muted">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-blue" aria-hidden="true" />
+                <li key={item} className="flex gap-3 text-[13px] sm:text-sm text-muted">
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-blue" aria-hidden="true" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <aside className="space-y-8">
-            <div className="rounded-(--radius-card) border border-line bg-canvas p-7">
-              <h2 className="text-lg font-bold text-navy">Well suited to</h2>
-              <ul className="mt-4 space-y-3">
+          <aside className="space-y-5 sm:space-y-8">
+            <div className="rounded-2xl border border-line bg-canvas p-4.5 sm:p-7">
+              <h2 className="font-heading text-[16px] sm:text-lg font-bold text-navy">Well suited to</h2>
+              <ul className="mt-3 space-y-2 sm:space-y-3">
                 {service.fitFor.map((item) => (
-                  <li key={item} className="flex gap-3 text-sm text-ink">
-                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-lime-dark" aria-hidden="true" />
+                  <li key={item} className="flex gap-2.5 sm:gap-3 text-[13px] sm:text-sm text-ink">
+                    <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-lime-dark" aria-hidden="true" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="rounded-(--radius-card) border border-line bg-surface p-7 shadow-(--shadow-card)">
-              <h2 className="flex items-center gap-2 text-lg font-bold text-navy">
-                <CheckCircle2 className="size-5 text-blue" aria-hidden="true" />
-                Key Capabilities & Scope
+            <div className="rounded-2xl border border-line bg-surface p-4.5 sm:p-7 shadow-(--shadow-card)">
+              <h2 className="flex items-center gap-2 font-heading text-[16px] sm:text-lg font-bold text-navy">
+                <CheckCircle2 className="size-4.5 sm:size-5 text-blue" aria-hidden="true" />
+                Key Capabilities &amp; Scope
               </h2>
-              <ul className="mt-4 space-y-2.5 text-sm text-muted">
+              <ul className="mt-3 space-y-2 text-[12px] sm:text-sm text-muted">
                 {service.pending.map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="mt-1 size-1.5 shrink-0 rounded-full bg-lime-dark" />
@@ -162,7 +163,7 @@ export function ServiceDetail() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 border-t border-line/60 pt-4 text-xs text-muted">
+              <p className="mt-4 sm:mt-5 border-t border-line/60 pt-3 text-[11px] sm:text-xs text-muted leading-relaxed">
                 Turnkey implementation with custom workflows, source ownership, and dedicated technical support.
               </p>
             </div>
@@ -170,21 +171,21 @@ export function ServiceDetail() {
         </div>
       </section>
 
-      <section className="bg-canvas py-16 lg:py-20" aria-labelledby="faq-heading">
+      <section className="bg-canvas py-10 sm:py-16 lg:py-20" aria-labelledby="faq-heading">
         <div className="container-page max-w-3xl">
-          <h2 id="faq-heading" className="text-2xl font-extrabold text-navy sm:text-3xl">
+          <h2 id="faq-heading" className="text-[18px] sm:text-2xl font-extrabold text-navy sm:text-3xl font-heading">
             Common questions
           </h2>
-          <div className="mt-8 space-y-4">
+          <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
             {service.faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group rounded-(--radius-card) border border-line bg-surface p-6 open:shadow-(--shadow-card)"
+                className="group rounded-2xl border border-line bg-surface p-4 sm:p-6 open:shadow-xs"
               >
-                <summary className="cursor-pointer list-none font-display text-base font-bold text-navy marker:hidden">
+                <summary className="cursor-pointer list-none font-heading text-[15px] sm:text-base font-bold text-navy marker:hidden">
                   {faq.question}
                 </summary>
-                <p className="mt-3 text-sm text-muted">{faq.answer}</p>
+                <p className="mt-2.5 text-[13px] sm:text-sm text-muted leading-relaxed border-t border-line/60 pt-2.5">{faq.answer}</p>
               </details>
             ))}
           </div>
@@ -192,12 +193,12 @@ export function ServiceDetail() {
         </div>
       </section>
 
-      <section className="bg-surface py-16 lg:py-24" aria-labelledby="related-heading">
+      <section className="bg-surface py-10 sm:py-16 lg:py-24" aria-labelledby="related-heading">
         <div className="container-page">
-          <h2 id="related-heading" className="text-2xl font-extrabold text-navy sm:text-3xl">
+          <h2 id="related-heading" className="text-[18px] sm:text-2xl font-extrabold text-navy sm:text-3xl font-heading">
             Related services
           </h2>
-          <div className="mt-10">
+          <div className="mt-6 sm:mt-10">
             <ServiceGrid services={related} columns={3} />
           </div>
         </div>

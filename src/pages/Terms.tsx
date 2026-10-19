@@ -41,6 +41,10 @@ export function Terms() {
         title="Terms & Conditions | MAXUS IT SERVICES"
         description="Terms covering use of the MAXUS IT SERVICES website, quotations and scope, intellectual property, portfolio permissions and third-party links."
         path="/terms"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Terms & Conditions', path: '/terms' },
+        ]}
       />
       <PageHero
         eyebrow="Legal"
@@ -48,24 +52,30 @@ export function Terms() {
         description="The basis on which this website is provided."
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Terms & Conditions' }]}
       />
-      <section className="bg-surface py-16 lg:py-20">
+      <section className="bg-surface py-10 sm:py-16 lg:py-20">
         <div className="container-page max-w-3xl">
-          <p className="text-sm text-muted">
+          <p className="text-[13px] text-muted">
             Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
 
-          {sections.map((section) => (
-            <div key={section.title} className="mt-10">
-              <h2 className="text-xl font-bold text-navy">{section.title}</h2>
-              <p className="mt-3 text-muted">{section.body}</p>
-            </div>
-          ))}
-          <p className="mt-10 text-sm text-muted">
-            Questions: {company.contact.person}, {company.contact.title} —{' '}
-            <a href={mailtoLink('Terms question')} className="text-blue underline break-all underline-offset-2">
-              {company.contact.email}
-            </a>
-          </p>
+          <div className="mt-6 sm:mt-8 space-y-6 sm:space-y-8">
+            {sections.map((section) => (
+              <div key={section.title} className="rounded-2xl border border-line/70 bg-canvas/40 p-4 sm:border-0 sm:bg-transparent sm:p-0">
+                <h2 className="text-[17px] sm:text-xl font-bold text-navy font-heading">{section.title}</h2>
+                <p className="mt-2 text-[14px] sm:text-base text-muted leading-relaxed">{section.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 sm:mt-10 rounded-2xl border border-line bg-canvas p-4.5 sm:p-6">
+            <h2 className="text-[16px] sm:text-lg font-bold text-navy font-heading">Questions</h2>
+            <p className="mt-2 text-[13px] sm:text-sm text-muted leading-relaxed">
+              Questions regarding these terms: {company.contact.person}, {company.contact.title} —{' '}
+              <a href={mailtoLink('Terms question')} className="text-blue font-semibold underline break-all underline-offset-2">
+                {company.contact.email}
+              </a>
+            </p>
+          </div>
         </div>
       </section>
       <ContactCTA />

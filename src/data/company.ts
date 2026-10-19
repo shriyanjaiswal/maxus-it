@@ -23,8 +23,14 @@ export const company = {
     unverified: false,
   },
   founders: [
-    { name: 'Mr. Ram Jaiswal', unverified: false },
-    { name: 'Mr. Krishna Murty Iyer', unverified: false },
+    { name: 'Mr. Ram Jaiswal', role: 'Co-Founder & Business Head', unverified: false },
+    { name: 'Mr. Krishna Murty Iyer', role: 'Co-Founder & Director', unverified: false },
+  ],
+  leadership: [
+    { name: 'Mr. Ram Jaiswal', role: 'Co-Founder & Business Head', badge: 'Leadership' },
+    { name: 'Mr. Krishna Murty Iyer', role: 'Co-Founder & Director', badge: 'Leadership' },
+    { name: 'Shriyan Jaiswal', role: 'Technical Head', badge: 'Engineering & Tech' },
+    { name: 'Dr. Usha Gupta', role: 'HR & Talent Recruiter', badge: 'People & Culture' },
   ],
   contact: {
     person: 'Ram Jaiswal',
@@ -36,9 +42,47 @@ export const company = {
     email: 'maxusit11@gmail.com',
     emailUnverified: false,
   },
+  offices: {
+    primary: {
+      tag: 'Primary Headquarters (Mumbai Branch)',
+      city: 'Mumbai',
+      state: 'Maharashtra',
+      address:
+        'Office No. 32 1st Floor, Sona Udyog Industrial Estate, Parsi Panchayat Rd, Jijamata Colony, Andheri East, Parasi, Mumbai, Maharashtra 400069',
+      pincode: '400069',
+      shortArea: 'Andheri East, Mumbai',
+    },
+    varanasi: {
+      tag: 'Varanasi Branch Delivery Center',
+      city: 'Varanasi',
+      state: 'Uttar Pradesh',
+      address:
+        'D 65/269-A-R-1, Mashala Wali Gali, Lahartara, Bazardiha, Maheshpur, Bauliya, Varanasi, Uttar Pradesh 221002',
+      pincode: '221002',
+      shortArea: 'Lahartara, Varanasi',
+    },
+  },
   locations: [
-    { city: 'Mumbai', state: 'Maharashtra', unverified: false },
-    { city: 'Varanasi', state: 'Uttar Pradesh', unverified: false },
+    {
+      city: 'Mumbai',
+      state: 'Maharashtra',
+      area: 'Andheri East',
+      pincode: '400069',
+      address:
+        'Office No. 32 1st Floor, Sona Udyog Industrial Estate, Parsi Panchayat Rd, Jijamata Colony, Andheri East, Parasi, Mumbai, Maharashtra 400069',
+      isPrimary: true,
+      unverified: false,
+    },
+    {
+      city: 'Varanasi',
+      state: 'Uttar Pradesh',
+      area: 'Lahartara',
+      pincode: '221002',
+      address:
+        'D 65/269-A-R-1, Mashala Wali Gali, Lahartara, Bazardiha, Maheshpur, Bauliya, Varanasi, Uttar Pradesh 221002',
+      isPrimary: false,
+      unverified: false,
+    },
   ],
   social: [
     { label: 'LinkedIn', key: 'linkedin' },

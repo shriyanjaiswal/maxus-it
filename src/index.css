@@ -1,4 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&family=Space+Grotesk:wght@400;600;700&display=swap');
 @import "tailwindcss";
+
+/* Responsive Typography Scale:
+   Mobile (< 1024px): User's exact approved scale (h1: 22px, h2: 20px, h3: 18px, h4: 14px, body: 15px, bodySmall: 13px, caption: 11px)
+   Desktop (>= 1024px): Proportional step up (h1: 30px, h2: 24px, h3: 20px, h4: 16px, body: 16px, bodySmall: 14px, caption: 12px)
+*/
+:root {
+  --fs-h1: 22px;
+  --lh-h1: 28px;
+  --ls-h1: -0.5px;
+
+  --fs-h2: 20px;
+  --lh-h2: 26px;
+  --ls-h2: -0.3px;
+
+  --fs-h3: 18px;
+  --lh-h3: 24px;
+
+  --fs-h4: 14px;
+  --lh-h4: 20px;
+
+  --fs-body: 15px;
+  --lh-body: 22px;
+
+  --fs-body-sm: 13px;
+  --lh-body-sm: 18px;
+
+  --fs-caption: 11px;
+  --lh-caption: 16px;
+  --ls-caption: 0.2px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-h1: 30px;
+    --lh-h1: 38px;
+    --ls-h1: -0.6px;
+
+    --fs-h2: 24px;
+    --lh-h2: 32px;
+    --ls-h2: -0.4px;
+
+    --fs-h3: 20px;
+    --lh-h3: 28px;
+
+    --fs-h4: 16px;
+    --lh-h4: 22px;
+
+    --fs-body: 16px;
+    --lh-body: 26px;
+
+    --fs-body-sm: 14px;
+    --lh-body-sm: 20px;
+
+    --fs-caption: 12px;
+    --lh-caption: 18px;
+    --ls-caption: 0.25px;
+  }
+}
 
 @theme {
   --color-navy: #0d3150;
@@ -15,8 +74,74 @@
   --color-muted: #5e6b75;
   --color-line: #dce4ea;
 
-  --font-display: "Manrope", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* Typography Fonts strictly set to Plus Jakarta Sans (Headings) and Space Grotesk (Body) */
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* Responsive Typography Scale mapped to CSS variables */
+  --text-h1: var(--fs-h1);
+  --text-h1--letter-spacing: var(--ls-h1);
+  --text-h1--line-height: var(--lh-h1);
+  --text-h1--font-weight: 700;
+
+  --text-h2: var(--fs-h2);
+  --text-h2--letter-spacing: var(--ls-h2);
+  --text-h2--line-height: var(--lh-h2);
+  --text-h2--font-weight: 700;
+
+  --text-h3: var(--fs-h3);
+  --text-h3--line-height: var(--lh-h3);
+  --text-h3--font-weight: 700;
+
+  --text-h4: var(--fs-h4);
+  --text-h4--line-height: var(--lh-h4);
+  --text-h4--font-weight: 700;
+
+  --text-body: var(--fs-body);
+  --text-body--line-height: var(--lh-body);
+  --text-body--font-weight: 400;
+
+  --text-body-small: var(--fs-body-sm);
+  --text-body-small--line-height: var(--lh-body-sm);
+  --text-body-small--font-weight: 400;
+
+  --text-caption: var(--fs-caption);
+  --text-caption--letter-spacing: var(--ls-caption);
+  --text-caption--line-height: var(--lh-caption);
+  --text-caption--font-weight: 600;
+
+  /* Standard Tailwind text sizes mapped strictly to the responsive design scale */
+  --text-5xl: var(--fs-h1);
+  --text-5xl--letter-spacing: var(--ls-h1);
+  --text-5xl--line-height: var(--lh-h1);
+
+  --text-4xl: var(--fs-h1);
+  --text-4xl--letter-spacing: var(--ls-h1);
+  --text-4xl--line-height: var(--lh-h1);
+
+  --text-3xl: var(--fs-h2);
+  --text-3xl--letter-spacing: var(--ls-h2);
+  --text-3xl--line-height: var(--lh-h2);
+
+  --text-2xl: var(--fs-h2);
+  --text-2xl--letter-spacing: var(--ls-h2);
+  --text-2xl--line-height: var(--lh-h2);
+
+  --text-xl: var(--fs-h3);
+  --text-xl--line-height: var(--lh-h3);
+
+  --text-lg: var(--fs-h3);
+  --text-lg--line-height: var(--lh-h3);
+
+  --text-base: var(--fs-body);
+  --text-base--line-height: var(--lh-body);
+
+  --text-sm: var(--fs-body-sm);
+  --text-sm--line-height: var(--lh-body-sm);
+
+  --text-xs: var(--fs-caption);
+  --text-xs--letter-spacing: var(--ls-caption);
+  --text-xs--line-height: var(--lh-caption);
 
   --radius-card: 16px;
   --radius-btn: 10px;
@@ -36,19 +161,64 @@
 
   body {
     font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    font-weight: 400;
     color: var(--color-ink);
     background: var(--color-surface);
-    line-height: 1.7;
     overflow-x: hidden;
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: var(--font-display);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+  h1, .h1, .text-h1 {
+    font-family: var(--font-display) !important;
+    font-size: var(--fs-h1) !important;
+    font-weight: 700 !important;
+    letter-spacing: var(--ls-h1) !important;
+    line-height: var(--lh-h1) !important;
+  }
+
+  h2, .h2, .text-h2 {
+    font-family: var(--font-display) !important;
+    font-size: var(--fs-h2) !important;
+    font-weight: 700 !important;
+    letter-spacing: var(--ls-h2) !important;
+    line-height: var(--lh-h2) !important;
+  }
+
+  h3, .h3, .text-h3 {
+    font-family: var(--font-display) !important;
+    font-size: var(--fs-h3) !important;
+    font-weight: 700 !important;
+    line-height: var(--lh-h3) !important;
+  }
+
+  h4, .h4, .text-h4 {
+    font-family: var(--font-display) !important;
+    font-size: var(--fs-h4) !important;
+    font-weight: 700 !important;
+    line-height: var(--lh-h4) !important;
+  }
+
+  p, li, .text-body {
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    font-weight: 400;
+  }
+
+  small, .text-body-small, .bodySmall {
+    font-family: var(--font-sans);
+    font-size: var(--fs-body-sm) !important;
+    line-height: var(--lh-body-sm) !important;
+    font-weight: 400;
+  }
+
+  caption, .text-caption, .caption {
+    font-family: var(--font-sans);
+    font-size: var(--fs-caption) !important;
+    letter-spacing: var(--ls-caption) !important;
+    font-weight: 600 !important;
+    line-height: var(--lh-caption) !important;
   }
 
   :focus-visible {
@@ -74,10 +244,10 @@
 }
 
 @utility eyebrow {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  font-weight: 600;
+  letter-spacing: var(--ls-caption);
   text-transform: uppercase;
 }
 

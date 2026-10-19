@@ -19,6 +19,7 @@ type CommonProps = {
   className?: string
   arrow?: boolean
   icon?: string
+  onClick?: () => void
 }
 
 const classes = (variant: keyof typeof variants, className = '') =>
@@ -31,9 +32,10 @@ export function LinkButton({
   className,
   arrow = false,
   icon,
+  onClick,
 }: CommonProps & { to: string }) {
   return (
-    <Link to={to} className={classes(variant, className)}>
+    <Link to={to} onClick={onClick} className={classes(variant, className)}>
       {icon && <Icon name={icon} className="size-4" />}
       {children}
       {arrow && <Icon name="arrow-right" className="size-4" strokeWidth={2.4} />}

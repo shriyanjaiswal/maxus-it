@@ -29,12 +29,18 @@
     {
       "city": "Mumbai",
       "state": "Maharashtra",
-      "verificationRequired": true
+      "type": "Primary (Main) Office / Mumbai Branch",
+      "address": "Office No. 32 1st Floor, Sona Udyog Industrial Estate, Parsi Panchayat Rd, Jijamata Colony, Andheri East, Parasi, Mumbai, Maharashtra 400069",
+      "pincode": "400069",
+      "verificationRequired": false
     },
     {
       "city": "Varanasi",
       "state": "Uttar Pradesh",
-      "verificationRequired": true
+      "type": "Varanasi Branch Delivery Center",
+      "address": "D 65/269-A-R-1, Mashala Wali Gali, Lahartara, Bazardiha, Maheshpur, Bauliya, Varanasi, Uttar Pradesh 221002",
+      "pincode": "221002",
+      "verificationRequired": false
     }
   ],
   "vision": "To help businesses unlock their potential through innovative technology and effective digital solutions.",

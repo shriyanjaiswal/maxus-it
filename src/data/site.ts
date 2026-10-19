@@ -30,7 +30,7 @@ export const footerServices = [
   { label: 'Telegram & WhatsApp Bots', slug: 'telegram-bot-development' },
   { label: 'Meta Ads & Campaigns', slug: 'meta-ads-campaigns' },
   { label: 'Business Automation & AI', slug: 'business-automation' },
-  { label: 'UI/UX Design', slug: 'ui-ux-design' },
+  { label: 'SEO & Google Maps (GMB)', slug: 'seo-gmb-services' },
   { label: 'Digital Marketing', slug: 'digital-marketing' },
   { label: 'Industry Solutions', slug: 'industry-solutions' },
 ].map((item) => ({ ...item, to: `/services/${item.slug}` }))

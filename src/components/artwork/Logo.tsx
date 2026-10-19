@@ -36,6 +36,30 @@ export function BrandLogoFull({ className = 'h-12 w-auto' }: Props) {
   )
 }
 
+/** Official Glossy 3D Maxus IT Tech Logo with white backing for light backgrounds. */
+export function OfficialMaxusLogoLight({ className = 'h-10 w-auto' }: Props) {
+  return (
+    <img
+      src="/assets/brand/maxus-logo-light-bg.png"
+      alt="MAXUS IT SERVICES PVT LTD - The Best Tech, Best Future"
+      className={`${className} object-contain shrink-0`}
+      loading="eager"
+    />
+  )
+}
+
+/** Official Glossy 3D Maxus IT Tech Logo with dark backing for dark navy backgrounds/footers. */
+export function OfficialMaxusLogoDark({ className = 'h-10 w-auto' }: Props) {
+  return (
+    <img
+      src="/assets/brand/maxus-logo-transparent-dark.png"
+      alt="MAXUS IT SERVICES PVT LTD - The Best Tech, Best Future"
+      className={`${className} object-contain shrink-0`}
+      loading="lazy"
+    />
+  )
+}
+
 export function Wordmark({ tone = 'dark' }: { tone?: 'light' | 'dark' }) {
   const primary = tone === 'light' ? 'text-white' : 'text-navy'
   const secondary = tone === 'light' ? 'text-white/65' : 'text-muted'
